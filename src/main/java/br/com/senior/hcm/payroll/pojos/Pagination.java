@@ -16,7 +16,6 @@ public class Pagination {
      * "Quantidade de páginas, inicia em 1"
      */
     int size;
-
     /**
      * "Ordenar por"
      */

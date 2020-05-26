@@ -11,8 +11,9 @@ public class SearchPersonsInput {
      * a busca é efetuada no nome completo do colaborador.
      */
     String q;
+
     /**
      * Data de referência da pesquisa
      */
-    Date referenceDate;
+    String referenceDate;
 }
