@@ -1,12 +1,16 @@
 package br.com.senior.hcm.recruitment.pojos;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.List;
 
 @Data
-public class    ListVacanciesInput {
+@AllArgsConstructor
+@NoArgsConstructor
+public class ListVacanciesInput {
     /**
      * Motivo da abertura da vaga
      */
@@ -15,7 +19,7 @@ public class    ListVacanciesInput {
     /**
      * Lista de palavras-chave a serem filtradas
      */
-    String q;
+    List<String> q;
 
     /**
      * Situação a ser filtrada

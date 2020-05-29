@@ -6,7 +6,6 @@ import br.com.senior.hcm.dependent.pojo.DependentListQueryInput;
 import br.com.senior.hcm.dependent.pojo.DependentListQueryOuput;
 import br.com.senior.hcm.dependent.pojo.DependentQueryInput;
 import br.com.senior.hcm.dependent.pojo.DependentQueryOutput;
-import br.com.senior.hcm.payroll.pojos.Pagination;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,20 +22,14 @@ public class DependentClientTest extends BaseTest {
 
     @Test
     public void dependentQuery() throws ServiceException {
-        DependentQueryInput input = new DependentQueryInput();
-        input.setDependentId("2182988098EE44F887F88BBC85F300A9");
+        DependentQueryInput input = new DependentQueryInput("2182988098EE44F887F88BBC85F300A9");
         DependentQueryOutput output = client.dependentQuery(input);
         System.out.println(output);
     }
 
     @Test
     public void dependentListQuery() throws ServiceException {
-        DependentListQueryInput input = new DependentListQueryInput();
-        input.setEmployeeId("9E8BC3478C8040558FA06C7C85FF3B28");
-        Pagination pagination = new Pagination();
-        pagination.setCurrent(0);
-        pagination.setSize(0);
-        input.setPage(pagination);
+        DependentListQueryInput input = new DependentListQueryInput("9E8BC3478C8040558FA06C7C85FF3B28");
         DependentListQueryOuput output = client.dependentListQuery(input);
         System.out.println(output);
     }

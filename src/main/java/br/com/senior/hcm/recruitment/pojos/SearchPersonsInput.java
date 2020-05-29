@@ -1,10 +1,13 @@
 package br.com.senior.hcm.recruitment.pojos;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import java.util.Date;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 @Data
+@RequiredArgsConstructor
+@AllArgsConstructor
 public class SearchPersonsInput {
     /**
      * Expressão a ser encontrada,
@@ -15,5 +18,6 @@ public class SearchPersonsInput {
     /**
      * Data de referência da pesquisa
      */
+    @NonNull
     String referenceDate;
 }

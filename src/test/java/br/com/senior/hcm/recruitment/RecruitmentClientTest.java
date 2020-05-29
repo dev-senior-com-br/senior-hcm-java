@@ -7,8 +7,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class RecruitmentClientTest extends BaseTest {
 
@@ -24,31 +24,28 @@ public class RecruitmentClientTest extends BaseTest {
     @Test
     public void listVacancies() throws ServiceException {
         ListVacanciesInput payload = new ListVacanciesInput();
-        payload.setSituation(Arrays.asList(VacancySituationDto.IN_PROGRESS));
+        payload.setSituation(Collections.singletonList(VacancySituationDto.IN_PROGRESS));
         ListVacanciesOutput output = client.listVacancies(payload);
         Assert.assertNotNull(output);
     }
 
     @Test
     public void vacancyDetails() throws ServiceException {
-        VacancyDetailsInput payload = new VacancyDetailsInput();
-        payload.setId("9E8BC3478C8040558FA06C7C85FF3B28");
+        VacancyDetailsInput payload = new VacancyDetailsInput("9E8BC3478C8040558FA06C7C85FF3B28");
         VacancyDetailsOutput output = client.vacancyDetails(payload);
         Assert.assertNotNull(output);
     }
 
     @Test
     public void vacancyDetailsSummary() throws ServiceException {
-        VacancyDetailsSummaryInput payload = new VacancyDetailsSummaryInput();
-        payload.setVacancyId("9E8BC3478C8040558FA06C7C85FF3B28");
+        VacancyDetailsSummaryInput payload = new VacancyDetailsSummaryInput("9E8BC3478C8040558FA06C7C85FF3B28");
         VacancyDetailsSummaryOutput output = client.vacancyDetailsSummary(payload);
         Assert.assertNotNull(output);
     }
 
     @Test
     public void searchPersons() throws ServiceException {
-        SearchPersonsInput payload = new SearchPersonsInput();
-        payload.setReferenceDate("2020-05-26");
+        SearchPersonsInput payload = new SearchPersonsInput("2020-05-26");
         SearchPersonsOutput output = client.searchPersons(payload);
         Assert.assertNotNull(output);
     }

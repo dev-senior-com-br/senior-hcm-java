@@ -1,14 +1,20 @@
 package br.com.senior.hcm.payroll.pojos;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 @Data
+@RequiredArgsConstructor
+@AllArgsConstructor
 public class BlobServiceRequestAccessInput {
 
     /**
      * O identificador único do arquivo.
      * Composto pelo ID + o nome do arquivo (separados por /)
      **/
+    @NonNull
     String fileId;
 
     /**

@@ -3,8 +3,6 @@ package br.com.senior.hcm.recruitment;
 import br.com.senior.core.base.BaseClient;
 import br.com.senior.core.base.Environment;
 import br.com.senior.core.base.ServiceException;
-import br.com.senior.hcm.payroll.pojos.EmployeeListQueryInput;
-import br.com.senior.hcm.payroll.pojos.EmployeeListQueryOutput;
 import br.com.senior.hcm.recruitment.pojos.*;
 
 /**

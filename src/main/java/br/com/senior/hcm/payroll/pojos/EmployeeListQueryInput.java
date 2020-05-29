@@ -1,8 +1,12 @@
 package br.com.senior.hcm.payroll.pojos;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class EmployeeListQueryInput {
     /**
      * Id da empresa
@@ -37,7 +41,7 @@ public class EmployeeListQueryInput {
     /**
      * Paginação
      */
-    Pagination page;
+    Pagination page = new Pagination(1, 20);
 
     /**
      * Id do colaborador
