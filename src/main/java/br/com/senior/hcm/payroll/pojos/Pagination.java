@@ -10,21 +10,23 @@ import lombok.RequiredArgsConstructor;
  */
 @Data
 @AllArgsConstructor
-@RequiredArgsConstructor
 public class Pagination {
     /**
      * "Página atual, inicia em 1"
      */
-    @NonNull
     int current;
 
     /**
      * "Quantidade de páginas, inicia em 1"
      */
-    @NonNull
     int size;
     /**
      * "Ordenar por"
      */
     Ordination orderBy;
+
+    public Pagination(int current, int size) {
+        this.size = size;
+        this.current = current;
+    }
 }
