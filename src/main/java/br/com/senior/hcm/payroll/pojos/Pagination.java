@@ -2,8 +2,6 @@ package br.com.senior.hcm.payroll.pojos;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 
 /**
  * Dados da paginação
