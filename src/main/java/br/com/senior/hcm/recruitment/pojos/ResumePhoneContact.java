@@ -11,7 +11,7 @@
  */
 
 
-package br.com.senior.hcm.recruitment.pojos
+package br.com.senior.hcm.recruitment.pojos;
 
 import java.util.Objects;
 import java.util.Arrays;
