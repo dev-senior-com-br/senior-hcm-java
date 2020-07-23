@@ -15,7 +15,7 @@ Esta biblioteca permite desenvolvedores criar integrações das APIs do HCM da S
         <dependency>
             <groupId>br.com.senior</groupId>
             <artifactId>senior-hcm-java</artifactId>
-            <version>0.0.1</version>
+            <version>{version}</version>
         </dependency>
     </dependencies>
     ...
