@@ -2,8 +2,11 @@ package br.com.senior.hcm.payroll;
 
 import br.com.senior.core.base.ServiceException;
 import br.com.senior.hcm.BaseTest;
+import br.com.senior.hcm.payroll.pojos.EmployeeListQueryInput;
+import br.com.senior.hcm.payroll.pojos.EmployeeListQueryOutput;
 import br.com.senior.hcm.payroll.pojos.EmployeeQueryInput;
 import br.com.senior.hcm.payroll.pojos.EmployeeQueryOutput;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -22,10 +25,11 @@ public class PayrollClientTest extends BaseTest {
     }
 
     @Test
-    public void employeeQuery() throws ServiceException {
-        EmployeeQueryInput input = new EmployeeQueryInput("2182988098EE44F887F88BBC85F300A9", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-        EmployeeQueryOutput employeeQueryOutput = this.client.employeeQuery(input);
-        System.out.println(employeeQueryOutput);
+    public void employeeListAndQuery() throws ServiceException {
+        EmployeeListQueryOutput output = this.client.employeeListQuery(new EmployeeListQueryInput());
+        Assert.assertTrue(output.getResult().getCountResult() > 0);
+        String employeeId = output.getResult().getEmployees().get(0).getEmployeeId();
+        EmployeeQueryInput input = new EmployeeQueryInput(employeeId, new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+        this.client.employeeQuery(input);
     }
-
 }

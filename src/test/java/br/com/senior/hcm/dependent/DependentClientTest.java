@@ -6,6 +6,10 @@ import br.com.senior.hcm.dependent.pojo.DependentListQueryInput;
 import br.com.senior.hcm.dependent.pojo.DependentListQueryOuput;
 import br.com.senior.hcm.dependent.pojo.DependentQueryInput;
 import br.com.senior.hcm.dependent.pojo.DependentQueryOutput;
+import br.com.senior.hcm.payroll.PayrollClient;
+import br.com.senior.hcm.payroll.pojos.EmployeeListQueryInput;
+import br.com.senior.hcm.payroll.pojos.EmployeeListQueryOutput;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,16 +25,19 @@ public class DependentClientTest extends BaseTest {
     }
 
     @Test
-    public void dependentQuery() throws ServiceException {
-        DependentQueryInput input = new DependentQueryInput("2182988098EE44F887F88BBC85F300A9");
-        DependentQueryOutput output = client.dependentQuery(input);
-        System.out.println(output);
+    public void dependentListQuery() throws ServiceException {
+        String employeeId = getSomeEmployeeId();
+        DependentListQueryInput input = new DependentListQueryInput(employeeId);
+        DependentListQueryOuput output = client.dependentListQuery(input);
+        if (output.getResult().getCountResult() > 0) {
+            DependentQueryOutput dependentOutput = client.dependentQuery(new DependentQueryInput(output.getResult().getDependents().get(0).getId()));
+            Assert.assertNotNull(dependentOutput.getResult());
+        }
     }
 
-    @Test
-    public void dependentListQuery() throws ServiceException {
-        DependentListQueryInput input = new DependentListQueryInput("9E8BC3478C8040558FA06C7C85FF3B28");
-        DependentListQueryOuput output = client.dependentListQuery(input);
-        System.out.println(output);
+    private String getSomeEmployeeId() throws ServiceException {
+        EmployeeListQueryOutput output = new PayrollClient(this.token).employeeListQuery(new EmployeeListQueryInput());
+        Assert.assertTrue(output.getResult().getCountResult() > 0);
+        return output.getResult().getEmployees().get(0).getEmployeeId();
     }
 }
