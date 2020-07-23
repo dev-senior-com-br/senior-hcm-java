@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.senior</groupId>
     <artifactId>senior-hcm-java</artifactId>
-    <version>0.1.01595448813</version>
+    <version>0.1.01595535789</version>
     <packaging>jar</packaging>
 
     <name>Senior HCM SDK</name>
