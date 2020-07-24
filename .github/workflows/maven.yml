@@ -29,6 +29,6 @@ jobs:
       
     - name: Build with Maven
       env:
-        SENIOR_USERNAME: senior@trn84862148.com.br
-        PASSWORD: senior
+        SENIOR_USERNAME: ${{ secrets.SENIOR_USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
       run: mvn -B package --file pom.xml
