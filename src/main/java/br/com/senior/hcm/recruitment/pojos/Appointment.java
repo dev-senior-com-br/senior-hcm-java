@@ -31,7 +31,7 @@ import org.threeten.bp.LocalDate;
  * Compromisso do processo seletivo.
  */
 @ApiModel(description = "Compromisso do processo seletivo.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-17T18:54:42.184Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
 public class Appointment {
   @SerializedName("date")
   private LocalDate date = null;

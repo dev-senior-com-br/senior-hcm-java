@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Vaga de emprego.
  */
 @ApiModel(description = "Vaga de emprego.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-17T18:54:42.184Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
 public class Vacancy {
   @SerializedName("reason")
   private Object reason = null;

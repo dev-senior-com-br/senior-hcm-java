@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Educação (Currículo).
  */
 @ApiModel(description = "Educação (Currículo).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-17T18:54:42.184Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
 public class EducationSection {
   @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
