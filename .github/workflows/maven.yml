@@ -28,4 +28,7 @@ jobs:
       run: mvn clean verify -fn
       
     - name: Build with Maven
+      env:
+        SENIOR_USERNAME: senior@trn84862148.com.br
+        PASSWORD: senior
       run: mvn -B package --file pom.xml
