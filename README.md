@@ -22,6 +22,25 @@ Esta biblioteca permite desenvolvedores criar integrações das APIs do HCM da S
   ```
 3. Para obter a última versão da SDK verifique no repositório. https://mvnrepository.com/artifact/br.com.senior/senior-hcm-java
 
+### Ambiente
+
+Atualmente o ambiente padrão para o desenvolvimento é o da Homologx.
+Para fazer a troca do ambiente basta chamar o construtor da api passando um dos Environments configurados:
+
+```java
+public enum Environment {
+
+    PROD("https://api.senior.com.br"),
+    HOMOLOG("https://platform-homologx.senior.com.br/t/senior.com.br/bridge/1.0");
+
+    private final String url;
+
+    Environment(String url) {
+        this.url = url;
+    }
+}
+```
+
 ## Exemplo Rápido
 
 Implementamos no pacote **/src/test/java/br/com/senior/hcm** um conjunto de testes de integração para cada serviço. Alguns serviços dependem de variáveis que precisam ser informadas pelos usuários, como login e senha.
@@ -40,6 +59,12 @@ Utilizando como exemplo o dependentQuery, basta instanciar o client utilizando o
     ...
 ```
 Definir as seguintes variáveis de ambiente:
+
+Para mudar o ambiente para produção é necessário informar o environment ao chamar o construtor do Client:
+
+```java
+  AuthenticationClient client = new AuthenticationClient(Environment.PROD);
+```
 
 ```
 SENIOR_USERNAME=<usuario>
