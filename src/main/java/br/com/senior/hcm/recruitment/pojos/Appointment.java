@@ -1,5 +1,5 @@
 /*
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -22,6 +22,8 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.AppointmentVacancy;
+import io.swagger.client.model.RecruitmentProcessStageStage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +33,10 @@ import org.threeten.bp.LocalDate;
  * Compromisso do processo seletivo.
  */
 @ApiModel(description = "Compromisso do processo seletivo.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-12T20:14:36.863Z")
+
+
+
 public class Appointment {
   @SerializedName("date")
   private LocalDate date = null;
@@ -46,7 +51,7 @@ public class Appointment {
   private String site = null;
 
   @SerializedName("stage")
-  private Object stage = null;
+  private RecruitmentProcessStageStage stage = null;
 
   @SerializedName("startTime")
   private String startTime = null;
@@ -64,7 +69,7 @@ public class Appointment {
   private List<Object> employees = null;
 
   @SerializedName("vacancy")
-  private Object vacancy = null;
+  private AppointmentVacancy vacancy = null;
 
   @SerializedName("vacancyId")
   private String vacancyId = null;
@@ -149,21 +154,21 @@ public class Appointment {
     this.site = site;
   }
 
-  public Appointment stage(Object stage) {
+  public Appointment stage(RecruitmentProcessStageStage stage) {
     this.stage = stage;
     return this;
   }
 
    /**
-   * Etapa do processo seletivo.
+   * Get stage
    * @return stage
   **/
-  @ApiModelProperty(value = "Etapa do processo seletivo.")
-  public Object getStage() {
+  @ApiModelProperty(value = "")
+  public RecruitmentProcessStageStage getStage() {
     return stage;
   }
 
-  public void setStage(Object stage) {
+  public void setStage(RecruitmentProcessStageStage stage) {
     this.stage = stage;
   }
 
@@ -265,21 +270,21 @@ public class Appointment {
     this.employees = employees;
   }
 
-  public Appointment vacancy(Object vacancy) {
+  public Appointment vacancy(AppointmentVacancy vacancy) {
     this.vacancy = vacancy;
     return this;
   }
 
    /**
-   * Vaga do processo seletivo.
+   * Get vacancy
    * @return vacancy
   **/
-  @ApiModelProperty(value = "Vaga do processo seletivo.")
-  public Object getVacancy() {
+  @ApiModelProperty(value = "")
+  public AppointmentVacancy getVacancy() {
     return vacancy;
   }
 
-  public void setVacancy(Object vacancy) {
+  public void setVacancy(AppointmentVacancy vacancy) {
     this.vacancy = vacancy;
   }
 

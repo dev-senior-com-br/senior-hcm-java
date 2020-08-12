@@ -1,5 +1,5 @@
 /*
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -22,6 +22,25 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.RecruitmentVacancySummaryRequester;
+import io.swagger.client.model.VacancyAdmissionSituation;
+import io.swagger.client.model.VacancyCardReason;
+import io.swagger.client.model.VacancyCardSituation;
+import io.swagger.client.model.VacancyChat;
+import io.swagger.client.model.VacancyCompany;
+import io.swagger.client.model.VacancyContractType;
+import io.swagger.client.model.VacancyCostCenter;
+import io.swagger.client.model.VacancyDepartment;
+import io.swagger.client.model.VacancyEmploymentContract;
+import io.swagger.client.model.VacancyIntegrationStatus;
+import io.swagger.client.model.VacancyJobPosition;
+import io.swagger.client.model.VacancyPersonalityModel;
+import io.swagger.client.model.VacancyReplacedEmployee;
+import io.swagger.client.model.VacancyRequisition;
+import io.swagger.client.model.VacancyResponsible;
+import io.swagger.client.model.VacancySequenceStaffrequisitionVacancy;
+import io.swagger.client.model.VacancyWorkShift;
+import io.swagger.client.model.VacancyWorkstationGroup;
 import java.io.IOException;
 import org.threeten.bp.LocalDate;
 import org.threeten.bp.OffsetDateTime;
@@ -30,22 +49,25 @@ import org.threeten.bp.OffsetDateTime;
  * Vaga de emprego.
  */
 @ApiModel(description = "Vaga de emprego.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-12T20:14:36.863Z")
+
+
+
 public class Vacancy {
   @SerializedName("reason")
-  private Object reason = null;
+  private VacancyCardReason reason = null;
 
   @SerializedName("finalizationComment")
   private String finalizationComment = null;
 
   @SerializedName("workstationGroup")
-  private Object workstationGroup = null;
+  private VacancyWorkstationGroup workstationGroup = null;
 
   @SerializedName("requisition")
-  private Object requisition = null;
+  private VacancyRequisition requisition = null;
 
   @SerializedName("contractType")
-  private Object contractType = null;
+  private VacancyContractType contractType = null;
 
   @SerializedName("externalStartDate")
   private LocalDate externalStartDate = null;
@@ -57,7 +79,7 @@ public class Vacancy {
   private OffsetDateTime createdAt = null;
 
   @SerializedName("admissionSituation")
-  private Object admissionSituation = null;
+  private VacancyAdmissionSituation admissionSituation = null;
 
   @SerializedName("id")
   private String id = null;
@@ -66,10 +88,10 @@ public class Vacancy {
   private String locationURI = null;
 
   @SerializedName("requester")
-  private Object requester = null;
+  private RecruitmentVacancySummaryRequester requester = null;
 
   @SerializedName("workShift")
-  private Object workShift = null;
+  private VacancyWorkShift workShift = null;
 
   @SerializedName("finalizationAttachmentId")
   private String finalizationAttachmentId = null;
@@ -84,7 +106,7 @@ public class Vacancy {
   private String requesterId = null;
 
   @SerializedName("costCenter")
-  private Object costCenter = null;
+  private VacancyCostCenter costCenter = null;
 
   @SerializedName("pendencyHours")
   private Long pendencyHours = null;
@@ -93,7 +115,7 @@ public class Vacancy {
   private String version = null;
 
   @SerializedName("jobPosition")
-  private Object jobPosition = null;
+  private VacancyJobPosition jobPosition = null;
 
   @SerializedName("companyId")
   private String companyId = null;
@@ -105,13 +127,13 @@ public class Vacancy {
   private String jobPositionId = null;
 
   @SerializedName("sequenceStaffrequisitionVacancy")
-  private Object sequenceStaffrequisitionVacancy = null;
+  private VacancySequenceStaffrequisitionVacancy sequenceStaffrequisitionVacancy = null;
 
   @SerializedName("replacedEmployee")
-  private Object replacedEmployee = null;
+  private VacancyReplacedEmployee replacedEmployee = null;
 
   @SerializedName("integrationStatus")
-  private Object integrationStatus = null;
+  private VacancyIntegrationStatus integrationStatus = null;
 
   @SerializedName("workShiftId")
   private String workShiftId = null;
@@ -123,10 +145,10 @@ public class Vacancy {
   private String questionnaire = null;
 
   @SerializedName("personalityModel")
-  private Object personalityModel = null;
+  private VacancyPersonalityModel personalityModel = null;
 
   @SerializedName("employmentContract")
-  private Object employmentContract = null;
+  private VacancyEmploymentContract employmentContract = null;
 
   @SerializedName("chatId")
   private String chatId = null;
@@ -159,19 +181,19 @@ public class Vacancy {
   private Boolean internalPublish = null;
 
   @SerializedName("responsible")
-  private Object responsible = null;
+  private VacancyResponsible responsible = null;
 
   @SerializedName("company")
-  private Object company = null;
+  private VacancyCompany company = null;
 
   @SerializedName("justification")
   private String justification = null;
 
   @SerializedName("department")
-  private Object department = null;
+  private VacancyDepartment department = null;
 
   @SerializedName("situation")
-  private Object situation = null;
+  private VacancyCardSituation situation = null;
 
   @SerializedName("startSalaryRange")
   private String startSalaryRange = null;
@@ -198,7 +220,7 @@ public class Vacancy {
   private OffsetDateTime finalizedAt = null;
 
   @SerializedName("chat")
-  private Object chat = null;
+  private VacancyChat chat = null;
 
   @SerializedName("progress")
   private Double progress = null;
@@ -206,21 +228,21 @@ public class Vacancy {
   @SerializedName("location")
   private String location = null;
 
-  public Vacancy reason(Object reason) {
+  public Vacancy reason(VacancyCardReason reason) {
     this.reason = reason;
     return this;
   }
 
    /**
-   * Motivo de abertura da vaga.
+   * Get reason
    * @return reason
   **/
-  @ApiModelProperty(required = true, value = "Motivo de abertura da vaga.")
-  public Object getReason() {
+  @ApiModelProperty(required = true, value = "")
+  public VacancyCardReason getReason() {
     return reason;
   }
 
-  public void setReason(Object reason) {
+  public void setReason(VacancyCardReason reason) {
     this.reason = reason;
   }
 
@@ -242,57 +264,57 @@ public class Vacancy {
     this.finalizationComment = finalizationComment;
   }
 
-  public Vacancy workstationGroup(Object workstationGroup) {
+  public Vacancy workstationGroup(VacancyWorkstationGroup workstationGroup) {
     this.workstationGroup = workstationGroup;
     return this;
   }
 
    /**
-   * Representa o posto de trabalho.
+   * Get workstationGroup
    * @return workstationGroup
   **/
-  @ApiModelProperty(value = "Representa o posto de trabalho.")
-  public Object getWorkstationGroup() {
+  @ApiModelProperty(value = "")
+  public VacancyWorkstationGroup getWorkstationGroup() {
     return workstationGroup;
   }
 
-  public void setWorkstationGroup(Object workstationGroup) {
+  public void setWorkstationGroup(VacancyWorkstationGroup workstationGroup) {
     this.workstationGroup = workstationGroup;
   }
 
-  public Vacancy requisition(Object requisition) {
+  public Vacancy requisition(VacancyRequisition requisition) {
     this.requisition = requisition;
     return this;
   }
 
    /**
-   * Requisição da vaga.
+   * Get requisition
    * @return requisition
   **/
-  @ApiModelProperty(value = "Requisição da vaga.")
-  public Object getRequisition() {
+  @ApiModelProperty(value = "")
+  public VacancyRequisition getRequisition() {
     return requisition;
   }
 
-  public void setRequisition(Object requisition) {
+  public void setRequisition(VacancyRequisition requisition) {
     this.requisition = requisition;
   }
 
-  public Vacancy contractType(Object contractType) {
+  public Vacancy contractType(VacancyContractType contractType) {
     this.contractType = contractType;
     return this;
   }
 
    /**
-   * Tipo de contrato de trabalho.
+   * Get contractType
    * @return contractType
   **/
-  @ApiModelProperty(value = "Tipo de contrato de trabalho.")
-  public Object getContractType() {
+  @ApiModelProperty(value = "")
+  public VacancyContractType getContractType() {
     return contractType;
   }
 
-  public void setContractType(Object contractType) {
+  public void setContractType(VacancyContractType contractType) {
     this.contractType = contractType;
   }
 
@@ -350,21 +372,21 @@ public class Vacancy {
     this.createdAt = createdAt;
   }
 
-  public Vacancy admissionSituation(Object admissionSituation) {
+  public Vacancy admissionSituation(VacancyAdmissionSituation admissionSituation) {
     this.admissionSituation = admissionSituation;
     return this;
   }
 
    /**
-   * Situação da admissão do candidato escolhido para a vaga.
+   * Get admissionSituation
    * @return admissionSituation
   **/
-  @ApiModelProperty(value = "Situação da admissão do candidato escolhido para a vaga.")
-  public Object getAdmissionSituation() {
+  @ApiModelProperty(value = "")
+  public VacancyAdmissionSituation getAdmissionSituation() {
     return admissionSituation;
   }
 
-  public void setAdmissionSituation(Object admissionSituation) {
+  public void setAdmissionSituation(VacancyAdmissionSituation admissionSituation) {
     this.admissionSituation = admissionSituation;
   }
 
@@ -404,39 +426,39 @@ public class Vacancy {
     this.locationURI = locationURI;
   }
 
-  public Vacancy requester(Object requester) {
+  public Vacancy requester(RecruitmentVacancySummaryRequester requester) {
     this.requester = requester;
     return this;
   }
 
    /**
-   * Solicitante da vaga.
+   * Get requester
    * @return requester
   **/
-  @ApiModelProperty(value = "Solicitante da vaga.")
-  public Object getRequester() {
+  @ApiModelProperty(value = "")
+  public RecruitmentVacancySummaryRequester getRequester() {
     return requester;
   }
 
-  public void setRequester(Object requester) {
+  public void setRequester(RecruitmentVacancySummaryRequester requester) {
     this.requester = requester;
   }
 
-  public Vacancy workShift(Object workShift) {
+  public Vacancy workShift(VacancyWorkShift workShift) {
     this.workShift = workShift;
     return this;
   }
 
    /**
-   * Turno de trabalho
+   * Get workShift
    * @return workShift
   **/
-  @ApiModelProperty(value = "Turno de trabalho")
-  public Object getWorkShift() {
+  @ApiModelProperty(value = "")
+  public VacancyWorkShift getWorkShift() {
     return workShift;
   }
 
-  public void setWorkShift(Object workShift) {
+  public void setWorkShift(VacancyWorkShift workShift) {
     this.workShift = workShift;
   }
 
@@ -512,21 +534,21 @@ public class Vacancy {
     this.requesterId = requesterId;
   }
 
-  public Vacancy costCenter(Object costCenter) {
+  public Vacancy costCenter(VacancyCostCenter costCenter) {
     this.costCenter = costCenter;
     return this;
   }
 
    /**
-   * Centro de custo
+   * Get costCenter
    * @return costCenter
   **/
-  @ApiModelProperty(value = "Centro de custo")
-  public Object getCostCenter() {
+  @ApiModelProperty(value = "")
+  public VacancyCostCenter getCostCenter() {
     return costCenter;
   }
 
-  public void setCostCenter(Object costCenter) {
+  public void setCostCenter(VacancyCostCenter costCenter) {
     this.costCenter = costCenter;
   }
 
@@ -566,21 +588,21 @@ public class Vacancy {
     this.version = version;
   }
 
-  public Vacancy jobPosition(Object jobPosition) {
+  public Vacancy jobPosition(VacancyJobPosition jobPosition) {
     this.jobPosition = jobPosition;
     return this;
   }
 
    /**
-   * Cargo da vaga.
+   * Get jobPosition
    * @return jobPosition
   **/
-  @ApiModelProperty(value = "Cargo da vaga.")
-  public Object getJobPosition() {
+  @ApiModelProperty(value = "")
+  public VacancyJobPosition getJobPosition() {
     return jobPosition;
   }
 
-  public void setJobPosition(Object jobPosition) {
+  public void setJobPosition(VacancyJobPosition jobPosition) {
     this.jobPosition = jobPosition;
   }
 
@@ -638,57 +660,57 @@ public class Vacancy {
     this.jobPositionId = jobPositionId;
   }
 
-  public Vacancy sequenceStaffrequisitionVacancy(Object sequenceStaffrequisitionVacancy) {
+  public Vacancy sequenceStaffrequisitionVacancy(VacancySequenceStaffrequisitionVacancy sequenceStaffrequisitionVacancy) {
     this.sequenceStaffrequisitionVacancy = sequenceStaffrequisitionVacancy;
     return this;
   }
 
    /**
-   * Responsável por armazenar uma sequência única da RP na vaga.
+   * Get sequenceStaffrequisitionVacancy
    * @return sequenceStaffrequisitionVacancy
   **/
-  @ApiModelProperty(value = "Responsável por armazenar uma sequência única da RP na vaga.")
-  public Object getSequenceStaffrequisitionVacancy() {
+  @ApiModelProperty(value = "")
+  public VacancySequenceStaffrequisitionVacancy getSequenceStaffrequisitionVacancy() {
     return sequenceStaffrequisitionVacancy;
   }
 
-  public void setSequenceStaffrequisitionVacancy(Object sequenceStaffrequisitionVacancy) {
+  public void setSequenceStaffrequisitionVacancy(VacancySequenceStaffrequisitionVacancy sequenceStaffrequisitionVacancy) {
     this.sequenceStaffrequisitionVacancy = sequenceStaffrequisitionVacancy;
   }
 
-  public Vacancy replacedEmployee(Object replacedEmployee) {
+  public Vacancy replacedEmployee(VacancyReplacedEmployee replacedEmployee) {
     this.replacedEmployee = replacedEmployee;
     return this;
   }
 
    /**
-   * Colaborador que será substituido (Se for o caso).
+   * Get replacedEmployee
    * @return replacedEmployee
   **/
-  @ApiModelProperty(value = "Colaborador que será substituido (Se for o caso).")
-  public Object getReplacedEmployee() {
+  @ApiModelProperty(value = "")
+  public VacancyReplacedEmployee getReplacedEmployee() {
     return replacedEmployee;
   }
 
-  public void setReplacedEmployee(Object replacedEmployee) {
+  public void setReplacedEmployee(VacancyReplacedEmployee replacedEmployee) {
     this.replacedEmployee = replacedEmployee;
   }
 
-  public Vacancy integrationStatus(Object integrationStatus) {
+  public Vacancy integrationStatus(VacancyIntegrationStatus integrationStatus) {
     this.integrationStatus = integrationStatus;
     return this;
   }
 
    /**
-   * Status da efetivação.
+   * Get integrationStatus
    * @return integrationStatus
   **/
-  @ApiModelProperty(value = "Status da efetivação.")
-  public Object getIntegrationStatus() {
+  @ApiModelProperty(value = "")
+  public VacancyIntegrationStatus getIntegrationStatus() {
     return integrationStatus;
   }
 
-  public void setIntegrationStatus(Object integrationStatus) {
+  public void setIntegrationStatus(VacancyIntegrationStatus integrationStatus) {
     this.integrationStatus = integrationStatus;
   }
 
@@ -746,39 +768,39 @@ public class Vacancy {
     this.questionnaire = questionnaire;
   }
 
-  public Vacancy personalityModel(Object personalityModel) {
+  public Vacancy personalityModel(VacancyPersonalityModel personalityModel) {
     this.personalityModel = personalityModel;
     return this;
   }
 
    /**
-   * Modelo de personalidade desejado para a vaga.
+   * Get personalityModel
    * @return personalityModel
   **/
-  @ApiModelProperty(value = "Modelo de personalidade desejado para a vaga.")
-  public Object getPersonalityModel() {
+  @ApiModelProperty(value = "")
+  public VacancyPersonalityModel getPersonalityModel() {
     return personalityModel;
   }
 
-  public void setPersonalityModel(Object personalityModel) {
+  public void setPersonalityModel(VacancyPersonalityModel personalityModel) {
     this.personalityModel = personalityModel;
   }
 
-  public Vacancy employmentContract(Object employmentContract) {
+  public Vacancy employmentContract(VacancyEmploymentContract employmentContract) {
     this.employmentContract = employmentContract;
     return this;
   }
 
    /**
-   * Tipo de vínculo empregatício da vaga.
+   * Get employmentContract
    * @return employmentContract
   **/
-  @ApiModelProperty(value = "Tipo de vínculo empregatício da vaga.")
-  public Object getEmploymentContract() {
+  @ApiModelProperty(value = "")
+  public VacancyEmploymentContract getEmploymentContract() {
     return employmentContract;
   }
 
-  public void setEmploymentContract(Object employmentContract) {
+  public void setEmploymentContract(VacancyEmploymentContract employmentContract) {
     this.employmentContract = employmentContract;
   }
 
@@ -962,39 +984,39 @@ public class Vacancy {
     this.internalPublish = internalPublish;
   }
 
-  public Vacancy responsible(Object responsible) {
+  public Vacancy responsible(VacancyResponsible responsible) {
     this.responsible = responsible;
     return this;
   }
 
    /**
-   * Analista de RH responsável pela vaga.
+   * Get responsible
    * @return responsible
   **/
-  @ApiModelProperty(value = "Analista de RH responsável pela vaga.")
-  public Object getResponsible() {
+  @ApiModelProperty(value = "")
+  public VacancyResponsible getResponsible() {
     return responsible;
   }
 
-  public void setResponsible(Object responsible) {
+  public void setResponsible(VacancyResponsible responsible) {
     this.responsible = responsible;
   }
 
-  public Vacancy company(Object company) {
+  public Vacancy company(VacancyCompany company) {
     this.company = company;
     return this;
   }
 
    /**
-   * Empresa
+   * Get company
    * @return company
   **/
-  @ApiModelProperty(value = "Empresa")
-  public Object getCompany() {
+  @ApiModelProperty(value = "")
+  public VacancyCompany getCompany() {
     return company;
   }
 
-  public void setCompany(Object company) {
+  public void setCompany(VacancyCompany company) {
     this.company = company;
   }
 
@@ -1016,39 +1038,39 @@ public class Vacancy {
     this.justification = justification;
   }
 
-  public Vacancy department(Object department) {
+  public Vacancy department(VacancyDepartment department) {
     this.department = department;
     return this;
   }
 
    /**
-   * Departamento
+   * Get department
    * @return department
   **/
-  @ApiModelProperty(value = "Departamento")
-  public Object getDepartment() {
+  @ApiModelProperty(value = "")
+  public VacancyDepartment getDepartment() {
     return department;
   }
 
-  public void setDepartment(Object department) {
+  public void setDepartment(VacancyDepartment department) {
     this.department = department;
   }
 
-  public Vacancy situation(Object situation) {
+  public Vacancy situation(VacancyCardSituation situation) {
     this.situation = situation;
     return this;
   }
 
    /**
-   * Situação atual da vaga.
+   * Get situation
    * @return situation
   **/
-  @ApiModelProperty(value = "Situação atual da vaga.")
-  public Object getSituation() {
+  @ApiModelProperty(value = "")
+  public VacancyCardSituation getSituation() {
     return situation;
   }
 
-  public void setSituation(Object situation) {
+  public void setSituation(VacancyCardSituation situation) {
     this.situation = situation;
   }
 
@@ -1196,21 +1218,21 @@ public class Vacancy {
     this.finalizedAt = finalizedAt;
   }
 
-  public Vacancy chat(Object chat) {
+  public Vacancy chat(VacancyChat chat) {
     this.chat = chat;
     return this;
   }
 
    /**
-   * Chat da vaga.
+   * Get chat
    * @return chat
   **/
-  @ApiModelProperty(value = "Chat da vaga.")
-  public Object getChat() {
+  @ApiModelProperty(value = "")
+  public VacancyChat getChat() {
     return chat;
   }
 
-  public void setChat(Object chat) {
+  public void setChat(VacancyChat chat) {
     this.chat = chat;
   }
 

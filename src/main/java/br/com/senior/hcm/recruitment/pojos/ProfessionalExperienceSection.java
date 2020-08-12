@@ -1,5 +1,5 @@
 /*
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -30,7 +30,10 @@ import org.threeten.bp.OffsetDateTime;
  * Experiência profissional (Currículo).
  */
 @ApiModel(description = "Experiência profissional (Currículo).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-12T20:14:36.863Z")
+
+
+
 public class ProfessionalExperienceSection {
   @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
