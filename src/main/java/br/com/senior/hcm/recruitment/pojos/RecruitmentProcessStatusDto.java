@@ -24,20 +24,24 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets vacancySituationDto
+ * Gets or Sets recruitmentProcessStatusDto
  */
-@JsonAdapter(VacancySituationDto.Adapter.class)
-public enum VacancySituationDto {
+@JsonAdapter(RecruitmentProcessStatusDto.Adapter.class)
+public enum RecruitmentProcessStatusDto {
   
-  IN_PROGRESS("IN_PROGRESS"),
+  SUBSCRIBED("SUBSCRIBED"),
   
-  CLOSED("CLOSED"),
+  SELECTED("SELECTED"),
   
-  CANCELED("CANCELED");
+  DELETED("DELETED"),
+  
+  DISAPPROVED("DISAPPROVED"),
+  
+  GIVENUP("GIVENUP");
 
   private String value;
 
-  VacancySituationDto(String value) {
+  RecruitmentProcessStatusDto(String value) {
     this.value = value;
   }
 
@@ -50,8 +54,8 @@ public enum VacancySituationDto {
     return String.valueOf(value);
   }
 
-  public static VacancySituationDto fromValue(String text) {
-    for (VacancySituationDto b : VacancySituationDto.values()) {
+  public static RecruitmentProcessStatusDto fromValue(String text) {
+    for (RecruitmentProcessStatusDto b : RecruitmentProcessStatusDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -59,16 +63,16 @@ public enum VacancySituationDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<VacancySituationDto> {
+  public static class Adapter extends TypeAdapter<RecruitmentProcessStatusDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final VacancySituationDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final RecruitmentProcessStatusDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public VacancySituationDto read(final JsonReader jsonReader) throws IOException {
+    public RecruitmentProcessStatusDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return VacancySituationDto.fromValue(String.valueOf(value));
+      return RecruitmentProcessStatusDto.fromValue(String.valueOf(value));
     }
   }
 }

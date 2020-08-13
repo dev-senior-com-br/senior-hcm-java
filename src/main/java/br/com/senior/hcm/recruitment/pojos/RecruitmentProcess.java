@@ -1,5 +1,5 @@
 /*
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -22,17 +22,23 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import br.com.senior.hcm.recruitment.pojos.Employee;
+import br.com.senior.hcm.recruitment.pojos.RecruitmentProcessStatusDto;
+import br.com.senior.hcm.recruitment.pojos.Resume;
+import br.com.senior.hcm.recruitment.pojos.Vacancy;
 import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Processo seletivo do candidato.
+ * RecruitmentProcess
  */
-@ApiModel(description = "Processo seletivo do candidato.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T15:44:06.345Z")
+
+
+
 public class RecruitmentProcess {
   @SerializedName("resume")
-  private Object resume = null;
+  private Resume resume = null;
 
   @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
@@ -50,10 +56,10 @@ public class RecruitmentProcess {
   private String justification = null;
 
   @SerializedName("employee")
-  private Object employee = null;
+  private Employee employee = null;
 
   @SerializedName("vacancy")
-  private Object vacancy = null;
+  private Vacancy vacancy = null;
 
   @SerializedName("vacancyId")
   private String vacancyId = null;
@@ -62,23 +68,23 @@ public class RecruitmentProcess {
   private OffsetDateTime updatedAt = null;
 
   @SerializedName("status")
-  private Object status = null;
+  private RecruitmentProcessStatusDto status = null;
 
-  public RecruitmentProcess resume(Object resume) {
+  public RecruitmentProcess resume(Resume resume) {
     this.resume = resume;
     return this;
   }
 
    /**
-   * Candidato externo.
+   * Get resume
    * @return resume
   **/
-  @ApiModelProperty(value = "Candidato externo.")
-  public Object getResume() {
+  @ApiModelProperty(value = "")
+  public Resume getResume() {
     return resume;
   }
 
-  public void setResume(Object resume) {
+  public void setResume(Resume resume) {
     this.resume = resume;
   }
 
@@ -172,39 +178,39 @@ public class RecruitmentProcess {
     this.justification = justification;
   }
 
-  public RecruitmentProcess employee(Object employee) {
+  public RecruitmentProcess employee(Employee employee) {
     this.employee = employee;
     return this;
   }
 
    /**
-   * Candidato interno
+   * Get employee
    * @return employee
   **/
-  @ApiModelProperty(value = "Candidato interno")
-  public Object getEmployee() {
+  @ApiModelProperty(value = "")
+  public Employee getEmployee() {
     return employee;
   }
 
-  public void setEmployee(Object employee) {
+  public void setEmployee(Employee employee) {
     this.employee = employee;
   }
 
-  public RecruitmentProcess vacancy(Object vacancy) {
+  public RecruitmentProcess vacancy(Vacancy vacancy) {
     this.vacancy = vacancy;
     return this;
   }
 
    /**
-   * Vaga.
+   * Get vacancy
    * @return vacancy
   **/
-  @ApiModelProperty(value = "Vaga.")
-  public Object getVacancy() {
+  @ApiModelProperty(value = "")
+  public Vacancy getVacancy() {
     return vacancy;
   }
 
-  public void setVacancy(Object vacancy) {
+  public void setVacancy(Vacancy vacancy) {
     this.vacancy = vacancy;
   }
 
@@ -244,21 +250,21 @@ public class RecruitmentProcess {
     this.updatedAt = updatedAt;
   }
 
-  public RecruitmentProcess status(Object status) {
+  public RecruitmentProcess status(RecruitmentProcessStatusDto status) {
     this.status = status;
     return this;
   }
 
    /**
-   * Status do candidato na vaga.
+   * Get status
    * @return status
   **/
-  @ApiModelProperty(value = "Status do candidato na vaga.")
-  public Object getStatus() {
+  @ApiModelProperty(value = "")
+  public RecruitmentProcessStatusDto getStatus() {
     return status;
   }
 
-  public void setStatus(Object status) {
+  public void setStatus(RecruitmentProcessStatusDto status) {
     this.status = status;
   }
 

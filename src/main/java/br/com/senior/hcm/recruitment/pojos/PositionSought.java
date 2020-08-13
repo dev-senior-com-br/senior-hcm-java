@@ -22,26 +22,25 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import br.com.senior.hcm.recruitment.pojos.PhoneContact;
 import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * ResumePhoneContact
+ * PositionSought
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T15:44:06.345Z")
 
 
 
-public class ResumePhoneContact {
+public class PositionSought {
+  @SerializedName("area")
+  private String area = null;
+
   @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
 
   @SerializedName("resumeId")
   private String resumeId = null;
-
-  @SerializedName("phoneContact")
-  private PhoneContact phoneContact = null;
 
   @SerializedName("g5Id")
   private String g5Id = null;
@@ -49,10 +48,31 @@ public class ResumePhoneContact {
   @SerializedName("id")
   private String id = null;
 
+  @SerializedName("position")
+  private String position = null;
+
   @SerializedName("updatedAt")
   private OffsetDateTime updatedAt = null;
 
-  public ResumePhoneContact createdAt(OffsetDateTime createdAt) {
+  public PositionSought area(String area) {
+    this.area = area;
+    return this;
+  }
+
+   /**
+   * Descrição da área pretendida.
+   * @return area
+  **/
+  @ApiModelProperty(value = "Descrição da área pretendida.")
+  public String getArea() {
+    return area;
+  }
+
+  public void setArea(String area) {
+    this.area = area;
+  }
+
+  public PositionSought createdAt(OffsetDateTime createdAt) {
     this.createdAt = createdAt;
     return this;
   }
@@ -70,7 +90,7 @@ public class ResumePhoneContact {
     this.createdAt = createdAt;
   }
 
-  public ResumePhoneContact resumeId(String resumeId) {
+  public PositionSought resumeId(String resumeId) {
     this.resumeId = resumeId;
     return this;
   }
@@ -88,25 +108,7 @@ public class ResumePhoneContact {
     this.resumeId = resumeId;
   }
 
-  public ResumePhoneContact phoneContact(PhoneContact phoneContact) {
-    this.phoneContact = phoneContact;
-    return this;
-  }
-
-   /**
-   * Get phoneContact
-   * @return phoneContact
-  **/
-  @ApiModelProperty(value = "")
-  public PhoneContact getPhoneContact() {
-    return phoneContact;
-  }
-
-  public void setPhoneContact(PhoneContact phoneContact) {
-    this.phoneContact = phoneContact;
-  }
-
-  public ResumePhoneContact g5Id(String g5Id) {
+  public PositionSought g5Id(String g5Id) {
     this.g5Id = g5Id;
     return this;
   }
@@ -124,7 +126,7 @@ public class ResumePhoneContact {
     this.g5Id = g5Id;
   }
 
-  public ResumePhoneContact id(String id) {
+  public PositionSought id(String id) {
     this.id = id;
     return this;
   }
@@ -142,7 +144,25 @@ public class ResumePhoneContact {
     this.id = id;
   }
 
-  public ResumePhoneContact updatedAt(OffsetDateTime updatedAt) {
+  public PositionSought position(String position) {
+    this.position = position;
+    return this;
+  }
+
+   /**
+   * Descrição do cargo pretendido.
+   * @return position
+  **/
+  @ApiModelProperty(value = "Descrição do cargo pretendido.")
+  public String getPosition() {
+    return position;
+  }
+
+  public void setPosition(String position) {
+    this.position = position;
+  }
+
+  public PositionSought updatedAt(OffsetDateTime updatedAt) {
     this.updatedAt = updatedAt;
     return this;
   }
@@ -169,31 +189,33 @@ public class ResumePhoneContact {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ResumePhoneContact resumePhoneContact = (ResumePhoneContact) o;
-    return Objects.equals(this.createdAt, resumePhoneContact.createdAt) &&
-        Objects.equals(this.resumeId, resumePhoneContact.resumeId) &&
-        Objects.equals(this.phoneContact, resumePhoneContact.phoneContact) &&
-        Objects.equals(this.g5Id, resumePhoneContact.g5Id) &&
-        Objects.equals(this.id, resumePhoneContact.id) &&
-        Objects.equals(this.updatedAt, resumePhoneContact.updatedAt);
+    PositionSought positionSought = (PositionSought) o;
+    return Objects.equals(this.area, positionSought.area) &&
+        Objects.equals(this.createdAt, positionSought.createdAt) &&
+        Objects.equals(this.resumeId, positionSought.resumeId) &&
+        Objects.equals(this.g5Id, positionSought.g5Id) &&
+        Objects.equals(this.id, positionSought.id) &&
+        Objects.equals(this.position, positionSought.position) &&
+        Objects.equals(this.updatedAt, positionSought.updatedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(createdAt, resumeId, phoneContact, g5Id, id, updatedAt);
+    return Objects.hash(area, createdAt, resumeId, g5Id, id, position, updatedAt);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ResumePhoneContact {\n");
+    sb.append("class PositionSought {\n");
     
+    sb.append("    area: ").append(toIndentedString(area)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    resumeId: ").append(toIndentedString(resumeId)).append("\n");
-    sb.append("    phoneContact: ").append(toIndentedString(phoneContact)).append("\n");
     sb.append("    g5Id: ").append(toIndentedString(g5Id)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("}");
     return sb.toString();
