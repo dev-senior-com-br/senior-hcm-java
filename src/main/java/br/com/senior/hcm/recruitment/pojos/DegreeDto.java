@@ -24,20 +24,28 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets vacancySituationDto
+ * Gets or Sets degreeDto
  */
-@JsonAdapter(VacancySituationDto.Adapter.class)
-public enum VacancySituationDto {
+@JsonAdapter(DegreeDto.Adapter.class)
+public enum DegreeDto {
   
-  IN_PROGRESS("IN_PROGRESS"),
+  ELEMENTARY_SCHOOL("ELEMENTARY_SCHOOL"),
   
-  CLOSED("CLOSED"),
+  HIGH_SCHOOL("HIGH_SCHOOL"),
   
-  CANCELED("CANCELED");
+  HIGHER_EDUCATION("HIGHER_EDUCATION"),
+  
+  POST_GRADUATED("POST_GRADUATED"),
+  
+  MASTERS_DEGREE("MASTERS_DEGREE"),
+  
+  PHD_DEGREE("PHD_DEGREE"),
+  
+  POST_DOCTORATE("POST_DOCTORATE");
 
   private String value;
 
-  VacancySituationDto(String value) {
+  DegreeDto(String value) {
     this.value = value;
   }
 
@@ -50,8 +58,8 @@ public enum VacancySituationDto {
     return String.valueOf(value);
   }
 
-  public static VacancySituationDto fromValue(String text) {
-    for (VacancySituationDto b : VacancySituationDto.values()) {
+  public static DegreeDto fromValue(String text) {
+    for (DegreeDto b : DegreeDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -59,16 +67,16 @@ public enum VacancySituationDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<VacancySituationDto> {
+  public static class Adapter extends TypeAdapter<DegreeDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final VacancySituationDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final DegreeDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public VacancySituationDto read(final JsonReader jsonReader) throws IOException {
+    public DegreeDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return VacancySituationDto.fromValue(String.valueOf(value));
+      return DegreeDto.fromValue(String.valueOf(value));
     }
   }
 }

@@ -24,20 +24,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets vacancySituationDto
+ * Gets or Sets seemMedicalStatusDto
  */
-@JsonAdapter(VacancySituationDto.Adapter.class)
-public enum VacancySituationDto {
+@JsonAdapter(SeemMedicalStatusDto.Adapter.class)
+public enum SeemMedicalStatusDto {
   
-  IN_PROGRESS("IN_PROGRESS"),
+  FIT("FIT"),
   
-  CLOSED("CLOSED"),
+  UNFIT("UNFIT"),
   
-  CANCELED("CANCELED");
+  FITWITHRESTRICTIONS("FITWITHRESTRICTIONS");
 
   private String value;
 
-  VacancySituationDto(String value) {
+  SeemMedicalStatusDto(String value) {
     this.value = value;
   }
 
@@ -50,8 +50,8 @@ public enum VacancySituationDto {
     return String.valueOf(value);
   }
 
-  public static VacancySituationDto fromValue(String text) {
-    for (VacancySituationDto b : VacancySituationDto.values()) {
+  public static SeemMedicalStatusDto fromValue(String text) {
+    for (SeemMedicalStatusDto b : SeemMedicalStatusDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -59,16 +59,16 @@ public enum VacancySituationDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<VacancySituationDto> {
+  public static class Adapter extends TypeAdapter<SeemMedicalStatusDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final VacancySituationDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final SeemMedicalStatusDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public VacancySituationDto read(final JsonReader jsonReader) throws IOException {
+    public SeemMedicalStatusDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return VacancySituationDto.fromValue(String.valueOf(value));
+      return SeemMedicalStatusDto.fromValue(String.valueOf(value));
     }
   }
 }

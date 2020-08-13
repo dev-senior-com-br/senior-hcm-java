@@ -1,5 +1,5 @@
 /*
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -27,10 +27,12 @@ import org.threeten.bp.LocalDate;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Experiência profissional (Currículo).
+ * ProfessionalExperienceSection
  */
-@ApiModel(description = "Experiência profissional (Currículo).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T13:45:43.649Z")
+
+
+
 public class ProfessionalExperienceSection {
   @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
@@ -110,7 +112,7 @@ public class ProfessionalExperienceSection {
    * Identificador do currículo a qual o interesse está associado.
    * @return resumeId
   **/
-  @ApiModelProperty(required = true, value = "Identificador do currículo a qual o interesse está associado.")
+  @ApiModelProperty(value = "Identificador do currículo a qual o interesse está associado.")
   public String getResumeId() {
     return resumeId;
   }
@@ -182,7 +184,7 @@ public class ProfessionalExperienceSection {
    * Empresa.
    * @return company
   **/
-  @ApiModelProperty(required = true, value = "Empresa.")
+  @ApiModelProperty(value = "Empresa.")
   public String getCompany() {
     return company;
   }
@@ -218,7 +220,7 @@ public class ProfessionalExperienceSection {
    * Cargo.
    * @return position
   **/
-  @ApiModelProperty(required = true, value = "Cargo.")
+  @ApiModelProperty(value = "Cargo.")
   public String getPosition() {
     return position;
   }
@@ -236,7 +238,7 @@ public class ProfessionalExperienceSection {
    * Data inicial.
    * @return startDate
   **/
-  @ApiModelProperty(required = true, value = "Data inicial.")
+  @ApiModelProperty(value = "Data inicial.")
   public LocalDate getStartDate() {
     return startDate;
   }
