@@ -1,5 +1,5 @@
 /*
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -22,6 +22,19 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import br.com.senior.hcm.recruitment.pojos.Ability;
+import br.com.senior.hcm.recruitment.pojos.DisabilityDto;
+import br.com.senior.hcm.recruitment.pojos.EducationSection;
+import br.com.senior.hcm.recruitment.pojos.GenderDto;
+import br.com.senior.hcm.recruitment.pojos.HonorificDto;
+import br.com.senior.hcm.recruitment.pojos.Knowledge;
+import br.com.senior.hcm.recruitment.pojos.LanguageSection;
+import br.com.senior.hcm.recruitment.pojos.MaritalStatusDto;
+import br.com.senior.hcm.recruitment.pojos.PersonalInterestSection;
+import br.com.senior.hcm.recruitment.pojos.PersonalityModelCandidate;
+import br.com.senior.hcm.recruitment.pojos.PositionSought;
+import br.com.senior.hcm.recruitment.pojos.ProfessionalExperienceSection;
+import br.com.senior.hcm.recruitment.pojos.ResumePhoneContact;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,10 +42,12 @@ import org.threeten.bp.LocalDate;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Currículo.
+ * Resume
  */
-@ApiModel(description = "Currículo.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T20:31:14.805Z")
+
+
+
 public class Resume {
   @SerializedName("birthday")
   private LocalDate birthday = null;
@@ -41,7 +56,7 @@ public class Resume {
   private String country = null;
 
   @SerializedName("gender")
-  private Object gender = null;
+  private GenderDto gender = null;
 
   @SerializedName("city")
   private String city = null;
@@ -53,7 +68,7 @@ public class Resume {
   private String postalCode = null;
 
   @SerializedName("educations")
-  private List<Object> educations = null;
+  private List<EducationSection> educations = null;
 
   @SerializedName("instagram")
   private String instagram = null;
@@ -65,13 +80,13 @@ public class Resume {
   private String salaryExpectation = null;
 
   @SerializedName("personalInterests")
-  private List<Object> personalInterests = null;
+  private List<PersonalInterestSection> personalInterests = null;
 
   @SerializedName("googlePlus")
   private String googlePlus = null;
 
   @SerializedName("abilities")
-  private List<Object> abilities = null;
+  private List<Ability> abilities = null;
 
   @SerializedName("number")
   private String number = null;
@@ -86,10 +101,10 @@ public class Resume {
   private String twitter = null;
 
   @SerializedName("personalityModelCandidate")
-  private Object personalityModelCandidate = null;
+  private PersonalityModelCandidate personalityModelCandidate = null;
 
   @SerializedName("children")
-  private Long children = null;
+  private Integer children = null;
 
   @SerializedName("cpf")
   private String cpf = null;
@@ -107,13 +122,13 @@ public class Resume {
   private String attachmentId = null;
 
   @SerializedName("phoneContacts")
-  private List<Object> phoneContacts = null;
+  private List<ResumePhoneContact> phoneContacts = null;
 
   @SerializedName("email")
   private String email = null;
 
   @SerializedName("honorific")
-  private Object honorific = null;
+  private HonorificDto honorific = null;
 
   @SerializedName("updatedAt")
   private OffsetDateTime updatedAt = null;
@@ -122,10 +137,10 @@ public class Resume {
   private String address = null;
 
   @SerializedName("languages")
-  private List<Object> languages = null;
+  private List<LanguageSection> languages = null;
 
   @SerializedName("professionalExperiences")
-  private List<Object> professionalExperiences = null;
+  private List<ProfessionalExperienceSection> professionalExperiences = null;
 
   @SerializedName("photoThumbnailLink")
   private String photoThumbnailLink = null;
@@ -149,13 +164,13 @@ public class Resume {
   private String linkedIn = null;
 
   @SerializedName("disabilities")
-  private List<Object> disabilities = null;
+  private List<DisabilityDto> disabilities = null;
 
   @SerializedName("incompleteNotifications")
-  private Long incompleteNotifications = null;
+  private Integer incompleteNotifications = null;
 
   @SerializedName("positionsSought")
-  private List<Object> positionsSought = null;
+  private List<PositionSought> positionsSought = null;
 
   @SerializedName("name")
   private String name = null;
@@ -170,10 +185,10 @@ public class Resume {
   private Boolean travel = null;
 
   @SerializedName("maritalStatus")
-  private Object maritalStatus = null;
+  private MaritalStatusDto maritalStatus = null;
 
   @SerializedName("knowledges")
-  private List<Object> knowledges = null;
+  private List<Knowledge> knowledges = null;
 
   public Resume birthday(LocalDate birthday) {
     this.birthday = birthday;
@@ -184,7 +199,7 @@ public class Resume {
    * Data de nascimento da pessoa.
    * @return birthday
   **/
-  @ApiModelProperty(required = true, value = "Data de nascimento da pessoa.")
+  @ApiModelProperty(value = "Data de nascimento da pessoa.")
   public LocalDate getBirthday() {
     return birthday;
   }
@@ -211,21 +226,21 @@ public class Resume {
     this.country = country;
   }
 
-  public Resume gender(Object gender) {
+  public Resume gender(GenderDto gender) {
     this.gender = gender;
     return this;
   }
 
    /**
-   * Gênero (Sexo).
+   * Get gender
    * @return gender
   **/
-  @ApiModelProperty(required = true, value = "Gênero (Sexo).")
-  public Object getGender() {
+  @ApiModelProperty(value = "")
+  public GenderDto getGender() {
     return gender;
   }
 
-  public void setGender(Object gender) {
+  public void setGender(GenderDto gender) {
     this.gender = gender;
   }
 
@@ -283,14 +298,14 @@ public class Resume {
     this.postalCode = postalCode;
   }
 
-  public Resume educations(List<Object> educations) {
+  public Resume educations(List<EducationSection> educations) {
     this.educations = educations;
     return this;
   }
 
-  public Resume addEducationsItem(Object educationsItem) {
+  public Resume addEducationsItem(EducationSection educationsItem) {
     if (this.educations == null) {
-      this.educations = new ArrayList<Object>();
+      this.educations = new ArrayList<EducationSection>();
     }
     this.educations.add(educationsItem);
     return this;
@@ -301,11 +316,11 @@ public class Resume {
    * @return educations
   **/
   @ApiModelProperty(value = "Formação acadêmica.")
-  public List<Object> getEducations() {
+  public List<EducationSection> getEducations() {
     return educations;
   }
 
-  public void setEducations(List<Object> educations) {
+  public void setEducations(List<EducationSection> educations) {
     this.educations = educations;
   }
 
@@ -363,14 +378,14 @@ public class Resume {
     this.salaryExpectation = salaryExpectation;
   }
 
-  public Resume personalInterests(List<Object> personalInterests) {
+  public Resume personalInterests(List<PersonalInterestSection> personalInterests) {
     this.personalInterests = personalInterests;
     return this;
   }
 
-  public Resume addPersonalInterestsItem(Object personalInterestsItem) {
+  public Resume addPersonalInterestsItem(PersonalInterestSection personalInterestsItem) {
     if (this.personalInterests == null) {
-      this.personalInterests = new ArrayList<Object>();
+      this.personalInterests = new ArrayList<PersonalInterestSection>();
     }
     this.personalInterests.add(personalInterestsItem);
     return this;
@@ -381,11 +396,11 @@ public class Resume {
    * @return personalInterests
   **/
   @ApiModelProperty(value = "Interesses pessoais.")
-  public List<Object> getPersonalInterests() {
+  public List<PersonalInterestSection> getPersonalInterests() {
     return personalInterests;
   }
 
-  public void setPersonalInterests(List<Object> personalInterests) {
+  public void setPersonalInterests(List<PersonalInterestSection> personalInterests) {
     this.personalInterests = personalInterests;
   }
 
@@ -407,14 +422,14 @@ public class Resume {
     this.googlePlus = googlePlus;
   }
 
-  public Resume abilities(List<Object> abilities) {
+  public Resume abilities(List<Ability> abilities) {
     this.abilities = abilities;
     return this;
   }
 
-  public Resume addAbilitiesItem(Object abilitiesItem) {
+  public Resume addAbilitiesItem(Ability abilitiesItem) {
     if (this.abilities == null) {
-      this.abilities = new ArrayList<Object>();
+      this.abilities = new ArrayList<Ability>();
     }
     this.abilities.add(abilitiesItem);
     return this;
@@ -425,11 +440,11 @@ public class Resume {
    * @return abilities
   **/
   @ApiModelProperty(value = "Habilidades.")
-  public List<Object> getAbilities() {
+  public List<Ability> getAbilities() {
     return abilities;
   }
 
-  public void setAbilities(List<Object> abilities) {
+  public void setAbilities(List<Ability> abilities) {
     this.abilities = abilities;
   }
 
@@ -505,25 +520,25 @@ public class Resume {
     this.twitter = twitter;
   }
 
-  public Resume personalityModelCandidate(Object personalityModelCandidate) {
+  public Resume personalityModelCandidate(PersonalityModelCandidate personalityModelCandidate) {
     this.personalityModelCandidate = personalityModelCandidate;
     return this;
   }
 
    /**
-   * Modelo de personalidade do candidato
+   * Get personalityModelCandidate
    * @return personalityModelCandidate
   **/
-  @ApiModelProperty(value = "Modelo de personalidade do candidato")
-  public Object getPersonalityModelCandidate() {
+  @ApiModelProperty(value = "")
+  public PersonalityModelCandidate getPersonalityModelCandidate() {
     return personalityModelCandidate;
   }
 
-  public void setPersonalityModelCandidate(Object personalityModelCandidate) {
+  public void setPersonalityModelCandidate(PersonalityModelCandidate personalityModelCandidate) {
     this.personalityModelCandidate = personalityModelCandidate;
   }
 
-  public Resume children(Long children) {
+  public Resume children(Integer children) {
     this.children = children;
     return this;
   }
@@ -533,11 +548,11 @@ public class Resume {
    * @return children
   **/
   @ApiModelProperty(value = "Quantidade de filhos.")
-  public Long getChildren() {
+  public Integer getChildren() {
     return children;
   }
 
-  public void setChildren(Long children) {
+  public void setChildren(Integer children) {
     this.children = children;
   }
 
@@ -631,14 +646,14 @@ public class Resume {
     this.attachmentId = attachmentId;
   }
 
-  public Resume phoneContacts(List<Object> phoneContacts) {
+  public Resume phoneContacts(List<ResumePhoneContact> phoneContacts) {
     this.phoneContacts = phoneContacts;
     return this;
   }
 
-  public Resume addPhoneContactsItem(Object phoneContactsItem) {
+  public Resume addPhoneContactsItem(ResumePhoneContact phoneContactsItem) {
     if (this.phoneContacts == null) {
-      this.phoneContacts = new ArrayList<Object>();
+      this.phoneContacts = new ArrayList<ResumePhoneContact>();
     }
     this.phoneContacts.add(phoneContactsItem);
     return this;
@@ -649,11 +664,11 @@ public class Resume {
    * @return phoneContacts
   **/
   @ApiModelProperty(value = "Contatos telefônicos.")
-  public List<Object> getPhoneContacts() {
+  public List<ResumePhoneContact> getPhoneContacts() {
     return phoneContacts;
   }
 
-  public void setPhoneContacts(List<Object> phoneContacts) {
+  public void setPhoneContacts(List<ResumePhoneContact> phoneContacts) {
     this.phoneContacts = phoneContacts;
   }
 
@@ -666,7 +681,7 @@ public class Resume {
    * E-mail.
    * @return email
   **/
-  @ApiModelProperty(required = true, value = "E-mail.")
+  @ApiModelProperty(value = "E-mail.")
   public String getEmail() {
     return email;
   }
@@ -675,21 +690,21 @@ public class Resume {
     this.email = email;
   }
 
-  public Resume honorific(Object honorific) {
+  public Resume honorific(HonorificDto honorific) {
     this.honorific = honorific;
     return this;
   }
 
    /**
-   * Honorífico.
+   * Get honorific
    * @return honorific
   **/
-  @ApiModelProperty(value = "Honorífico.")
-  public Object getHonorific() {
+  @ApiModelProperty(value = "")
+  public HonorificDto getHonorific() {
     return honorific;
   }
 
-  public void setHonorific(Object honorific) {
+  public void setHonorific(HonorificDto honorific) {
     this.honorific = honorific;
   }
 
@@ -729,14 +744,14 @@ public class Resume {
     this.address = address;
   }
 
-  public Resume languages(List<Object> languages) {
+  public Resume languages(List<LanguageSection> languages) {
     this.languages = languages;
     return this;
   }
 
-  public Resume addLanguagesItem(Object languagesItem) {
+  public Resume addLanguagesItem(LanguageSection languagesItem) {
     if (this.languages == null) {
-      this.languages = new ArrayList<Object>();
+      this.languages = new ArrayList<LanguageSection>();
     }
     this.languages.add(languagesItem);
     return this;
@@ -747,22 +762,22 @@ public class Resume {
    * @return languages
   **/
   @ApiModelProperty(value = "Idiomas.")
-  public List<Object> getLanguages() {
+  public List<LanguageSection> getLanguages() {
     return languages;
   }
 
-  public void setLanguages(List<Object> languages) {
+  public void setLanguages(List<LanguageSection> languages) {
     this.languages = languages;
   }
 
-  public Resume professionalExperiences(List<Object> professionalExperiences) {
+  public Resume professionalExperiences(List<ProfessionalExperienceSection> professionalExperiences) {
     this.professionalExperiences = professionalExperiences;
     return this;
   }
 
-  public Resume addProfessionalExperiencesItem(Object professionalExperiencesItem) {
+  public Resume addProfessionalExperiencesItem(ProfessionalExperienceSection professionalExperiencesItem) {
     if (this.professionalExperiences == null) {
-      this.professionalExperiences = new ArrayList<Object>();
+      this.professionalExperiences = new ArrayList<ProfessionalExperienceSection>();
     }
     this.professionalExperiences.add(professionalExperiencesItem);
     return this;
@@ -773,11 +788,11 @@ public class Resume {
    * @return professionalExperiences
   **/
   @ApiModelProperty(value = "Experiências profissionais.")
-  public List<Object> getProfessionalExperiences() {
+  public List<ProfessionalExperienceSection> getProfessionalExperiences() {
     return professionalExperiences;
   }
 
-  public void setProfessionalExperiences(List<Object> professionalExperiences) {
+  public void setProfessionalExperiences(List<ProfessionalExperienceSection> professionalExperiences) {
     this.professionalExperiences = professionalExperiences;
   }
 
@@ -907,14 +922,14 @@ public class Resume {
     this.linkedIn = linkedIn;
   }
 
-  public Resume disabilities(List<Object> disabilities) {
+  public Resume disabilities(List<DisabilityDto> disabilities) {
     this.disabilities = disabilities;
     return this;
   }
 
-  public Resume addDisabilitiesItem(Object disabilitiesItem) {
+  public Resume addDisabilitiesItem(DisabilityDto disabilitiesItem) {
     if (this.disabilities == null) {
-      this.disabilities = new ArrayList<Object>();
+      this.disabilities = new ArrayList<DisabilityDto>();
     }
     this.disabilities.add(disabilitiesItem);
     return this;
@@ -925,15 +940,15 @@ public class Resume {
    * @return disabilities
   **/
   @ApiModelProperty(value = "Deficiências da pessoa.")
-  public List<Object> getDisabilities() {
+  public List<DisabilityDto> getDisabilities() {
     return disabilities;
   }
 
-  public void setDisabilities(List<Object> disabilities) {
+  public void setDisabilities(List<DisabilityDto> disabilities) {
     this.disabilities = disabilities;
   }
 
-  public Resume incompleteNotifications(Long incompleteNotifications) {
+  public Resume incompleteNotifications(Integer incompleteNotifications) {
     this.incompleteNotifications = incompleteNotifications;
     return this;
   }
@@ -943,22 +958,22 @@ public class Resume {
    * @return incompleteNotifications
   **/
   @ApiModelProperty(value = "Número de notificação de currículo incompleto enviadas.")
-  public Long getIncompleteNotifications() {
+  public Integer getIncompleteNotifications() {
     return incompleteNotifications;
   }
 
-  public void setIncompleteNotifications(Long incompleteNotifications) {
+  public void setIncompleteNotifications(Integer incompleteNotifications) {
     this.incompleteNotifications = incompleteNotifications;
   }
 
-  public Resume positionsSought(List<Object> positionsSought) {
+  public Resume positionsSought(List<PositionSought> positionsSought) {
     this.positionsSought = positionsSought;
     return this;
   }
 
-  public Resume addPositionsSoughtItem(Object positionsSoughtItem) {
+  public Resume addPositionsSoughtItem(PositionSought positionsSoughtItem) {
     if (this.positionsSought == null) {
-      this.positionsSought = new ArrayList<Object>();
+      this.positionsSought = new ArrayList<PositionSought>();
     }
     this.positionsSought.add(positionsSoughtItem);
     return this;
@@ -969,11 +984,11 @@ public class Resume {
    * @return positionsSought
   **/
   @ApiModelProperty(value = "Cargos pretendidos.")
-  public List<Object> getPositionsSought() {
+  public List<PositionSought> getPositionsSought() {
     return positionsSought;
   }
 
-  public void setPositionsSought(List<Object> positionsSought) {
+  public void setPositionsSought(List<PositionSought> positionsSought) {
     this.positionsSought = positionsSought;
   }
 
@@ -986,7 +1001,7 @@ public class Resume {
    * Nome completo da pessoa.
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Nome completo da pessoa.")
+  @ApiModelProperty(value = "Nome completo da pessoa.")
   public String getName() {
     return name;
   }
@@ -1049,32 +1064,32 @@ public class Resume {
     this.travel = travel;
   }
 
-  public Resume maritalStatus(Object maritalStatus) {
+  public Resume maritalStatus(MaritalStatusDto maritalStatus) {
     this.maritalStatus = maritalStatus;
     return this;
   }
 
    /**
-   * Estado civil.
+   * Get maritalStatus
    * @return maritalStatus
   **/
-  @ApiModelProperty(value = "Estado civil.")
-  public Object getMaritalStatus() {
+  @ApiModelProperty(value = "")
+  public MaritalStatusDto getMaritalStatus() {
     return maritalStatus;
   }
 
-  public void setMaritalStatus(Object maritalStatus) {
+  public void setMaritalStatus(MaritalStatusDto maritalStatus) {
     this.maritalStatus = maritalStatus;
   }
 
-  public Resume knowledges(List<Object> knowledges) {
+  public Resume knowledges(List<Knowledge> knowledges) {
     this.knowledges = knowledges;
     return this;
   }
 
-  public Resume addKnowledgesItem(Object knowledgesItem) {
+  public Resume addKnowledgesItem(Knowledge knowledgesItem) {
     if (this.knowledges == null) {
-      this.knowledges = new ArrayList<Object>();
+      this.knowledges = new ArrayList<Knowledge>();
     }
     this.knowledges.add(knowledgesItem);
     return this;
@@ -1085,11 +1100,11 @@ public class Resume {
    * @return knowledges
   **/
   @ApiModelProperty(value = "Conhecimentos.")
-  public List<Object> getKnowledges() {
+  public List<Knowledge> getKnowledges() {
     return knowledges;
   }
 
-  public void setKnowledges(List<Object> knowledges) {
+  public void setKnowledges(List<Knowledge> knowledges) {
     this.knowledges = knowledges;
   }
 

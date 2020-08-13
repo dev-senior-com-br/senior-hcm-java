@@ -24,20 +24,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets vacancySituationDto
+ * Gets or Sets educationStatusDto
  */
-@JsonAdapter(VacancySituationDto.Adapter.class)
-public enum VacancySituationDto {
+@JsonAdapter(EducationStatusDto.Adapter.class)
+public enum EducationStatusDto {
   
   IN_PROGRESS("IN_PROGRESS"),
   
-  CLOSED("CLOSED"),
-  
-  CANCELED("CANCELED");
+  DONE("DONE");
 
   private String value;
 
-  VacancySituationDto(String value) {
+  EducationStatusDto(String value) {
     this.value = value;
   }
 
@@ -50,8 +48,8 @@ public enum VacancySituationDto {
     return String.valueOf(value);
   }
 
-  public static VacancySituationDto fromValue(String text) {
-    for (VacancySituationDto b : VacancySituationDto.values()) {
+  public static EducationStatusDto fromValue(String text) {
+    for (EducationStatusDto b : EducationStatusDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -59,16 +57,16 @@ public enum VacancySituationDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<VacancySituationDto> {
+  public static class Adapter extends TypeAdapter<EducationStatusDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final VacancySituationDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final EducationStatusDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public VacancySituationDto read(final JsonReader jsonReader) throws IOException {
+    public EducationStatusDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return VacancySituationDto.fromValue(String.valueOf(value));
+      return EducationStatusDto.fromValue(String.valueOf(value));
     }
   }
 }

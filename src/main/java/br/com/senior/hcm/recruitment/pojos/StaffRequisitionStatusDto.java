@@ -24,20 +24,24 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets vacancySituationDto
+ * Gets or Sets staffRequisitionStatusDto
  */
-@JsonAdapter(VacancySituationDto.Adapter.class)
-public enum VacancySituationDto {
+@JsonAdapter(StaffRequisitionStatusDto.Adapter.class)
+public enum StaffRequisitionStatusDto {
   
-  IN_PROGRESS("IN_PROGRESS"),
+  IN_DEFINITION("IN_DEFINITION"),
   
-  CLOSED("CLOSED"),
+  IN_APPROVAL("IN_APPROVAL"),
+  
+  APPROVED("APPROVED"),
+  
+  REJECTED("REJECTED"),
   
   CANCELED("CANCELED");
 
   private String value;
 
-  VacancySituationDto(String value) {
+  StaffRequisitionStatusDto(String value) {
     this.value = value;
   }
 
@@ -50,8 +54,8 @@ public enum VacancySituationDto {
     return String.valueOf(value);
   }
 
-  public static VacancySituationDto fromValue(String text) {
-    for (VacancySituationDto b : VacancySituationDto.values()) {
+  public static StaffRequisitionStatusDto fromValue(String text) {
+    for (StaffRequisitionStatusDto b : StaffRequisitionStatusDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -59,16 +63,16 @@ public enum VacancySituationDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<VacancySituationDto> {
+  public static class Adapter extends TypeAdapter<StaffRequisitionStatusDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final VacancySituationDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final StaffRequisitionStatusDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public VacancySituationDto read(final JsonReader jsonReader) throws IOException {
+    public StaffRequisitionStatusDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return VacancySituationDto.fromValue(String.valueOf(value));
+      return StaffRequisitionStatusDto.fromValue(String.valueOf(value));
     }
   }
 }

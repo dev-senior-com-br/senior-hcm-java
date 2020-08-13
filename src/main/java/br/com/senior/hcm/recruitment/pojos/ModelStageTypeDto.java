@@ -24,20 +24,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets vacancySituationDto
+ * Gets or Sets modelStageTypeDto
  */
-@JsonAdapter(VacancySituationDto.Adapter.class)
-public enum VacancySituationDto {
+@JsonAdapter(ModelStageTypeDto.Adapter.class)
+public enum ModelStageTypeDto {
   
-  IN_PROGRESS("IN_PROGRESS"),
+  HR("HR"),
   
-  CLOSED("CLOSED"),
+  REQUESTER("REQUESTER"),
   
-  CANCELED("CANCELED");
+  BOTH("BOTH");
 
   private String value;
 
-  VacancySituationDto(String value) {
+  ModelStageTypeDto(String value) {
     this.value = value;
   }
 
@@ -50,8 +50,8 @@ public enum VacancySituationDto {
     return String.valueOf(value);
   }
 
-  public static VacancySituationDto fromValue(String text) {
-    for (VacancySituationDto b : VacancySituationDto.values()) {
+  public static ModelStageTypeDto fromValue(String text) {
+    for (ModelStageTypeDto b : ModelStageTypeDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -59,16 +59,16 @@ public enum VacancySituationDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<VacancySituationDto> {
+  public static class Adapter extends TypeAdapter<ModelStageTypeDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final VacancySituationDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final ModelStageTypeDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public VacancySituationDto read(final JsonReader jsonReader) throws IOException {
+    public ModelStageTypeDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return VacancySituationDto.fromValue(String.valueOf(value));
+      return ModelStageTypeDto.fromValue(String.valueOf(value));
     }
   }
 }
