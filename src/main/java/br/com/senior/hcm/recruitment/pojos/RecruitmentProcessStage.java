@@ -1,5 +1,5 @@
 /*
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -22,29 +22,37 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import br.com.senior.hcm.recruitment.pojos.AprovationTypeDto;
+import br.com.senior.hcm.recruitment.pojos.IntegrationStatusDto;
+import br.com.senior.hcm.recruitment.pojos.ModelStage;
+import br.com.senior.hcm.recruitment.pojos.Person;
+import br.com.senior.hcm.recruitment.pojos.RecruitmentProcess;
+import br.com.senior.hcm.recruitment.pojos.SeemMedicalStatusDto;
 import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Etapa do processo seletivo do candidato.
+ * RecruitmentProcessStage
  */
-@ApiModel(description = "Etapa do processo seletivo do candidato.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T14:23:53.017Z")
+
+
+
 public class RecruitmentProcessStage {
   @SerializedName("process")
-  private Object process = null;
+  private RecruitmentProcess process = null;
 
   @SerializedName("stage")
-  private Object stage = null;
+  private ModelStage stage = null;
 
   @SerializedName("processId")
   private String processId = null;
 
   @SerializedName("seemMedicalStatus")
-  private Object seemMedicalStatus = null;
+  private SeemMedicalStatusDto seemMedicalStatus = null;
 
   @SerializedName("integrationStatus")
-  private Object integrationStatus = null;
+  private IntegrationStatusDto integrationStatus = null;
 
   @SerializedName("integrationSendDate")
   private OffsetDateTime integrationSendDate = null;
@@ -59,47 +67,47 @@ public class RecruitmentProcessStage {
   private OffsetDateTime integrationG5Date = null;
 
   @SerializedName("integrationResponsiblePerson")
-  private Object integrationResponsiblePerson = null;
+  private Person integrationResponsiblePerson = null;
 
   @SerializedName("status")
-  private Object status = null;
+  private AprovationTypeDto status = null;
 
   @SerializedName("stageId")
   private String stageId = null;
 
-  public RecruitmentProcessStage process(Object process) {
+  public RecruitmentProcessStage process(RecruitmentProcess process) {
     this.process = process;
     return this;
   }
 
    /**
-   * Processo a qual está etapa pertence.
+   * Get process
    * @return process
   **/
-  @ApiModelProperty(value = "Processo a qual está etapa pertence.")
-  public Object getProcess() {
+  @ApiModelProperty(value = "")
+  public RecruitmentProcess getProcess() {
     return process;
   }
 
-  public void setProcess(Object process) {
+  public void setProcess(RecruitmentProcess process) {
     this.process = process;
   }
 
-  public RecruitmentProcessStage stage(Object stage) {
+  public RecruitmentProcessStage stage(ModelStage stage) {
     this.stage = stage;
     return this;
   }
 
    /**
-   * Etapa do processo seletivo.
+   * Get stage
    * @return stage
   **/
-  @ApiModelProperty(value = "Etapa do processo seletivo.")
-  public Object getStage() {
+  @ApiModelProperty(value = "")
+  public ModelStage getStage() {
     return stage;
   }
 
-  public void setStage(Object stage) {
+  public void setStage(ModelStage stage) {
     this.stage = stage;
   }
 
@@ -121,39 +129,39 @@ public class RecruitmentProcessStage {
     this.processId = processId;
   }
 
-  public RecruitmentProcessStage seemMedicalStatus(Object seemMedicalStatus) {
+  public RecruitmentProcessStage seemMedicalStatus(SeemMedicalStatusDto seemMedicalStatus) {
     this.seemMedicalStatus = seemMedicalStatus;
     return this;
   }
 
    /**
-   * Status da ficha médica integrada.
+   * Get seemMedicalStatus
    * @return seemMedicalStatus
   **/
-  @ApiModelProperty(value = "Status da ficha médica integrada.")
-  public Object getSeemMedicalStatus() {
+  @ApiModelProperty(value = "")
+  public SeemMedicalStatusDto getSeemMedicalStatus() {
     return seemMedicalStatus;
   }
 
-  public void setSeemMedicalStatus(Object seemMedicalStatus) {
+  public void setSeemMedicalStatus(SeemMedicalStatusDto seemMedicalStatus) {
     this.seemMedicalStatus = seemMedicalStatus;
   }
 
-  public RecruitmentProcessStage integrationStatus(Object integrationStatus) {
+  public RecruitmentProcessStage integrationStatus(IntegrationStatusDto integrationStatus) {
     this.integrationStatus = integrationStatus;
     return this;
   }
 
    /**
-   * Status para gerar a ficha médica e ASO.
+   * Get integrationStatus
    * @return integrationStatus
   **/
-  @ApiModelProperty(value = "Status para gerar a ficha médica e ASO.")
-  public Object getIntegrationStatus() {
+  @ApiModelProperty(value = "")
+  public IntegrationStatusDto getIntegrationStatus() {
     return integrationStatus;
   }
 
-  public void setIntegrationStatus(Object integrationStatus) {
+  public void setIntegrationStatus(IntegrationStatusDto integrationStatus) {
     this.integrationStatus = integrationStatus;
   }
 
@@ -229,39 +237,39 @@ public class RecruitmentProcessStage {
     this.integrationG5Date = integrationG5Date;
   }
 
-  public RecruitmentProcessStage integrationResponsiblePerson(Object integrationResponsiblePerson) {
+  public RecruitmentProcessStage integrationResponsiblePerson(Person integrationResponsiblePerson) {
     this.integrationResponsiblePerson = integrationResponsiblePerson;
     return this;
   }
 
    /**
-   * Responsável por gerar a ficha médica e ASO.
+   * Get integrationResponsiblePerson
    * @return integrationResponsiblePerson
   **/
-  @ApiModelProperty(value = "Responsável por gerar a ficha médica e ASO.")
-  public Object getIntegrationResponsiblePerson() {
+  @ApiModelProperty(value = "")
+  public Person getIntegrationResponsiblePerson() {
     return integrationResponsiblePerson;
   }
 
-  public void setIntegrationResponsiblePerson(Object integrationResponsiblePerson) {
+  public void setIntegrationResponsiblePerson(Person integrationResponsiblePerson) {
     this.integrationResponsiblePerson = integrationResponsiblePerson;
   }
 
-  public RecruitmentProcessStage status(Object status) {
+  public RecruitmentProcessStage status(AprovationTypeDto status) {
     this.status = status;
     return this;
   }
 
    /**
-   * Status da etapa.
+   * Get status
    * @return status
   **/
-  @ApiModelProperty(value = "Status da etapa.")
-  public Object getStatus() {
+  @ApiModelProperty(value = "")
+  public AprovationTypeDto getStatus() {
     return status;
   }
 
-  public void setStatus(Object status) {
+  public void setStatus(AprovationTypeDto status) {
     this.status = status;
   }
 

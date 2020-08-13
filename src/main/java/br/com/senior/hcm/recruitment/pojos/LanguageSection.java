@@ -22,50 +22,40 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import br.com.senior.hcm.recruitment.pojos.DegreeDto;
-import br.com.senior.hcm.recruitment.pojos.EducationStatusDto;
+import br.com.senior.hcm.recruitment.pojos.LanguageProficiencyDto;
 import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * EducationSection
+ * LanguageSection
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T14:23:53.017Z")
 
 
 
-public class EducationSection {
+public class LanguageSection {
   @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
 
   @SerializedName("resumeId")
   private String resumeId = null;
 
-  @SerializedName("school")
-  private String school = null;
-
   @SerializedName("g5Id")
   private String g5Id = null;
 
-  @SerializedName("degree")
-  private DegreeDto degree = null;
-
-  @SerializedName("conclusionYear")
-  private Integer conclusionYear = null;
+  @SerializedName("language")
+  private String language = null;
 
   @SerializedName("id")
   private String id = null;
 
-  @SerializedName("fieldOfStudy")
-  private String fieldOfStudy = null;
-
-  @SerializedName("status")
-  private EducationStatusDto status = null;
+  @SerializedName("proficiency")
+  private LanguageProficiencyDto proficiency = null;
 
   @SerializedName("updatedAt")
   private OffsetDateTime updatedAt = null;
 
-  public EducationSection createdAt(OffsetDateTime createdAt) {
+  public LanguageSection createdAt(OffsetDateTime createdAt) {
     this.createdAt = createdAt;
     return this;
   }
@@ -83,16 +73,16 @@ public class EducationSection {
     this.createdAt = createdAt;
   }
 
-  public EducationSection resumeId(String resumeId) {
+  public LanguageSection resumeId(String resumeId) {
     this.resumeId = resumeId;
     return this;
   }
 
    /**
-   * Identificador do currículo a qual a educação está associada.
+   * Identificador do currículo à qual o idioma está associado.
    * @return resumeId
   **/
-  @ApiModelProperty(value = "Identificador do currículo a qual a educação está associada.")
+  @ApiModelProperty(value = "Identificador do currículo à qual o idioma está associado.")
   public String getResumeId() {
     return resumeId;
   }
@@ -101,25 +91,7 @@ public class EducationSection {
     this.resumeId = resumeId;
   }
 
-  public EducationSection school(String school) {
-    this.school = school;
-    return this;
-  }
-
-   /**
-   * Instituição de ensino.
-   * @return school
-  **/
-  @ApiModelProperty(value = "Instituição de ensino.")
-  public String getSchool() {
-    return school;
-  }
-
-  public void setSchool(String school) {
-    this.school = school;
-  }
-
-  public EducationSection g5Id(String g5Id) {
+  public LanguageSection g5Id(String g5Id) {
     this.g5Id = g5Id;
     return this;
   }
@@ -137,43 +109,25 @@ public class EducationSection {
     this.g5Id = g5Id;
   }
 
-  public EducationSection degree(DegreeDto degree) {
-    this.degree = degree;
+  public LanguageSection language(String language) {
+    this.language = language;
     return this;
   }
 
    /**
-   * Get degree
-   * @return degree
+   * Idioma.
+   * @return language
   **/
-  @ApiModelProperty(value = "")
-  public DegreeDto getDegree() {
-    return degree;
+  @ApiModelProperty(value = "Idioma.")
+  public String getLanguage() {
+    return language;
   }
 
-  public void setDegree(DegreeDto degree) {
-    this.degree = degree;
+  public void setLanguage(String language) {
+    this.language = language;
   }
 
-  public EducationSection conclusionYear(Integer conclusionYear) {
-    this.conclusionYear = conclusionYear;
-    return this;
-  }
-
-   /**
-   * Ano de conclusão.
-   * @return conclusionYear
-  **/
-  @ApiModelProperty(value = "Ano de conclusão.")
-  public Integer getConclusionYear() {
-    return conclusionYear;
-  }
-
-  public void setConclusionYear(Integer conclusionYear) {
-    this.conclusionYear = conclusionYear;
-  }
-
-  public EducationSection id(String id) {
+  public LanguageSection id(String id) {
     this.id = id;
     return this;
   }
@@ -191,43 +145,25 @@ public class EducationSection {
     this.id = id;
   }
 
-  public EducationSection fieldOfStudy(String fieldOfStudy) {
-    this.fieldOfStudy = fieldOfStudy;
+  public LanguageSection proficiency(LanguageProficiencyDto proficiency) {
+    this.proficiency = proficiency;
     return this;
   }
 
    /**
-   * Curso.
-   * @return fieldOfStudy
-  **/
-  @ApiModelProperty(value = "Curso.")
-  public String getFieldOfStudy() {
-    return fieldOfStudy;
-  }
-
-  public void setFieldOfStudy(String fieldOfStudy) {
-    this.fieldOfStudy = fieldOfStudy;
-  }
-
-  public EducationSection status(EducationStatusDto status) {
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Get status
-   * @return status
+   * Get proficiency
+   * @return proficiency
   **/
   @ApiModelProperty(value = "")
-  public EducationStatusDto getStatus() {
-    return status;
+  public LanguageProficiencyDto getProficiency() {
+    return proficiency;
   }
 
-  public void setStatus(EducationStatusDto status) {
-    this.status = status;
+  public void setProficiency(LanguageProficiencyDto proficiency) {
+    this.proficiency = proficiency;
   }
 
-  public EducationSection updatedAt(OffsetDateTime updatedAt) {
+  public LanguageSection updatedAt(OffsetDateTime updatedAt) {
     this.updatedAt = updatedAt;
     return this;
   }
@@ -254,39 +190,33 @@ public class EducationSection {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EducationSection educationSection = (EducationSection) o;
-    return Objects.equals(this.createdAt, educationSection.createdAt) &&
-        Objects.equals(this.resumeId, educationSection.resumeId) &&
-        Objects.equals(this.school, educationSection.school) &&
-        Objects.equals(this.g5Id, educationSection.g5Id) &&
-        Objects.equals(this.degree, educationSection.degree) &&
-        Objects.equals(this.conclusionYear, educationSection.conclusionYear) &&
-        Objects.equals(this.id, educationSection.id) &&
-        Objects.equals(this.fieldOfStudy, educationSection.fieldOfStudy) &&
-        Objects.equals(this.status, educationSection.status) &&
-        Objects.equals(this.updatedAt, educationSection.updatedAt);
+    LanguageSection languageSection = (LanguageSection) o;
+    return Objects.equals(this.createdAt, languageSection.createdAt) &&
+        Objects.equals(this.resumeId, languageSection.resumeId) &&
+        Objects.equals(this.g5Id, languageSection.g5Id) &&
+        Objects.equals(this.language, languageSection.language) &&
+        Objects.equals(this.id, languageSection.id) &&
+        Objects.equals(this.proficiency, languageSection.proficiency) &&
+        Objects.equals(this.updatedAt, languageSection.updatedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(createdAt, resumeId, school, g5Id, degree, conclusionYear, id, fieldOfStudy, status, updatedAt);
+    return Objects.hash(createdAt, resumeId, g5Id, language, id, proficiency, updatedAt);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EducationSection {\n");
+    sb.append("class LanguageSection {\n");
     
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    resumeId: ").append(toIndentedString(resumeId)).append("\n");
-    sb.append("    school: ").append(toIndentedString(school)).append("\n");
     sb.append("    g5Id: ").append(toIndentedString(g5Id)).append("\n");
-    sb.append("    degree: ").append(toIndentedString(degree)).append("\n");
-    sb.append("    conclusionYear: ").append(toIndentedString(conclusionYear)).append("\n");
+    sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    fieldOfStudy: ").append(toIndentedString(fieldOfStudy)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    proficiency: ").append(toIndentedString(proficiency)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("}");
     return sb.toString();
