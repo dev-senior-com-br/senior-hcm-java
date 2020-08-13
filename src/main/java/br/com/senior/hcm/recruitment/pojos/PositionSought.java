@@ -22,50 +22,57 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import br.com.senior.hcm.recruitment.pojos.DegreeDto;
-import br.com.senior.hcm.recruitment.pojos.EducationStatusDto;
 import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * EducationSection
+ * PositionSought
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T15:24:45.430Z")
 
 
 
-public class EducationSection {
+public class PositionSought {
+  @SerializedName("area")
+  private String area = null;
+
   @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
 
   @SerializedName("resumeId")
   private String resumeId = null;
 
-  @SerializedName("school")
-  private String school = null;
-
   @SerializedName("g5Id")
   private String g5Id = null;
-
-  @SerializedName("degree")
-  private DegreeDto degree = null;
-
-  @SerializedName("conclusionYear")
-  private Integer conclusionYear = null;
 
   @SerializedName("id")
   private String id = null;
 
-  @SerializedName("fieldOfStudy")
-  private String fieldOfStudy = null;
-
-  @SerializedName("status")
-  private EducationStatusDto status = null;
+  @SerializedName("position")
+  private String position = null;
 
   @SerializedName("updatedAt")
   private OffsetDateTime updatedAt = null;
 
-  public EducationSection createdAt(OffsetDateTime createdAt) {
+  public PositionSought area(String area) {
+    this.area = area;
+    return this;
+  }
+
+   /**
+   * Descrição da área pretendida.
+   * @return area
+  **/
+  @ApiModelProperty(value = "Descrição da área pretendida.")
+  public String getArea() {
+    return area;
+  }
+
+  public void setArea(String area) {
+    this.area = area;
+  }
+
+  public PositionSought createdAt(OffsetDateTime createdAt) {
     this.createdAt = createdAt;
     return this;
   }
@@ -83,16 +90,16 @@ public class EducationSection {
     this.createdAt = createdAt;
   }
 
-  public EducationSection resumeId(String resumeId) {
+  public PositionSought resumeId(String resumeId) {
     this.resumeId = resumeId;
     return this;
   }
 
    /**
-   * Identificador do currículo a qual a educação está associada.
+   * Identificador único do currículo.
    * @return resumeId
   **/
-  @ApiModelProperty(value = "Identificador do currículo a qual a educação está associada.")
+  @ApiModelProperty(value = "Identificador único do currículo.")
   public String getResumeId() {
     return resumeId;
   }
@@ -101,25 +108,7 @@ public class EducationSection {
     this.resumeId = resumeId;
   }
 
-  public EducationSection school(String school) {
-    this.school = school;
-    return this;
-  }
-
-   /**
-   * Instituição de ensino.
-   * @return school
-  **/
-  @ApiModelProperty(value = "Instituição de ensino.")
-  public String getSchool() {
-    return school;
-  }
-
-  public void setSchool(String school) {
-    this.school = school;
-  }
-
-  public EducationSection g5Id(String g5Id) {
+  public PositionSought g5Id(String g5Id) {
     this.g5Id = g5Id;
     return this;
   }
@@ -137,43 +126,7 @@ public class EducationSection {
     this.g5Id = g5Id;
   }
 
-  public EducationSection degree(DegreeDto degree) {
-    this.degree = degree;
-    return this;
-  }
-
-   /**
-   * Get degree
-   * @return degree
-  **/
-  @ApiModelProperty(value = "")
-  public DegreeDto getDegree() {
-    return degree;
-  }
-
-  public void setDegree(DegreeDto degree) {
-    this.degree = degree;
-  }
-
-  public EducationSection conclusionYear(Integer conclusionYear) {
-    this.conclusionYear = conclusionYear;
-    return this;
-  }
-
-   /**
-   * Ano de conclusão.
-   * @return conclusionYear
-  **/
-  @ApiModelProperty(value = "Ano de conclusão.")
-  public Integer getConclusionYear() {
-    return conclusionYear;
-  }
-
-  public void setConclusionYear(Integer conclusionYear) {
-    this.conclusionYear = conclusionYear;
-  }
-
-  public EducationSection id(String id) {
+  public PositionSought id(String id) {
     this.id = id;
     return this;
   }
@@ -191,43 +144,25 @@ public class EducationSection {
     this.id = id;
   }
 
-  public EducationSection fieldOfStudy(String fieldOfStudy) {
-    this.fieldOfStudy = fieldOfStudy;
+  public PositionSought position(String position) {
+    this.position = position;
     return this;
   }
 
    /**
-   * Curso.
-   * @return fieldOfStudy
+   * Descrição do cargo pretendido.
+   * @return position
   **/
-  @ApiModelProperty(value = "Curso.")
-  public String getFieldOfStudy() {
-    return fieldOfStudy;
+  @ApiModelProperty(value = "Descrição do cargo pretendido.")
+  public String getPosition() {
+    return position;
   }
 
-  public void setFieldOfStudy(String fieldOfStudy) {
-    this.fieldOfStudy = fieldOfStudy;
+  public void setPosition(String position) {
+    this.position = position;
   }
 
-  public EducationSection status(EducationStatusDto status) {
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Get status
-   * @return status
-  **/
-  @ApiModelProperty(value = "")
-  public EducationStatusDto getStatus() {
-    return status;
-  }
-
-  public void setStatus(EducationStatusDto status) {
-    this.status = status;
-  }
-
-  public EducationSection updatedAt(OffsetDateTime updatedAt) {
+  public PositionSought updatedAt(OffsetDateTime updatedAt) {
     this.updatedAt = updatedAt;
     return this;
   }
@@ -254,39 +189,33 @@ public class EducationSection {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EducationSection educationSection = (EducationSection) o;
-    return Objects.equals(this.createdAt, educationSection.createdAt) &&
-        Objects.equals(this.resumeId, educationSection.resumeId) &&
-        Objects.equals(this.school, educationSection.school) &&
-        Objects.equals(this.g5Id, educationSection.g5Id) &&
-        Objects.equals(this.degree, educationSection.degree) &&
-        Objects.equals(this.conclusionYear, educationSection.conclusionYear) &&
-        Objects.equals(this.id, educationSection.id) &&
-        Objects.equals(this.fieldOfStudy, educationSection.fieldOfStudy) &&
-        Objects.equals(this.status, educationSection.status) &&
-        Objects.equals(this.updatedAt, educationSection.updatedAt);
+    PositionSought positionSought = (PositionSought) o;
+    return Objects.equals(this.area, positionSought.area) &&
+        Objects.equals(this.createdAt, positionSought.createdAt) &&
+        Objects.equals(this.resumeId, positionSought.resumeId) &&
+        Objects.equals(this.g5Id, positionSought.g5Id) &&
+        Objects.equals(this.id, positionSought.id) &&
+        Objects.equals(this.position, positionSought.position) &&
+        Objects.equals(this.updatedAt, positionSought.updatedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(createdAt, resumeId, school, g5Id, degree, conclusionYear, id, fieldOfStudy, status, updatedAt);
+    return Objects.hash(area, createdAt, resumeId, g5Id, id, position, updatedAt);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EducationSection {\n");
+    sb.append("class PositionSought {\n");
     
+    sb.append("    area: ").append(toIndentedString(area)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    resumeId: ").append(toIndentedString(resumeId)).append("\n");
-    sb.append("    school: ").append(toIndentedString(school)).append("\n");
     sb.append("    g5Id: ").append(toIndentedString(g5Id)).append("\n");
-    sb.append("    degree: ").append(toIndentedString(degree)).append("\n");
-    sb.append("    conclusionYear: ").append(toIndentedString(conclusionYear)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    fieldOfStudy: ").append(toIndentedString(fieldOfStudy)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("}");
     return sb.toString();

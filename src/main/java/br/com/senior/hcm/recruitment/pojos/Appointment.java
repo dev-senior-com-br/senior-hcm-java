@@ -1,5 +1,5 @@
 /*
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -22,16 +22,22 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import br.com.senior.hcm.recruitment.pojos.BasicCandidateSummary;
+import br.com.senior.hcm.recruitment.pojos.EmployeeSummary;
+import br.com.senior.hcm.recruitment.pojos.ModelStage;
+import br.com.senior.hcm.recruitment.pojos.Vacancy;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.threeten.bp.LocalDate;
 
 /**
- * Compromisso do processo seletivo.
+ * Appointment
  */
-@ApiModel(description = "Compromisso do processo seletivo.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T15:24:45.430Z")
+
+
+
 public class Appointment {
   @SerializedName("date")
   private LocalDate date = null;
@@ -40,13 +46,13 @@ public class Appointment {
   private String subject = null;
 
   @SerializedName("candidates")
-  private List<Object> candidates = new ArrayList<Object>();
+  private List<BasicCandidateSummary> candidates = null;
 
   @SerializedName("site")
   private String site = null;
 
   @SerializedName("stage")
-  private Object stage = null;
+  private ModelStage stage = null;
 
   @SerializedName("startTime")
   private String startTime = null;
@@ -61,10 +67,10 @@ public class Appointment {
   private String endTime = null;
 
   @SerializedName("employees")
-  private List<Object> employees = null;
+  private List<EmployeeSummary> employees = null;
 
   @SerializedName("vacancy")
-  private Object vacancy = null;
+  private Vacancy vacancy = null;
 
   @SerializedName("vacancyId")
   private String vacancyId = null;
@@ -81,7 +87,7 @@ public class Appointment {
    * Data do compromisso.
    * @return date
   **/
-  @ApiModelProperty(required = true, value = "Data do compromisso.")
+  @ApiModelProperty(value = "Data do compromisso.")
   public LocalDate getDate() {
     return date;
   }
@@ -99,7 +105,7 @@ public class Appointment {
    * Assunto do compromisso.
    * @return subject
   **/
-  @ApiModelProperty(required = true, value = "Assunto do compromisso.")
+  @ApiModelProperty(value = "Assunto do compromisso.")
   public String getSubject() {
     return subject;
   }
@@ -108,12 +114,15 @@ public class Appointment {
     this.subject = subject;
   }
 
-  public Appointment candidates(List<Object> candidates) {
+  public Appointment candidates(List<BasicCandidateSummary> candidates) {
     this.candidates = candidates;
     return this;
   }
 
-  public Appointment addCandidatesItem(Object candidatesItem) {
+  public Appointment addCandidatesItem(BasicCandidateSummary candidatesItem) {
+    if (this.candidates == null) {
+      this.candidates = new ArrayList<BasicCandidateSummary>();
+    }
     this.candidates.add(candidatesItem);
     return this;
   }
@@ -122,12 +131,12 @@ public class Appointment {
    * Candidatos que participarão do compromisso.
    * @return candidates
   **/
-  @ApiModelProperty(required = true, value = "Candidatos que participarão do compromisso.")
-  public List<Object> getCandidates() {
+  @ApiModelProperty(value = "Candidatos que participarão do compromisso.")
+  public List<BasicCandidateSummary> getCandidates() {
     return candidates;
   }
 
-  public void setCandidates(List<Object> candidates) {
+  public void setCandidates(List<BasicCandidateSummary> candidates) {
     this.candidates = candidates;
   }
 
@@ -140,7 +149,7 @@ public class Appointment {
    * Local do compromisso.
    * @return site
   **/
-  @ApiModelProperty(required = true, value = "Local do compromisso.")
+  @ApiModelProperty(value = "Local do compromisso.")
   public String getSite() {
     return site;
   }
@@ -149,21 +158,21 @@ public class Appointment {
     this.site = site;
   }
 
-  public Appointment stage(Object stage) {
+  public Appointment stage(ModelStage stage) {
     this.stage = stage;
     return this;
   }
 
    /**
-   * Etapa do processo seletivo.
+   * Get stage
    * @return stage
   **/
-  @ApiModelProperty(value = "Etapa do processo seletivo.")
-  public Object getStage() {
+  @ApiModelProperty(value = "")
+  public ModelStage getStage() {
     return stage;
   }
 
-  public void setStage(Object stage) {
+  public void setStage(ModelStage stage) {
     this.stage = stage;
   }
 
@@ -176,7 +185,7 @@ public class Appointment {
    * Horário de início do compromisso.
    * @return startTime
   **/
-  @ApiModelProperty(required = true, value = "Horário de início do compromisso.")
+  @ApiModelProperty(value = "Horário de início do compromisso.")
   public String getStartTime() {
     return startTime;
   }
@@ -230,7 +239,7 @@ public class Appointment {
    * Horário de término do compromisso.
    * @return endTime
   **/
-  @ApiModelProperty(required = true, value = "Horário de término do compromisso.")
+  @ApiModelProperty(value = "Horário de término do compromisso.")
   public String getEndTime() {
     return endTime;
   }
@@ -239,14 +248,14 @@ public class Appointment {
     this.endTime = endTime;
   }
 
-  public Appointment employees(List<Object> employees) {
+  public Appointment employees(List<EmployeeSummary> employees) {
     this.employees = employees;
     return this;
   }
 
-  public Appointment addEmployeesItem(Object employeesItem) {
+  public Appointment addEmployeesItem(EmployeeSummary employeesItem) {
     if (this.employees == null) {
-      this.employees = new ArrayList<Object>();
+      this.employees = new ArrayList<EmployeeSummary>();
     }
     this.employees.add(employeesItem);
     return this;
@@ -257,29 +266,29 @@ public class Appointment {
    * @return employees
   **/
   @ApiModelProperty(value = "Colaboradores que participarão do compromisso para ajudar a avaliar os candidatos.")
-  public List<Object> getEmployees() {
+  public List<EmployeeSummary> getEmployees() {
     return employees;
   }
 
-  public void setEmployees(List<Object> employees) {
+  public void setEmployees(List<EmployeeSummary> employees) {
     this.employees = employees;
   }
 
-  public Appointment vacancy(Object vacancy) {
+  public Appointment vacancy(Vacancy vacancy) {
     this.vacancy = vacancy;
     return this;
   }
 
    /**
-   * Vaga do processo seletivo.
+   * Get vacancy
    * @return vacancy
   **/
-  @ApiModelProperty(value = "Vaga do processo seletivo.")
-  public Object getVacancy() {
+  @ApiModelProperty(value = "")
+  public Vacancy getVacancy() {
     return vacancy;
   }
 
-  public void setVacancy(Object vacancy) {
+  public void setVacancy(Vacancy vacancy) {
     this.vacancy = vacancy;
   }
 
@@ -289,10 +298,10 @@ public class Appointment {
   }
 
    /**
-   * Identificador único da vaga  do processo seletivo.
+   * Identificador único da vaga &amp;#9;do processo seletivo.
    * @return vacancyId
   **/
-  @ApiModelProperty(value = "Identificador único da vaga  do processo seletivo.")
+  @ApiModelProperty(value = "Identificador único da vaga &#9;do processo seletivo.")
   public String getVacancyId() {
     return vacancyId;
   }
