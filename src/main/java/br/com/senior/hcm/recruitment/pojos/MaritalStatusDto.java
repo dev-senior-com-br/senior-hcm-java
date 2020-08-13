@@ -24,20 +24,30 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets vacancySituationDto
+ * Gets or Sets maritalStatusDto
  */
-@JsonAdapter(VacancySituationDto.Adapter.class)
-public enum VacancySituationDto {
+@JsonAdapter(MaritalStatusDto.Adapter.class)
+public enum MaritalStatusDto {
   
-  IN_PROGRESS("IN_PROGRESS"),
+  SINGLE("SINGLE"),
   
-  CLOSED("CLOSED"),
+  MARRIED("MARRIED"),
   
-  CANCELED("CANCELED");
+  DIVORCED("DIVORCED"),
+  
+  WIDOWER("WIDOWER"),
+  
+  CONCUBINAGE("CONCUBINAGE"),
+  
+  SEPARATED("SEPARATED"),
+  
+  STABLE_UNION("STABLE_UNION"),
+  
+  OTHER("OTHER");
 
   private String value;
 
-  VacancySituationDto(String value) {
+  MaritalStatusDto(String value) {
     this.value = value;
   }
 
@@ -50,8 +60,8 @@ public enum VacancySituationDto {
     return String.valueOf(value);
   }
 
-  public static VacancySituationDto fromValue(String text) {
-    for (VacancySituationDto b : VacancySituationDto.values()) {
+  public static MaritalStatusDto fromValue(String text) {
+    for (MaritalStatusDto b : MaritalStatusDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -59,16 +69,16 @@ public enum VacancySituationDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<VacancySituationDto> {
+  public static class Adapter extends TypeAdapter<MaritalStatusDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final VacancySituationDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final MaritalStatusDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public VacancySituationDto read(final JsonReader jsonReader) throws IOException {
+    public MaritalStatusDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return VacancySituationDto.fromValue(String.valueOf(value));
+      return MaritalStatusDto.fromValue(String.valueOf(value));
     }
   }
 }

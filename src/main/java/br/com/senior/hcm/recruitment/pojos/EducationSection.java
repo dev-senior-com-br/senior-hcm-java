@@ -1,5 +1,5 @@
 /*
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -22,14 +22,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import br.com.senior.hcm.recruitment.pojos.DegreeDto;
+import br.com.senior.hcm.recruitment.pojos.EducationStatusDto;
 import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Educação (Currículo).
+ * EducationSection
  */
-@ApiModel(description = "Educação (Currículo).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T15:43:18.879Z")
+
+
+
 public class EducationSection {
   @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
@@ -44,10 +48,10 @@ public class EducationSection {
   private String g5Id = null;
 
   @SerializedName("degree")
-  private Object degree = null;
+  private DegreeDto degree = null;
 
   @SerializedName("conclusionYear")
-  private Long conclusionYear = null;
+  private Integer conclusionYear = null;
 
   @SerializedName("id")
   private String id = null;
@@ -56,7 +60,7 @@ public class EducationSection {
   private String fieldOfStudy = null;
 
   @SerializedName("status")
-  private Object status = null;
+  private EducationStatusDto status = null;
 
   @SerializedName("updatedAt")
   private OffsetDateTime updatedAt = null;
@@ -88,7 +92,7 @@ public class EducationSection {
    * Identificador do currículo a qual a educação está associada.
    * @return resumeId
   **/
-  @ApiModelProperty(required = true, value = "Identificador do currículo a qual a educação está associada.")
+  @ApiModelProperty(value = "Identificador do currículo a qual a educação está associada.")
   public String getResumeId() {
     return resumeId;
   }
@@ -106,7 +110,7 @@ public class EducationSection {
    * Instituição de ensino.
    * @return school
   **/
-  @ApiModelProperty(required = true, value = "Instituição de ensino.")
+  @ApiModelProperty(value = "Instituição de ensino.")
   public String getSchool() {
     return school;
   }
@@ -133,25 +137,25 @@ public class EducationSection {
     this.g5Id = g5Id;
   }
 
-  public EducationSection degree(Object degree) {
+  public EducationSection degree(DegreeDto degree) {
     this.degree = degree;
     return this;
   }
 
    /**
-   * Nível.
+   * Get degree
    * @return degree
   **/
-  @ApiModelProperty(required = true, value = "Nível.")
-  public Object getDegree() {
+  @ApiModelProperty(value = "")
+  public DegreeDto getDegree() {
     return degree;
   }
 
-  public void setDegree(Object degree) {
+  public void setDegree(DegreeDto degree) {
     this.degree = degree;
   }
 
-  public EducationSection conclusionYear(Long conclusionYear) {
+  public EducationSection conclusionYear(Integer conclusionYear) {
     this.conclusionYear = conclusionYear;
     return this;
   }
@@ -161,11 +165,11 @@ public class EducationSection {
    * @return conclusionYear
   **/
   @ApiModelProperty(value = "Ano de conclusão.")
-  public Long getConclusionYear() {
+  public Integer getConclusionYear() {
     return conclusionYear;
   }
 
-  public void setConclusionYear(Long conclusionYear) {
+  public void setConclusionYear(Integer conclusionYear) {
     this.conclusionYear = conclusionYear;
   }
 
@@ -196,7 +200,7 @@ public class EducationSection {
    * Curso.
    * @return fieldOfStudy
   **/
-  @ApiModelProperty(required = true, value = "Curso.")
+  @ApiModelProperty(value = "Curso.")
   public String getFieldOfStudy() {
     return fieldOfStudy;
   }
@@ -205,21 +209,21 @@ public class EducationSection {
     this.fieldOfStudy = fieldOfStudy;
   }
 
-  public EducationSection status(Object status) {
+  public EducationSection status(EducationStatusDto status) {
     this.status = status;
     return this;
   }
 
    /**
-   * Situação do curso.
+   * Get status
    * @return status
   **/
-  @ApiModelProperty(required = true, value = "Situação do curso.")
-  public Object getStatus() {
+  @ApiModelProperty(value = "")
+  public EducationStatusDto getStatus() {
     return status;
   }
 
-  public void setStatus(Object status) {
+  public void setStatus(EducationStatusDto status) {
     this.status = status;
   }
 
