@@ -1,5 +1,5 @@
 /*
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -22,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.PersonPhoneContactPhoneContact;
 import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 
@@ -29,7 +30,10 @@ import org.threeten.bp.OffsetDateTime;
  * Contato telefônico (Currículo).
  */
 @ApiModel(description = "Contato telefônico (Currículo).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T11:29:04.266Z")
+
+
+
 public class ResumePhoneContact {
   @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
@@ -38,7 +42,7 @@ public class ResumePhoneContact {
   private String resumeId = null;
 
   @SerializedName("phoneContact")
-  private Object phoneContact = null;
+  private PersonPhoneContactPhoneContact phoneContact = null;
 
   @SerializedName("g5Id")
   private String g5Id = null;
@@ -85,21 +89,21 @@ public class ResumePhoneContact {
     this.resumeId = resumeId;
   }
 
-  public ResumePhoneContact phoneContact(Object phoneContact) {
+  public ResumePhoneContact phoneContact(PersonPhoneContactPhoneContact phoneContact) {
     this.phoneContact = phoneContact;
     return this;
   }
 
    /**
-   * Identificador único do telefone de contato.
+   * Get phoneContact
    * @return phoneContact
   **/
-  @ApiModelProperty(required = true, value = "Identificador único do telefone de contato.")
-  public Object getPhoneContact() {
+  @ApiModelProperty(required = true, value = "")
+  public PersonPhoneContactPhoneContact getPhoneContact() {
     return phoneContact;
   }
 
-  public void setPhoneContact(Object phoneContact) {
+  public void setPhoneContact(PersonPhoneContactPhoneContact phoneContact) {
     this.phoneContact = phoneContact;
   }
 

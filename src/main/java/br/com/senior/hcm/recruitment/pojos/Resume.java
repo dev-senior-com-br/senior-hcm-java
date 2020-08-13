@@ -1,5 +1,5 @@
 /*
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -22,6 +22,10 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.ResumeGender;
+import io.swagger.client.model.ResumeHonorific;
+import io.swagger.client.model.ResumeMaritalStatus;
+import io.swagger.client.model.ResumePersonalityModelCandidate;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +36,10 @@ import org.threeten.bp.OffsetDateTime;
  * Currículo.
  */
 @ApiModel(description = "Currículo.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-24T19:32:03.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T11:29:04.266Z")
+
+
+
 public class Resume {
   @SerializedName("birthday")
   private LocalDate birthday = null;
@@ -41,7 +48,7 @@ public class Resume {
   private String country = null;
 
   @SerializedName("gender")
-  private Object gender = null;
+  private ResumeGender gender = null;
 
   @SerializedName("city")
   private String city = null;
@@ -86,7 +93,7 @@ public class Resume {
   private String twitter = null;
 
   @SerializedName("personalityModelCandidate")
-  private Object personalityModelCandidate = null;
+  private ResumePersonalityModelCandidate personalityModelCandidate = null;
 
   @SerializedName("children")
   private Long children = null;
@@ -113,7 +120,7 @@ public class Resume {
   private String email = null;
 
   @SerializedName("honorific")
-  private Object honorific = null;
+  private ResumeHonorific honorific = null;
 
   @SerializedName("updatedAt")
   private OffsetDateTime updatedAt = null;
@@ -170,7 +177,7 @@ public class Resume {
   private Boolean travel = null;
 
   @SerializedName("maritalStatus")
-  private Object maritalStatus = null;
+  private ResumeMaritalStatus maritalStatus = null;
 
   @SerializedName("knowledges")
   private List<Object> knowledges = null;
@@ -211,21 +218,21 @@ public class Resume {
     this.country = country;
   }
 
-  public Resume gender(Object gender) {
+  public Resume gender(ResumeGender gender) {
     this.gender = gender;
     return this;
   }
 
    /**
-   * Gênero (Sexo).
+   * Get gender
    * @return gender
   **/
-  @ApiModelProperty(required = true, value = "Gênero (Sexo).")
-  public Object getGender() {
+  @ApiModelProperty(required = true, value = "")
+  public ResumeGender getGender() {
     return gender;
   }
 
-  public void setGender(Object gender) {
+  public void setGender(ResumeGender gender) {
     this.gender = gender;
   }
 
@@ -505,21 +512,21 @@ public class Resume {
     this.twitter = twitter;
   }
 
-  public Resume personalityModelCandidate(Object personalityModelCandidate) {
+  public Resume personalityModelCandidate(ResumePersonalityModelCandidate personalityModelCandidate) {
     this.personalityModelCandidate = personalityModelCandidate;
     return this;
   }
 
    /**
-   * Modelo de personalidade do candidato
+   * Get personalityModelCandidate
    * @return personalityModelCandidate
   **/
-  @ApiModelProperty(value = "Modelo de personalidade do candidato")
-  public Object getPersonalityModelCandidate() {
+  @ApiModelProperty(value = "")
+  public ResumePersonalityModelCandidate getPersonalityModelCandidate() {
     return personalityModelCandidate;
   }
 
-  public void setPersonalityModelCandidate(Object personalityModelCandidate) {
+  public void setPersonalityModelCandidate(ResumePersonalityModelCandidate personalityModelCandidate) {
     this.personalityModelCandidate = personalityModelCandidate;
   }
 
@@ -675,21 +682,21 @@ public class Resume {
     this.email = email;
   }
 
-  public Resume honorific(Object honorific) {
+  public Resume honorific(ResumeHonorific honorific) {
     this.honorific = honorific;
     return this;
   }
 
    /**
-   * Honorífico.
+   * Get honorific
    * @return honorific
   **/
-  @ApiModelProperty(value = "Honorífico.")
-  public Object getHonorific() {
+  @ApiModelProperty(value = "")
+  public ResumeHonorific getHonorific() {
     return honorific;
   }
 
-  public void setHonorific(Object honorific) {
+  public void setHonorific(ResumeHonorific honorific) {
     this.honorific = honorific;
   }
 
@@ -1049,21 +1056,21 @@ public class Resume {
     this.travel = travel;
   }
 
-  public Resume maritalStatus(Object maritalStatus) {
+  public Resume maritalStatus(ResumeMaritalStatus maritalStatus) {
     this.maritalStatus = maritalStatus;
     return this;
   }
 
    /**
-   * Estado civil.
+   * Get maritalStatus
    * @return maritalStatus
   **/
-  @ApiModelProperty(value = "Estado civil.")
-  public Object getMaritalStatus() {
+  @ApiModelProperty(value = "")
+  public ResumeMaritalStatus getMaritalStatus() {
     return maritalStatus;
   }
 
-  public void setMaritalStatus(Object maritalStatus) {
+  public void setMaritalStatus(ResumeMaritalStatus maritalStatus) {
     this.maritalStatus = maritalStatus;
   }
 
