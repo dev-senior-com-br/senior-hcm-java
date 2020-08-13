@@ -24,20 +24,22 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets vacancySituationDto
+ * Gets or Sets languageProficiencyDto
  */
-@JsonAdapter(VacancySituationDto.Adapter.class)
-public enum VacancySituationDto {
+@JsonAdapter(LanguageProficiencyDto.Adapter.class)
+public enum LanguageProficiencyDto {
   
-  IN_PROGRESS("IN_PROGRESS"),
+  BASIC("BASIC"),
   
-  CLOSED("CLOSED"),
+  INTERMEDIATE("INTERMEDIATE"),
   
-  CANCELED("CANCELED");
+  ADVANCED("ADVANCED"),
+  
+  FLUENT("FLUENT");
 
   private String value;
 
-  VacancySituationDto(String value) {
+  LanguageProficiencyDto(String value) {
     this.value = value;
   }
 
@@ -50,8 +52,8 @@ public enum VacancySituationDto {
     return String.valueOf(value);
   }
 
-  public static VacancySituationDto fromValue(String text) {
-    for (VacancySituationDto b : VacancySituationDto.values()) {
+  public static LanguageProficiencyDto fromValue(String text) {
+    for (LanguageProficiencyDto b : LanguageProficiencyDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -59,16 +61,16 @@ public enum VacancySituationDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<VacancySituationDto> {
+  public static class Adapter extends TypeAdapter<LanguageProficiencyDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final VacancySituationDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final LanguageProficiencyDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public VacancySituationDto read(final JsonReader jsonReader) throws IOException {
+    public LanguageProficiencyDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return VacancySituationDto.fromValue(String.valueOf(value));
+      return LanguageProficiencyDto.fromValue(String.valueOf(value));
     }
   }
 }

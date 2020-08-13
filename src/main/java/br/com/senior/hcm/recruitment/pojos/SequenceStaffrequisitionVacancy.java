@@ -25,68 +25,47 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * JobPosition
+ * SequenceStaffrequisitionVacancy
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T20:44:04.403Z")
 
 
 
-public class JobPosition {
-  @SerializedName("code")
-  private String code = null;
-
-  @SerializedName("name")
-  private String name = null;
+public class SequenceStaffrequisitionVacancy {
+  @SerializedName("sequence")
+  private Integer sequence = null;
 
   @SerializedName("id")
   private String id = null;
 
-  public JobPosition code(String code) {
-    this.code = code;
+  public SequenceStaffrequisitionVacancy sequence(Integer sequence) {
+    this.sequence = sequence;
     return this;
   }
 
    /**
-   * Código do cargo.
-   * @return code
+   * Sequência única.
+   * @return sequence
   **/
-  @ApiModelProperty(value = "Código do cargo.")
-  public String getCode() {
-    return code;
+  @ApiModelProperty(value = "Sequência única.")
+  public Integer getSequence() {
+    return sequence;
   }
 
-  public void setCode(String code) {
-    this.code = code;
+  public void setSequence(Integer sequence) {
+    this.sequence = sequence;
   }
 
-  public JobPosition name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Nome do cargo.
-   * @return name
-  **/
-  @ApiModelProperty(value = "Nome do cargo.")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public JobPosition id(String id) {
+  public SequenceStaffrequisitionVacancy id(String id) {
     this.id = id;
     return this;
   }
 
    /**
-   * Identificador único da entidade.
+   * Identificador da entidade.
    * @return id
   **/
-  @ApiModelProperty(value = "Identificador único da entidade.")
+  @ApiModelProperty(value = "Identificador da entidade.")
   public String getId() {
     return id;
   }
@@ -104,25 +83,23 @@ public class JobPosition {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    JobPosition jobPosition = (JobPosition) o;
-    return Objects.equals(this.code, jobPosition.code) &&
-        Objects.equals(this.name, jobPosition.name) &&
-        Objects.equals(this.id, jobPosition.id);
+    SequenceStaffrequisitionVacancy sequenceStaffrequisitionVacancy = (SequenceStaffrequisitionVacancy) o;
+    return Objects.equals(this.sequence, sequenceStaffrequisitionVacancy.sequence) &&
+        Objects.equals(this.id, sequenceStaffrequisitionVacancy.id);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, name, id);
+    return Objects.hash(sequence, id);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class JobPosition {\n");
+    sb.append("class SequenceStaffrequisitionVacancy {\n");
     
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("}");
     return sb.toString();

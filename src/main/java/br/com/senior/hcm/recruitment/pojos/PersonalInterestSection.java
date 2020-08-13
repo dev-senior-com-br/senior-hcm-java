@@ -22,29 +22,25 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import br.com.senior.hcm.recruitment.pojos.PhoneContact;
 import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * ResumePhoneContact
+ * PersonalInterestSection
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-13T20:44:04.403Z")
 
 
 
-public class ResumePhoneContact {
+public class PersonalInterestSection {
   @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
 
   @SerializedName("resumeId")
   private String resumeId = null;
 
-  @SerializedName("phoneContact")
-  private PhoneContact phoneContact = null;
-
-  @SerializedName("g5Id")
-  private String g5Id = null;
+  @SerializedName("interest")
+  private String interest = null;
 
   @SerializedName("id")
   private String id = null;
@@ -52,7 +48,7 @@ public class ResumePhoneContact {
   @SerializedName("updatedAt")
   private OffsetDateTime updatedAt = null;
 
-  public ResumePhoneContact createdAt(OffsetDateTime createdAt) {
+  public PersonalInterestSection createdAt(OffsetDateTime createdAt) {
     this.createdAt = createdAt;
     return this;
   }
@@ -70,16 +66,16 @@ public class ResumePhoneContact {
     this.createdAt = createdAt;
   }
 
-  public ResumePhoneContact resumeId(String resumeId) {
+  public PersonalInterestSection resumeId(String resumeId) {
     this.resumeId = resumeId;
     return this;
   }
 
    /**
-   * Identificador único do currículo.
+   * Identificador do currículo a qual o interesse está associado.
    * @return resumeId
   **/
-  @ApiModelProperty(value = "Identificador único do currículo.")
+  @ApiModelProperty(value = "Identificador do currículo a qual o interesse está associado.")
   public String getResumeId() {
     return resumeId;
   }
@@ -88,43 +84,25 @@ public class ResumePhoneContact {
     this.resumeId = resumeId;
   }
 
-  public ResumePhoneContact phoneContact(PhoneContact phoneContact) {
-    this.phoneContact = phoneContact;
+  public PersonalInterestSection interest(String interest) {
+    this.interest = interest;
     return this;
   }
 
    /**
-   * Get phoneContact
-   * @return phoneContact
+   * Interesse.
+   * @return interest
   **/
-  @ApiModelProperty(value = "")
-  public PhoneContact getPhoneContact() {
-    return phoneContact;
+  @ApiModelProperty(value = "Interesse.")
+  public String getInterest() {
+    return interest;
   }
 
-  public void setPhoneContact(PhoneContact phoneContact) {
-    this.phoneContact = phoneContact;
+  public void setInterest(String interest) {
+    this.interest = interest;
   }
 
-  public ResumePhoneContact g5Id(String g5Id) {
-    this.g5Id = g5Id;
-    return this;
-  }
-
-   /**
-   * ID do registro no sistema legado. Esse atributo não é persistido na base, é utilizado apenas como identificador na integração do registro da g5 para G7.
-   * @return g5Id
-  **/
-  @ApiModelProperty(value = "ID do registro no sistema legado. Esse atributo não é persistido na base, é utilizado apenas como identificador na integração do registro da g5 para G7.")
-  public String getG5Id() {
-    return g5Id;
-  }
-
-  public void setG5Id(String g5Id) {
-    this.g5Id = g5Id;
-  }
-
-  public ResumePhoneContact id(String id) {
+  public PersonalInterestSection id(String id) {
     this.id = id;
     return this;
   }
@@ -142,7 +120,7 @@ public class ResumePhoneContact {
     this.id = id;
   }
 
-  public ResumePhoneContact updatedAt(OffsetDateTime updatedAt) {
+  public PersonalInterestSection updatedAt(OffsetDateTime updatedAt) {
     this.updatedAt = updatedAt;
     return this;
   }
@@ -169,30 +147,28 @@ public class ResumePhoneContact {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ResumePhoneContact resumePhoneContact = (ResumePhoneContact) o;
-    return Objects.equals(this.createdAt, resumePhoneContact.createdAt) &&
-        Objects.equals(this.resumeId, resumePhoneContact.resumeId) &&
-        Objects.equals(this.phoneContact, resumePhoneContact.phoneContact) &&
-        Objects.equals(this.g5Id, resumePhoneContact.g5Id) &&
-        Objects.equals(this.id, resumePhoneContact.id) &&
-        Objects.equals(this.updatedAt, resumePhoneContact.updatedAt);
+    PersonalInterestSection personalInterestSection = (PersonalInterestSection) o;
+    return Objects.equals(this.createdAt, personalInterestSection.createdAt) &&
+        Objects.equals(this.resumeId, personalInterestSection.resumeId) &&
+        Objects.equals(this.interest, personalInterestSection.interest) &&
+        Objects.equals(this.id, personalInterestSection.id) &&
+        Objects.equals(this.updatedAt, personalInterestSection.updatedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(createdAt, resumeId, phoneContact, g5Id, id, updatedAt);
+    return Objects.hash(createdAt, resumeId, interest, id, updatedAt);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ResumePhoneContact {\n");
+    sb.append("class PersonalInterestSection {\n");
     
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    resumeId: ").append(toIndentedString(resumeId)).append("\n");
-    sb.append("    phoneContact: ").append(toIndentedString(phoneContact)).append("\n");
-    sb.append("    g5Id: ").append(toIndentedString(g5Id)).append("\n");
+    sb.append("    interest: ").append(toIndentedString(interest)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("}");
