@@ -24,18 +24,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets processTypeDto
+ * Gets or Sets educationStatusDto
  */
-@JsonAdapter(ProcessTypeDto.Adapter.class)
-public enum ProcessTypeDto {
+@JsonAdapter(EducationStatusDto.Adapter.class)
+public enum EducationStatusDto {
   
-  STAFF_INCREASE("STAFF_INCREASE"),
+  IN_PROGRESS("IN_PROGRESS"),
   
-  REPLACEMENT("REPLACEMENT");
+  DONE("DONE");
 
   private String value;
 
-  ProcessTypeDto(String value) {
+  EducationStatusDto(String value) {
     this.value = value;
   }
 
@@ -48,8 +48,8 @@ public enum ProcessTypeDto {
     return String.valueOf(value);
   }
 
-  public static ProcessTypeDto fromValue(String text) {
-    for (ProcessTypeDto b : ProcessTypeDto.values()) {
+  public static EducationStatusDto fromValue(String text) {
+    for (EducationStatusDto b : EducationStatusDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -57,16 +57,16 @@ public enum ProcessTypeDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProcessTypeDto> {
+  public static class Adapter extends TypeAdapter<EducationStatusDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProcessTypeDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final EducationStatusDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProcessTypeDto read(final JsonReader jsonReader) throws IOException {
+    public EducationStatusDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProcessTypeDto.fromValue(String.valueOf(value));
+      return EducationStatusDto.fromValue(String.valueOf(value));
     }
   }
 }

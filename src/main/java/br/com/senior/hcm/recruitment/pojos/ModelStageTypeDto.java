@@ -24,18 +24,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets processTypeDto
+ * Gets or Sets modelStageTypeDto
  */
-@JsonAdapter(ProcessTypeDto.Adapter.class)
-public enum ProcessTypeDto {
+@JsonAdapter(ModelStageTypeDto.Adapter.class)
+public enum ModelStageTypeDto {
   
-  STAFF_INCREASE("STAFF_INCREASE"),
+  HR("HR"),
   
-  REPLACEMENT("REPLACEMENT");
+  REQUESTER("REQUESTER"),
+  
+  BOTH("BOTH");
 
   private String value;
 
-  ProcessTypeDto(String value) {
+  ModelStageTypeDto(String value) {
     this.value = value;
   }
 
@@ -48,8 +50,8 @@ public enum ProcessTypeDto {
     return String.valueOf(value);
   }
 
-  public static ProcessTypeDto fromValue(String text) {
-    for (ProcessTypeDto b : ProcessTypeDto.values()) {
+  public static ModelStageTypeDto fromValue(String text) {
+    for (ModelStageTypeDto b : ModelStageTypeDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -57,16 +59,16 @@ public enum ProcessTypeDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProcessTypeDto> {
+  public static class Adapter extends TypeAdapter<ModelStageTypeDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProcessTypeDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final ModelStageTypeDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProcessTypeDto read(final JsonReader jsonReader) throws IOException {
+    public ModelStageTypeDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProcessTypeDto.fromValue(String.valueOf(value));
+      return ModelStageTypeDto.fromValue(String.valueOf(value));
     }
   }
 }

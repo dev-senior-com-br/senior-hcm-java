@@ -24,18 +24,24 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets processTypeDto
+ * Gets or Sets recruitmentProcessStatusDto
  */
-@JsonAdapter(ProcessTypeDto.Adapter.class)
-public enum ProcessTypeDto {
+@JsonAdapter(RecruitmentProcessStatusDto.Adapter.class)
+public enum RecruitmentProcessStatusDto {
   
-  STAFF_INCREASE("STAFF_INCREASE"),
+  SUBSCRIBED("SUBSCRIBED"),
   
-  REPLACEMENT("REPLACEMENT");
+  SELECTED("SELECTED"),
+  
+  DELETED("DELETED"),
+  
+  DISAPPROVED("DISAPPROVED"),
+  
+  GIVENUP("GIVENUP");
 
   private String value;
 
-  ProcessTypeDto(String value) {
+  RecruitmentProcessStatusDto(String value) {
     this.value = value;
   }
 
@@ -48,8 +54,8 @@ public enum ProcessTypeDto {
     return String.valueOf(value);
   }
 
-  public static ProcessTypeDto fromValue(String text) {
-    for (ProcessTypeDto b : ProcessTypeDto.values()) {
+  public static RecruitmentProcessStatusDto fromValue(String text) {
+    for (RecruitmentProcessStatusDto b : RecruitmentProcessStatusDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -57,16 +63,16 @@ public enum ProcessTypeDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProcessTypeDto> {
+  public static class Adapter extends TypeAdapter<RecruitmentProcessStatusDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProcessTypeDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final RecruitmentProcessStatusDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProcessTypeDto read(final JsonReader jsonReader) throws IOException {
+    public RecruitmentProcessStatusDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProcessTypeDto.fromValue(String.valueOf(value));
+      return RecruitmentProcessStatusDto.fromValue(String.valueOf(value));
     }
   }
 }
