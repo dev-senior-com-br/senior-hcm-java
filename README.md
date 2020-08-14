@@ -99,7 +99,27 @@ Objeto retorno = new EntitiesUtils<>(dominio, serviço, token de autenticação,
 * Compromisso do processo seletivo - [Appointment.java](src/main/java/br/com/senior/hcm/recruitment/pojos/Appointment.java)
 
 #### Entidades do Payroll
-N/A
+
+* Histórico de natureza de despesa - [HistoricalExpenseNature.java](src/main/java/br/com/senior/hcm/payroll/pojos/HistoricalExpenseNature.java)
+* Histórico de movimentação de um colaborador - [Movimentation.java](src/main/java/br/com/senior/hcm/payroll/pojos/Movimentation.java)
+* Vínculo do telefone de contato com a pessoa - [Personphonecontact.java](src/main/java/br/com/senior/hcm/payroll/pojos/Personphonecontact.java)
+* Documentação de uma pessoa - [Document.java](src/main/java/br/com/senior/hcm/payroll/pojos/Document.java)
+* Histórico de sindicato - [Syndicate.java](src/main/java/br/com/senior/hcm/payroll/pojos/Syndicate.java)
+* Aviso Prévio - [PriorNotice.java](src/main/java/br/com/senior/hcm/payroll/pojos/PriorNotice.java)
+* Histórico de posto de trabalho - [HistoricalJobPosition.java](src/main/java/br/com/senior/hcm/payroll/pojos/HistoricalJobPosition.java)
+* Histórico de afastamento - [Historicalleave.java](src/main/java/br/com/senior/hcm/payroll/pojos/Historicalleave.java)
+* Histórico de horário - [HistoricalWorkshift.java](src/main/java/br/com/senior/hcm/payroll/pojos/HistoricalWorkshift.java)
+* Tipo de atuação - [Actingtype.java](src/main/java/br/com/senior/hcm/payroll/pojos/Actingtype.java)
+* Estrutura do posto de trabalho - [Workstationgroupstructure.java](src/main/java/br/com/senior/hcm/payroll/pojos/Workstationgroupstructure.java)
+* Pessoa - [Person.java](src/main/java/br/com/senior/hcm/payroll/pojos/Person.java)
+* Histórico de centro de custo - [HistoricalCostCenter.java](src/main/java/br/com/senior/hcm/payroll/pojos/HistoricalCostCenter.java)
+* Vínculo do colaborador - [HistoricalEmploymentRelationship.java](src/main/java/br/com/senior/hcm/payroll/pojos/HistoricalEmploymentRelationship.java)
+* Histórico de categoria do eSocial - [HistoricalEsocialCategory.java](src/main/java/br/com/senior/hcm/payroll/pojos/HistoricalEsocialCategory.java)
+* Outros contratos - [OtherContract.java](src/main/java/br/com/senior/hcm/payroll/pojos/OtherContract.java)
+* Telefone de contato - [Phonecontact.java](src/main/java/br/com/senior/hcm/payroll/pojos/Phonecontact.java)
+* Local de trabalho - [Department.java](src/main/java/br/com/senior/hcm/payroll/pojos/Department.java)
+* Endereço de email da pessoa - [Email.java](src/main/java/br/com/senior/hcm/payroll/pojos/Email.java)
+* Conta bancária - [Account.java](src/main/java/br/com/senior/hcm/payroll/pojos/Account.java)
 
 #### Entidades do Dependent
 
