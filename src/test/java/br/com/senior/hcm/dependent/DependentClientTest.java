@@ -2,10 +2,10 @@ package br.com.senior.hcm.dependent;
 
 import br.com.senior.core.base.ServiceException;
 import br.com.senior.hcm.BaseTest;
-import br.com.senior.hcm.dependent.pojo.DependentListQueryInput;
-import br.com.senior.hcm.dependent.pojo.DependentListQueryOuput;
-import br.com.senior.hcm.dependent.pojo.DependentQueryInput;
-import br.com.senior.hcm.dependent.pojo.DependentQueryOutput;
+import br.com.senior.hcm.dependent.pojos.DependentListQueryInput;
+import br.com.senior.hcm.dependent.pojos.DependentListQueryOuput;
+import br.com.senior.hcm.dependent.pojos.DependentQueryInput;
+import br.com.senior.hcm.dependent.pojos.DependentQueryOutput;
 import br.com.senior.hcm.payroll.PayrollClient;
 import br.com.senior.hcm.payroll.pojos.EmployeeListQueryInput;
 import br.com.senior.hcm.payroll.pojos.EmployeeListQueryOutput;

@@ -1,4 +1,4 @@
-package br.com.senior.hcm.dependent.pojo;
+package br.com.senior.hcm.dependent.pojos;
 
 import lombok.Data;
 import lombok.NonNull;

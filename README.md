@@ -102,8 +102,15 @@ Objeto retorno = new EntitiesUtils<>(dominio, serviço, token de autenticação,
 N/A
 
 #### Entidades do Dependent
-N/A
 
+* Dependente - [Dependent.java](src/main/java/br/com/senior/hcm/dependent/pojos/Dependent.java)
+* Tutela - [Tutelage.java](src/main/java/br/com/senior/hcm/dependent/pojos/Tutelage.java)
+* Auxílio creche - [ChildcareAssistance.java](src/main/java/br/com/senior/hcm/dependent/pojos/ChildcareAssistance.java)
+* Salário família - [FamilySalary.java](src/main/java/br/com/senior/hcm/dependent/pojos/FamilySalary.java)
+* Documento do salário família - [FamilySalaryDocument.java](src/main/java/br/com/senior/hcm/dependent/pojos/FamilySalaryDocument.java)
+* Dependente do imposto de renda - [DependentIncomeTax.java](src/main/java/br/com/senior/hcm/dependent/pojos/DependentIncomeTax.java)
+* Dependente do plano saúde - [DependentHealthInsurance.java](src/main/java/br/com/senior/hcm/dependent/pojos/DependentHealthInsurance.java)
+* Pensão judicial - [JudicialPension.java](src/main/java/br/com/senior/hcm/dependent/pojos/JudicialPension.java)
 
 ### Suporte
 

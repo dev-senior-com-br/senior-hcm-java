@@ -1,4 +1,4 @@
-package br.com.senior.hcm.dependent.pojo;
+package br.com.senior.hcm.dependent.pojos;
 
 import br.com.senior.hcm.payroll.pojos.AutoCompleteData;
 import br.com.senior.hcm.payroll.pojos.AutoCompleteEnumData;
