@@ -76,14 +76,33 @@ PASS=<senha_do_usuario>
 Implementamos a parte de utilidades para entidades, para facilitar as requisições realizadas para as mesmas. Conforme exemplos abaixo:
 
 Como realizar uma chamada rest de uma entidade:
-```
-// O Objeto.class define ao objeto da entidade que você deseja requisitar. Disponibiliamos as classes das entidades publicas no pacote pojos de cada módulo
+```java
+// Criando um filtro, caso seja necessário.
+// Tendo como retorno o seguinte: ?filter=id eq 123
+String filter = new FilterBuilder().field("id").equals("123").build();
+
+// O Objeto.class define ao objeto da entidade que você deseja requisitar.
+// Disponibiliamos as classes das entidades públicas no pacote pojos de cada módulo.
 Objeto retorno = new EntitiesUtils<>(dominio, serviço, token de autenticação, Objeto.class).executeGet(entity_name, filter);
 
-// Caso seja necessário utilizar a classe de filtro
-String filter = new FilterBuilder().field("id").equals("123").build();
-// O mesmo terá como retorno o seguinte : ?filter=id eq 123
 ```
+
+#### Entidades do Recruitment
+
+* Currículo - [Resume.java](src/main/java/br/com/senior/hcm/recruitment/pojos/Resume.java)
+* Contato telefônico (Currículo) - [ResumePhoneContact.java](src/main/java/br/com/senior/hcm/recruitment/pojos/ResumePhoneContact.java)
+* Educação (Currículo) - [EducationSection.java](src/main/java/br/com/senior/hcm/recruitment/pojos/EducationSection.java)
+* Experiência profissional (Currículo) - [ProfessionalExperienceSection.java](src/main/java/br/com/senior/hcm/recruitment/pojos/ProfessionalExperienceSection.java)
+* Vaga de emprego - [Vacancy.java](src/main/java/br/com/senior/hcm/recruitment/pojos/Vacancy.java)
+* Processo seletivo do candidato - [RecruitmentProcess.java](src/main/java/br/com/senior/hcm/recruitment/pojos/RecruitmentProcess.java)
+* Etapa do processo seletivo do candidato - [RecruitmentProcessStage.java](src/main/java/br/com/senior/hcm/recruitment/pojos/RecruitmentProcessStage.java)
+* Compromisso do processo seletivo - [Appointment.java](src/main/java/br/com/senior/hcm/recruitment/pojos/Appointment.java)
+
+#### Entidades do Payroll
+N/A
+
+#### Entidades do Dependent
+N/A
 
 
 ### Suporte
