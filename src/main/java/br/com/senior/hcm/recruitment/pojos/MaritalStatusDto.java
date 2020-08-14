@@ -24,18 +24,30 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets processTypeDto
+ * Gets or Sets maritalStatusDto
  */
-@JsonAdapter(ProcessTypeDto.Adapter.class)
-public enum ProcessTypeDto {
+@JsonAdapter(MaritalStatusDto.Adapter.class)
+public enum MaritalStatusDto {
   
-  STAFF_INCREASE("STAFF_INCREASE"),
+  SINGLE("SINGLE"),
   
-  REPLACEMENT("REPLACEMENT");
+  MARRIED("MARRIED"),
+  
+  DIVORCED("DIVORCED"),
+  
+  WIDOWER("WIDOWER"),
+  
+  CONCUBINAGE("CONCUBINAGE"),
+  
+  SEPARATED("SEPARATED"),
+  
+  STABLE_UNION("STABLE_UNION"),
+  
+  OTHER("OTHER");
 
   private String value;
 
-  ProcessTypeDto(String value) {
+  MaritalStatusDto(String value) {
     this.value = value;
   }
 
@@ -48,8 +60,8 @@ public enum ProcessTypeDto {
     return String.valueOf(value);
   }
 
-  public static ProcessTypeDto fromValue(String text) {
-    for (ProcessTypeDto b : ProcessTypeDto.values()) {
+  public static MaritalStatusDto fromValue(String text) {
+    for (MaritalStatusDto b : MaritalStatusDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -57,16 +69,16 @@ public enum ProcessTypeDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProcessTypeDto> {
+  public static class Adapter extends TypeAdapter<MaritalStatusDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProcessTypeDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final MaritalStatusDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProcessTypeDto read(final JsonReader jsonReader) throws IOException {
+    public MaritalStatusDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProcessTypeDto.fromValue(String.valueOf(value));
+      return MaritalStatusDto.fromValue(String.valueOf(value));
     }
   }
 }

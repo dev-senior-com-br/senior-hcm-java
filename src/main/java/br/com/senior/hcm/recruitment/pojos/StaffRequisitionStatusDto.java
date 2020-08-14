@@ -24,18 +24,24 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets processTypeDto
+ * Gets or Sets staffRequisitionStatusDto
  */
-@JsonAdapter(ProcessTypeDto.Adapter.class)
-public enum ProcessTypeDto {
+@JsonAdapter(StaffRequisitionStatusDto.Adapter.class)
+public enum StaffRequisitionStatusDto {
   
-  STAFF_INCREASE("STAFF_INCREASE"),
+  IN_DEFINITION("IN_DEFINITION"),
   
-  REPLACEMENT("REPLACEMENT");
+  IN_APPROVAL("IN_APPROVAL"),
+  
+  APPROVED("APPROVED"),
+  
+  REJECTED("REJECTED"),
+  
+  CANCELED("CANCELED");
 
   private String value;
 
-  ProcessTypeDto(String value) {
+  StaffRequisitionStatusDto(String value) {
     this.value = value;
   }
 
@@ -48,8 +54,8 @@ public enum ProcessTypeDto {
     return String.valueOf(value);
   }
 
-  public static ProcessTypeDto fromValue(String text) {
-    for (ProcessTypeDto b : ProcessTypeDto.values()) {
+  public static StaffRequisitionStatusDto fromValue(String text) {
+    for (StaffRequisitionStatusDto b : StaffRequisitionStatusDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -57,16 +63,16 @@ public enum ProcessTypeDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProcessTypeDto> {
+  public static class Adapter extends TypeAdapter<StaffRequisitionStatusDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProcessTypeDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final StaffRequisitionStatusDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProcessTypeDto read(final JsonReader jsonReader) throws IOException {
+    public StaffRequisitionStatusDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProcessTypeDto.fromValue(String.valueOf(value));
+      return StaffRequisitionStatusDto.fromValue(String.valueOf(value));
     }
   }
 }

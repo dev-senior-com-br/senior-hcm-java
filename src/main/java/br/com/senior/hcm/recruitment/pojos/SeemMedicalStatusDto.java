@@ -24,18 +24,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets processTypeDto
+ * Gets or Sets seemMedicalStatusDto
  */
-@JsonAdapter(ProcessTypeDto.Adapter.class)
-public enum ProcessTypeDto {
+@JsonAdapter(SeemMedicalStatusDto.Adapter.class)
+public enum SeemMedicalStatusDto {
   
-  STAFF_INCREASE("STAFF_INCREASE"),
+  FIT("FIT"),
   
-  REPLACEMENT("REPLACEMENT");
+  UNFIT("UNFIT"),
+  
+  FITWITHRESTRICTIONS("FITWITHRESTRICTIONS");
 
   private String value;
 
-  ProcessTypeDto(String value) {
+  SeemMedicalStatusDto(String value) {
     this.value = value;
   }
 
@@ -48,8 +50,8 @@ public enum ProcessTypeDto {
     return String.valueOf(value);
   }
 
-  public static ProcessTypeDto fromValue(String text) {
-    for (ProcessTypeDto b : ProcessTypeDto.values()) {
+  public static SeemMedicalStatusDto fromValue(String text) {
+    for (SeemMedicalStatusDto b : SeemMedicalStatusDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -57,16 +59,16 @@ public enum ProcessTypeDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProcessTypeDto> {
+  public static class Adapter extends TypeAdapter<SeemMedicalStatusDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProcessTypeDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final SeemMedicalStatusDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProcessTypeDto read(final JsonReader jsonReader) throws IOException {
+    public SeemMedicalStatusDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProcessTypeDto.fromValue(String.valueOf(value));
+      return SeemMedicalStatusDto.fromValue(String.valueOf(value));
     }
   }
 }

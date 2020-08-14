@@ -24,18 +24,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets processTypeDto
+ * Gets or Sets contractTypeDto
  */
-@JsonAdapter(ProcessTypeDto.Adapter.class)
-public enum ProcessTypeDto {
+@JsonAdapter(ContractTypeDto.Adapter.class)
+public enum ContractTypeDto {
   
-  STAFF_INCREASE("STAFF_INCREASE"),
+  DETERMINED_DEADLINE("DETERMINED_DEADLINE"),
   
-  REPLACEMENT("REPLACEMENT");
+  UNDETERMINED_DEADLINE("UNDETERMINED_DEADLINE");
 
   private String value;
 
-  ProcessTypeDto(String value) {
+  ContractTypeDto(String value) {
     this.value = value;
   }
 
@@ -48,8 +48,8 @@ public enum ProcessTypeDto {
     return String.valueOf(value);
   }
 
-  public static ProcessTypeDto fromValue(String text) {
-    for (ProcessTypeDto b : ProcessTypeDto.values()) {
+  public static ContractTypeDto fromValue(String text) {
+    for (ContractTypeDto b : ContractTypeDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -57,16 +57,16 @@ public enum ProcessTypeDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProcessTypeDto> {
+  public static class Adapter extends TypeAdapter<ContractTypeDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProcessTypeDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final ContractTypeDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProcessTypeDto read(final JsonReader jsonReader) throws IOException {
+    public ContractTypeDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProcessTypeDto.fromValue(String.valueOf(value));
+      return ContractTypeDto.fromValue(String.valueOf(value));
     }
   }
 }

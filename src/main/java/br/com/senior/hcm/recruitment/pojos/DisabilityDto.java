@@ -24,18 +24,24 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets processTypeDto
+ * Gets or Sets disabilityDto
  */
-@JsonAdapter(ProcessTypeDto.Adapter.class)
-public enum ProcessTypeDto {
+@JsonAdapter(DisabilityDto.Adapter.class)
+public enum DisabilityDto {
   
-  STAFF_INCREASE("STAFF_INCREASE"),
+  PHYSICAL("PHYSICAL"),
   
-  REPLACEMENT("REPLACEMENT");
+  HEARING("HEARING"),
+  
+  VISUAL("VISUAL"),
+  
+  MENTAL("MENTAL"),
+  
+  INTELLECTUAL("INTELLECTUAL");
 
   private String value;
 
-  ProcessTypeDto(String value) {
+  DisabilityDto(String value) {
     this.value = value;
   }
 
@@ -48,8 +54,8 @@ public enum ProcessTypeDto {
     return String.valueOf(value);
   }
 
-  public static ProcessTypeDto fromValue(String text) {
-    for (ProcessTypeDto b : ProcessTypeDto.values()) {
+  public static DisabilityDto fromValue(String text) {
+    for (DisabilityDto b : DisabilityDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -57,16 +63,16 @@ public enum ProcessTypeDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProcessTypeDto> {
+  public static class Adapter extends TypeAdapter<DisabilityDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProcessTypeDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final DisabilityDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProcessTypeDto read(final JsonReader jsonReader) throws IOException {
+    public DisabilityDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProcessTypeDto.fromValue(String.valueOf(value));
+      return DisabilityDto.fromValue(String.valueOf(value));
     }
   }
 }

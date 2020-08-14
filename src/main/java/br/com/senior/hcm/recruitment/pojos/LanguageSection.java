@@ -22,37 +22,40 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import br.com.senior.hcm.recruitment.pojos.PhoneContact;
+import br.com.senior.hcm.recruitment.pojos.LanguageProficiencyDto;
 import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * ResumePhoneContact
+ * LanguageSection
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-14T11:43:22.583Z")
 
 
 
-public class ResumePhoneContact {
+public class LanguageSection {
   @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
 
   @SerializedName("resumeId")
   private String resumeId = null;
 
-  @SerializedName("phoneContact")
-  private PhoneContact phoneContact = null;
-
   @SerializedName("g5Id")
   private String g5Id = null;
+
+  @SerializedName("language")
+  private String language = null;
 
   @SerializedName("id")
   private String id = null;
 
+  @SerializedName("proficiency")
+  private LanguageProficiencyDto proficiency = null;
+
   @SerializedName("updatedAt")
   private OffsetDateTime updatedAt = null;
 
-  public ResumePhoneContact createdAt(OffsetDateTime createdAt) {
+  public LanguageSection createdAt(OffsetDateTime createdAt) {
     this.createdAt = createdAt;
     return this;
   }
@@ -70,16 +73,16 @@ public class ResumePhoneContact {
     this.createdAt = createdAt;
   }
 
-  public ResumePhoneContact resumeId(String resumeId) {
+  public LanguageSection resumeId(String resumeId) {
     this.resumeId = resumeId;
     return this;
   }
 
    /**
-   * Identificador único do currículo.
+   * Identificador do currículo à qual o idioma está associado.
    * @return resumeId
   **/
-  @ApiModelProperty(value = "Identificador único do currículo.")
+  @ApiModelProperty(value = "Identificador do currículo à qual o idioma está associado.")
   public String getResumeId() {
     return resumeId;
   }
@@ -88,25 +91,7 @@ public class ResumePhoneContact {
     this.resumeId = resumeId;
   }
 
-  public ResumePhoneContact phoneContact(PhoneContact phoneContact) {
-    this.phoneContact = phoneContact;
-    return this;
-  }
-
-   /**
-   * Get phoneContact
-   * @return phoneContact
-  **/
-  @ApiModelProperty(value = "")
-  public PhoneContact getPhoneContact() {
-    return phoneContact;
-  }
-
-  public void setPhoneContact(PhoneContact phoneContact) {
-    this.phoneContact = phoneContact;
-  }
-
-  public ResumePhoneContact g5Id(String g5Id) {
+  public LanguageSection g5Id(String g5Id) {
     this.g5Id = g5Id;
     return this;
   }
@@ -124,7 +109,25 @@ public class ResumePhoneContact {
     this.g5Id = g5Id;
   }
 
-  public ResumePhoneContact id(String id) {
+  public LanguageSection language(String language) {
+    this.language = language;
+    return this;
+  }
+
+   /**
+   * Idioma.
+   * @return language
+  **/
+  @ApiModelProperty(value = "Idioma.")
+  public String getLanguage() {
+    return language;
+  }
+
+  public void setLanguage(String language) {
+    this.language = language;
+  }
+
+  public LanguageSection id(String id) {
     this.id = id;
     return this;
   }
@@ -142,7 +145,25 @@ public class ResumePhoneContact {
     this.id = id;
   }
 
-  public ResumePhoneContact updatedAt(OffsetDateTime updatedAt) {
+  public LanguageSection proficiency(LanguageProficiencyDto proficiency) {
+    this.proficiency = proficiency;
+    return this;
+  }
+
+   /**
+   * Get proficiency
+   * @return proficiency
+  **/
+  @ApiModelProperty(value = "")
+  public LanguageProficiencyDto getProficiency() {
+    return proficiency;
+  }
+
+  public void setProficiency(LanguageProficiencyDto proficiency) {
+    this.proficiency = proficiency;
+  }
+
+  public LanguageSection updatedAt(OffsetDateTime updatedAt) {
     this.updatedAt = updatedAt;
     return this;
   }
@@ -169,31 +190,33 @@ public class ResumePhoneContact {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ResumePhoneContact resumePhoneContact = (ResumePhoneContact) o;
-    return Objects.equals(this.createdAt, resumePhoneContact.createdAt) &&
-        Objects.equals(this.resumeId, resumePhoneContact.resumeId) &&
-        Objects.equals(this.phoneContact, resumePhoneContact.phoneContact) &&
-        Objects.equals(this.g5Id, resumePhoneContact.g5Id) &&
-        Objects.equals(this.id, resumePhoneContact.id) &&
-        Objects.equals(this.updatedAt, resumePhoneContact.updatedAt);
+    LanguageSection languageSection = (LanguageSection) o;
+    return Objects.equals(this.createdAt, languageSection.createdAt) &&
+        Objects.equals(this.resumeId, languageSection.resumeId) &&
+        Objects.equals(this.g5Id, languageSection.g5Id) &&
+        Objects.equals(this.language, languageSection.language) &&
+        Objects.equals(this.id, languageSection.id) &&
+        Objects.equals(this.proficiency, languageSection.proficiency) &&
+        Objects.equals(this.updatedAt, languageSection.updatedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(createdAt, resumeId, phoneContact, g5Id, id, updatedAt);
+    return Objects.hash(createdAt, resumeId, g5Id, language, id, proficiency, updatedAt);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ResumePhoneContact {\n");
+    sb.append("class LanguageSection {\n");
     
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    resumeId: ").append(toIndentedString(resumeId)).append("\n");
-    sb.append("    phoneContact: ").append(toIndentedString(phoneContact)).append("\n");
     sb.append("    g5Id: ").append(toIndentedString(g5Id)).append("\n");
+    sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    proficiency: ").append(toIndentedString(proficiency)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("}");
     return sb.toString();

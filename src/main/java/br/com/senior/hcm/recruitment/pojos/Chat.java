@@ -23,61 +23,41 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 
 /**
- * JobPosition
+ * Chat
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-14T11:43:22.583Z")
 
 
 
-public class JobPosition {
-  @SerializedName("code")
-  private String code = null;
-
-  @SerializedName("name")
-  private String name = null;
+public class Chat {
+  @SerializedName("createdAt")
+  private OffsetDateTime createdAt = null;
 
   @SerializedName("id")
   private String id = null;
 
-  public JobPosition code(String code) {
-    this.code = code;
+  public Chat createdAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
     return this;
   }
 
    /**
-   * Código do cargo.
-   * @return code
+   * Data e hora da criação do chat.
+   * @return createdAt
   **/
-  @ApiModelProperty(value = "Código do cargo.")
-  public String getCode() {
-    return code;
+  @ApiModelProperty(value = "Data e hora da criação do chat.")
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
   }
 
-  public void setCode(String code) {
-    this.code = code;
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
   }
 
-  public JobPosition name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Nome do cargo.
-   * @return name
-  **/
-  @ApiModelProperty(value = "Nome do cargo.")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public JobPosition id(String id) {
+  public Chat id(String id) {
     this.id = id;
     return this;
   }
@@ -104,25 +84,23 @@ public class JobPosition {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    JobPosition jobPosition = (JobPosition) o;
-    return Objects.equals(this.code, jobPosition.code) &&
-        Objects.equals(this.name, jobPosition.name) &&
-        Objects.equals(this.id, jobPosition.id);
+    Chat chat = (Chat) o;
+    return Objects.equals(this.createdAt, chat.createdAt) &&
+        Objects.equals(this.id, chat.id);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, name, id);
+    return Objects.hash(createdAt, id);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class JobPosition {\n");
+    sb.append("class Chat {\n");
     
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("}");
     return sb.toString();
