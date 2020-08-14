@@ -3,10 +3,10 @@ package br.com.senior.hcm.dependent;
 import br.com.senior.core.base.BaseClient;
 import br.com.senior.core.base.Environment;
 import br.com.senior.core.base.ServiceException;
-import br.com.senior.hcm.dependent.pojo.DependentListQueryInput;
-import br.com.senior.hcm.dependent.pojo.DependentListQueryOuput;
-import br.com.senior.hcm.dependent.pojo.DependentQueryInput;
-import br.com.senior.hcm.dependent.pojo.DependentQueryOutput;
+import br.com.senior.hcm.dependent.pojos.DependentListQueryInput;
+import br.com.senior.hcm.dependent.pojos.DependentListQueryOuput;
+import br.com.senior.hcm.dependent.pojos.DependentQueryInput;
+import br.com.senior.hcm.dependent.pojos.DependentQueryOutput;
 
 /**
  * Cliente do serviço de  <a href="https://dev.senior.com.br/apis/hcm_depentent">Dependente</a>
