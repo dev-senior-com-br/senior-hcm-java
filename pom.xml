@@ -215,7 +215,7 @@
         <dependency>
             <groupId>br.com.senior</groupId>
             <artifactId>senior-core-java</artifactId>
-            <version>0.7.0</version>
+            <version>0.23.1</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -249,11 +249,6 @@
             <artifactId>lombok</artifactId>
             <version>1.18.12</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>br.com.senior</groupId>
-            <artifactId>senior-core-java</artifactId>
-            <version>0.1.01594761661</version>
         </dependency>
         <dependency>
             <groupId>io.swagger</groupId>
