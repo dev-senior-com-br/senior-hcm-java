@@ -132,6 +132,12 @@ Objeto retorno = new EntitiesUtils<>(dominio, serviço, token de autenticação,
 * Dependente do plano saúde - [DependentHealthInsurance.java](src/main/java/br/com/senior/hcm/dependent/pojos/DependentHealthInsurance.java)
 * Pensão judicial - [JudicialPension.java](src/main/java/br/com/senior/hcm/dependent/pojos/JudicialPension.java)
 
-### Suporte
+## [Guia de contribuição](https://dev.senior.com.br/guia-de-contribuicao/)
 
-1. Criar um issue https://github.com/dev-senior-com-br/senior-hcm-java/issues
+## Suporte
+
+Criar um issue https://github.com/dev-senior-com-br/senior-hcm-java/issues
+
+## License
+
+Copyright © 2020.
