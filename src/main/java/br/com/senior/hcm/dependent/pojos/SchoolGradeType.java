@@ -24,22 +24,48 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets employeeType
+ * Gets or Sets schoolGradeType
  */
-@JsonAdapter(EmployeeType.Adapter.class)
-public enum EmployeeType {
+@JsonAdapter(SchoolGradeType.Adapter.class)
+public enum SchoolGradeType {
   
-  NULL("NULL"),
+  _1("TYPE_1"),
   
-  EMPLOYEE("EMPLOYEE"),
+  _2("TYPE_2"),
   
-  THIRD("THIRD"),
+  _3("TYPE_3"),
   
-  PARTNER("PARTNER");
+  _4("TYPE_4"),
+  
+  _5("TYPE_5"),
+  
+  _6("TYPE_6"),
+  
+  _7("TYPE_7"),
+  
+  _8("TYPE_8"),
+  
+  _9("TYPE_9"),
+  
+  _10("TYPE_10"),
+  
+  _11("TYPE_11"),
+  
+  _12("TYPE_12"),
+  
+  _13("TYPE_13"),
+  
+  _14("TYPE_14"),
+  
+  _15("TYPE_15"),
+  
+  _16("TYPE_16"),
+  
+  _17("TYPE_17");
 
   private String value;
 
-  EmployeeType(String value) {
+  SchoolGradeType(String value) {
     this.value = value;
   }
 
@@ -52,8 +78,8 @@ public enum EmployeeType {
     return String.valueOf(value);
   }
 
-  public static EmployeeType fromValue(String text) {
-    for (EmployeeType b : EmployeeType.values()) {
+  public static SchoolGradeType fromValue(String text) {
+    for (SchoolGradeType b : SchoolGradeType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -61,16 +87,16 @@ public enum EmployeeType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<EmployeeType> {
+  public static class Adapter extends TypeAdapter<SchoolGradeType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final EmployeeType enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final SchoolGradeType enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public EmployeeType read(final JsonReader jsonReader) throws IOException {
+    public SchoolGradeType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return EmployeeType.fromValue(String.valueOf(value));
+      return SchoolGradeType.fromValue(String.valueOf(value));
     }
   }
 }

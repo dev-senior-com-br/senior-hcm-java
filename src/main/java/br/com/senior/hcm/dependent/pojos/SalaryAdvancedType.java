@@ -24,22 +24,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets employeeType
+ * Gets or Sets salaryAdvancedType
  */
-@JsonAdapter(EmployeeType.Adapter.class)
-public enum EmployeeType {
+@JsonAdapter(SalaryAdvancedType.Adapter.class)
+public enum SalaryAdvancedType {
   
-  NULL("NULL"),
+  YES("YES"),
   
-  EMPLOYEE("EMPLOYEE"),
+  NO("NO"),
   
-  THIRD("THIRD"),
-  
-  PARTNER("PARTNER");
+  PERCENTAGE("PERCENTAGE");
 
   private String value;
 
-  EmployeeType(String value) {
+  SalaryAdvancedType(String value) {
     this.value = value;
   }
 
@@ -52,8 +50,8 @@ public enum EmployeeType {
     return String.valueOf(value);
   }
 
-  public static EmployeeType fromValue(String text) {
-    for (EmployeeType b : EmployeeType.values()) {
+  public static SalaryAdvancedType fromValue(String text) {
+    for (SalaryAdvancedType b : SalaryAdvancedType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -61,16 +59,16 @@ public enum EmployeeType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<EmployeeType> {
+  public static class Adapter extends TypeAdapter<SalaryAdvancedType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final EmployeeType enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final SalaryAdvancedType enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public EmployeeType read(final JsonReader jsonReader) throws IOException {
+    public SalaryAdvancedType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return EmployeeType.fromValue(String.valueOf(value));
+      return SalaryAdvancedType.fromValue(String.valueOf(value));
     }
   }
 }

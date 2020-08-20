@@ -24,22 +24,30 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets employeeType
+ * Gets or Sets indexType
  */
-@JsonAdapter(EmployeeType.Adapter.class)
-public enum EmployeeType {
+@JsonAdapter(IndexType.Adapter.class)
+public enum IndexType {
   
-  NULL("NULL"),
+  OTHER("OTHER"),
   
-  EMPLOYEE("EMPLOYEE"),
+  UFIR("UFIR"),
   
-  THIRD("THIRD"),
+  URV("URV"),
   
-  PARTNER("PARTNER");
+  ITRD("ITRD"),
+  
+  SELIC("SELIC"),
+  
+  CONTRIBUTION_SALARY_CORRECTION("CONTRIBUTION_SALARY_CORRECTION"),
+  
+  SAVINGS_CORRECTION("SAVINGS_CORRECTION"),
+  
+  CURRENCY("CURRENCY");
 
   private String value;
 
-  EmployeeType(String value) {
+  IndexType(String value) {
     this.value = value;
   }
 
@@ -52,8 +60,8 @@ public enum EmployeeType {
     return String.valueOf(value);
   }
 
-  public static EmployeeType fromValue(String text) {
-    for (EmployeeType b : EmployeeType.values()) {
+  public static IndexType fromValue(String text) {
+    for (IndexType b : IndexType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -61,16 +69,16 @@ public enum EmployeeType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<EmployeeType> {
+  public static class Adapter extends TypeAdapter<IndexType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final EmployeeType enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final IndexType enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public EmployeeType read(final JsonReader jsonReader) throws IOException {
+    public IndexType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return EmployeeType.fromValue(String.valueOf(value));
+      return IndexType.fromValue(String.valueOf(value));
     }
   }
 }

@@ -24,22 +24,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets employeeType
+ * Gets or Sets salary13Type
  */
-@JsonAdapter(EmployeeType.Adapter.class)
-public enum EmployeeType {
+@JsonAdapter(Salary13Type.Adapter.class)
+public enum Salary13Type {
   
-  NULL("NULL"),
+  YES("YES"),
   
-  EMPLOYEE("EMPLOYEE"),
+  NO("NO"),
   
-  THIRD("THIRD"),
-  
-  PARTNER("PARTNER");
+  PARTIAL("PARTIAL");
 
   private String value;
 
-  EmployeeType(String value) {
+  Salary13Type(String value) {
     this.value = value;
   }
 
@@ -52,8 +50,8 @@ public enum EmployeeType {
     return String.valueOf(value);
   }
 
-  public static EmployeeType fromValue(String text) {
-    for (EmployeeType b : EmployeeType.values()) {
+  public static Salary13Type fromValue(String text) {
+    for (Salary13Type b : Salary13Type.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -61,16 +59,16 @@ public enum EmployeeType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<EmployeeType> {
+  public static class Adapter extends TypeAdapter<Salary13Type> {
     @Override
-    public void write(final JsonWriter jsonWriter, final EmployeeType enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final Salary13Type enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public EmployeeType read(final JsonReader jsonReader) throws IOException {
+    public Salary13Type read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return EmployeeType.fromValue(String.valueOf(value));
+      return Salary13Type.fromValue(String.valueOf(value));
     }
   }
 }
