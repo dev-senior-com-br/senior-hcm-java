@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+* ECOAPI-824 - Movido as classes dos pacotes de teste para a pasta `examples`
+
+
 ## [0.19.0] - 2020-08-17
 
 ### Added
