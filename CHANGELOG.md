@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.21.0] - 2020-08-26
 
+### Changed
+
+- Atualização dos POJOs das entidades do `hcm/recruitment`
+
 ## [0.20.0] - 2020-08-26
 
 ### Changed
