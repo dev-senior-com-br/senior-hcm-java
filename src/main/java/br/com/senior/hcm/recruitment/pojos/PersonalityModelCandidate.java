@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * PersonalityModelCandidate
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-26T17:52:01.775Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-26T22:02:06.260Z")
 
 
 
