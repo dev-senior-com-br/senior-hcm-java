@@ -24,24 +24,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets staffRequisitionStatusDto
+ * Gets or Sets resumeGenderDto
  */
-@JsonAdapter(StaffRequisitionStatusDto.Adapter.class)
-public enum StaffRequisitionStatusDto {
+@JsonAdapter(ResumeGenderDto.Adapter.class)
+public enum ResumeGenderDto {
   
-  IN_DEFINITION("IN_DEFINITION"),
+  MALE("MALE"),
   
-  IN_APPROVAL("IN_APPROVAL"),
+  FEMALE("FEMALE"),
   
-  APPROVED("APPROVED"),
-  
-  REJECTED("REJECTED"),
-  
-  CANCELED("CANCELED");
+  LGPD_EXCLUSION("LGPD_EXCLUSION");
 
   private String value;
 
-  StaffRequisitionStatusDto(String value) {
+  ResumeGenderDto(String value) {
     this.value = value;
   }
 
@@ -54,8 +50,8 @@ public enum StaffRequisitionStatusDto {
     return String.valueOf(value);
   }
 
-  public static StaffRequisitionStatusDto fromValue(String text) {
-    for (StaffRequisitionStatusDto b : StaffRequisitionStatusDto.values()) {
+  public static ResumeGenderDto fromValue(String text) {
+    for (ResumeGenderDto b : ResumeGenderDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -63,16 +59,16 @@ public enum StaffRequisitionStatusDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<StaffRequisitionStatusDto> {
+  public static class Adapter extends TypeAdapter<ResumeGenderDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final StaffRequisitionStatusDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final ResumeGenderDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public StaffRequisitionStatusDto read(final JsonReader jsonReader) throws IOException {
+    public ResumeGenderDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return StaffRequisitionStatusDto.fromValue(String.valueOf(value));
+      return ResumeGenderDto.fromValue(String.valueOf(value));
     }
   }
 }
