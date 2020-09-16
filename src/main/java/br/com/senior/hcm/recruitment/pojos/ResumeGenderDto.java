@@ -24,24 +24,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets disabilityDto
+ * Gets or Sets resumeGenderDto
  */
-@JsonAdapter(DisabilityDto.Adapter.class)
-public enum DisabilityDto {
+@JsonAdapter(ResumeGenderDto.Adapter.class)
+public enum ResumeGenderDto {
   
-  PHYSICAL("PHYSICAL"),
+  MALE("MALE"),
   
-  HEARING("HEARING"),
+  FEMALE("FEMALE"),
   
-  VISUAL("VISUAL"),
-  
-  MENTAL("MENTAL"),
-  
-  INTELLECTUAL("INTELLECTUAL");
+  LGPD_EXCLUSION("LGPD_EXCLUSION");
 
   private String value;
 
-  DisabilityDto(String value) {
+  ResumeGenderDto(String value) {
     this.value = value;
   }
 
@@ -54,8 +50,8 @@ public enum DisabilityDto {
     return String.valueOf(value);
   }
 
-  public static DisabilityDto fromValue(String text) {
-    for (DisabilityDto b : DisabilityDto.values()) {
+  public static ResumeGenderDto fromValue(String text) {
+    for (ResumeGenderDto b : ResumeGenderDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -63,16 +59,16 @@ public enum DisabilityDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<DisabilityDto> {
+  public static class Adapter extends TypeAdapter<ResumeGenderDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final DisabilityDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final ResumeGenderDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public DisabilityDto read(final JsonReader jsonReader) throws IOException {
+    public ResumeGenderDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return DisabilityDto.fromValue(String.valueOf(value));
+      return ResumeGenderDto.fromValue(String.valueOf(value));
     }
   }
 }
