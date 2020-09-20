@@ -24,20 +24,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets seemMedicalStatusDto
+ * Gets or Sets resumeGenderDto
  */
-@JsonAdapter(SeemMedicalStatusDto.Adapter.class)
-public enum SeemMedicalStatusDto {
+@JsonAdapter(ResumeGenderDto.Adapter.class)
+public enum ResumeGenderDto {
   
-  FIT("FIT"),
+  MALE("MALE"),
   
-  UNFIT("UNFIT"),
+  FEMALE("FEMALE"),
   
-  FITWITHRESTRICTIONS("FITWITHRESTRICTIONS");
+  LGPD_EXCLUSION("LGPD_EXCLUSION");
 
   private String value;
 
-  SeemMedicalStatusDto(String value) {
+  ResumeGenderDto(String value) {
     this.value = value;
   }
 
@@ -50,8 +50,8 @@ public enum SeemMedicalStatusDto {
     return String.valueOf(value);
   }
 
-  public static SeemMedicalStatusDto fromValue(String text) {
-    for (SeemMedicalStatusDto b : SeemMedicalStatusDto.values()) {
+  public static ResumeGenderDto fromValue(String text) {
+    for (ResumeGenderDto b : ResumeGenderDto.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -59,16 +59,16 @@ public enum SeemMedicalStatusDto {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<SeemMedicalStatusDto> {
+  public static class Adapter extends TypeAdapter<ResumeGenderDto> {
     @Override
-    public void write(final JsonWriter jsonWriter, final SeemMedicalStatusDto enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final ResumeGenderDto enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public SeemMedicalStatusDto read(final JsonReader jsonReader) throws IOException {
+    public ResumeGenderDto read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return SeemMedicalStatusDto.fromValue(String.valueOf(value));
+      return ResumeGenderDto.fromValue(String.valueOf(value));
     }
   }
 }
