@@ -24,30 +24,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets indexType
+ * Gets or Sets apiType
  */
-@JsonAdapter(IndexType.Adapter.class)
-public enum IndexType {
+@JsonAdapter(ApiType.Adapter.class)
+public enum ApiType {
   
-  OTHER("OTHER"),
+  PRIVATE("PRIVATE"),
   
-  UFIR("UFIR"),
-  
-  URV("URV"),
-  
-  ITRD("ITRD"),
-  
-  SELIC("SELIC"),
-  
-  CONTRIBUTION_SALARY_CORRECTION("CONTRIBUTION_SALARY_CORRECTION"),
-  
-  SAVINGS_CORRECTION("SAVINGS_CORRECTION"),
-  
-  CURRENCY("CURRENCY");
+  PUBLIC("PUBLIC");
 
   private String value;
 
-  IndexType(String value) {
+  ApiType(String value) {
     this.value = value;
   }
 
@@ -60,8 +48,8 @@ public enum IndexType {
     return String.valueOf(value);
   }
 
-  public static IndexType fromValue(String text) {
-    for (IndexType b : IndexType.values()) {
+  public static ApiType fromValue(String text) {
+    for (ApiType b : ApiType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -69,16 +57,16 @@ public enum IndexType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<IndexType> {
+  public static class Adapter extends TypeAdapter<ApiType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final IndexType enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final ApiType enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public IndexType read(final JsonReader jsonReader) throws IOException {
+    public ApiType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return IndexType.fromValue(String.valueOf(value));
+      return ApiType.fromValue(String.valueOf(value));
     }
   }
 }
