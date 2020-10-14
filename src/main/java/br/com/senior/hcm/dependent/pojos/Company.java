@@ -25,32 +25,38 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Bank
+ * Company
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-10-14T08:22:02.055Z")
 
 
 
-public class Bank {
+public class Company {
   @SerializedName("code")
   private Integer code = null;
 
-  @SerializedName("name")
-  private String name = null;
+  @SerializedName("headquarter")
+  private String headquarter = null;
+
+  @SerializedName("companyname")
+  private String companyname = null;
 
   @SerializedName("id")
   private String id = null;
 
-  public Bank code(Integer code) {
+  @SerializedName("cnpj")
+  private String cnpj = null;
+
+  public Company code(Integer code) {
     this.code = code;
     return this;
   }
 
    /**
-   * Número do banco
+   * Código da empresa.
    * @return code
   **/
-  @ApiModelProperty(value = "Número do banco")
+  @ApiModelProperty(value = "Código da empresa.")
   public Integer getCode() {
     return code;
   }
@@ -59,40 +65,76 @@ public class Bank {
     this.code = code;
   }
 
-  public Bank name(String name) {
-    this.name = name;
+  public Company headquarter(String headquarter) {
+    this.headquarter = headquarter;
     return this;
   }
 
    /**
-   * Descrição
-   * @return name
+   * Relacionamento com a sede da empresa
+   * @return headquarter
   **/
-  @ApiModelProperty(value = "Descrição")
-  public String getName() {
-    return name;
+  @ApiModelProperty(value = "Relacionamento com a sede da empresa")
+  public String getHeadquarter() {
+    return headquarter;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setHeadquarter(String headquarter) {
+    this.headquarter = headquarter;
   }
 
-  public Bank id(String id) {
+  public Company companyname(String companyname) {
+    this.companyname = companyname;
+    return this;
+  }
+
+   /**
+   * Nome da empresa.
+   * @return companyname
+  **/
+  @ApiModelProperty(value = "Nome da empresa.")
+  public String getCompanyname() {
+    return companyname;
+  }
+
+  public void setCompanyname(String companyname) {
+    this.companyname = companyname;
+  }
+
+  public Company id(String id) {
     this.id = id;
     return this;
   }
 
    /**
-   * Id do banco
+   * Id da entidade.
    * @return id
   **/
-  @ApiModelProperty(value = "Id do banco")
+  @ApiModelProperty(value = "Id da entidade.")
   public String getId() {
     return id;
   }
 
   public void setId(String id) {
     this.id = id;
+  }
+
+  public Company cnpj(String cnpj) {
+    this.cnpj = cnpj;
+    return this;
+  }
+
+   /**
+   * Cnpj da empresa.
+   * @return cnpj
+  **/
+  @ApiModelProperty(value = "Cnpj da empresa.")
+  public String getCnpj() {
+    return cnpj;
+  }
+
+  public void setCnpj(String cnpj) {
+    this.cnpj = cnpj;
   }
 
 
@@ -104,26 +146,30 @@ public class Bank {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Bank bank = (Bank) o;
-    return Objects.equals(this.code, bank.code) &&
-        Objects.equals(this.name, bank.name) &&
-        Objects.equals(this.id, bank.id);
+    Company company = (Company) o;
+    return Objects.equals(this.code, company.code) &&
+        Objects.equals(this.headquarter, company.headquarter) &&
+        Objects.equals(this.companyname, company.companyname) &&
+        Objects.equals(this.id, company.id) &&
+        Objects.equals(this.cnpj, company.cnpj);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, name, id);
+    return Objects.hash(code, headquarter, companyname, id, cnpj);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Bank {\n");
+    sb.append("class Company {\n");
     
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    headquarter: ").append(toIndentedString(headquarter)).append("\n");
+    sb.append("    companyname: ").append(toIndentedString(companyname)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    cnpj: ").append(toIndentedString(cnpj)).append("\n");
     sb.append("}");
     return sb.toString();
   }
