@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Atualização dos POJOs das entidades do `hcm/dependent`
+    
 ### Added
-
--   [ECOAPI-926](https://jira.senior.com.br/browse/ECOAPI-926): Adicionado endpoints do pontomobile
+- [ECOAPI-926](https://jira.senior.com.br/browse/ECOAPI-926): Adicionado endpoints do pontomobile
 
 ## [0.21.0] - 2020-08-26
 
