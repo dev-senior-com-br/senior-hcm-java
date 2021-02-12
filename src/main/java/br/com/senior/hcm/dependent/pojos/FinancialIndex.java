@@ -30,9 +30,6 @@ import java.io.IOException;
  * FinancialIndex
  */
 
-
-
-
 public class FinancialIndex {
   @SerializedName("indexType")
   private IndexType indexType = null;

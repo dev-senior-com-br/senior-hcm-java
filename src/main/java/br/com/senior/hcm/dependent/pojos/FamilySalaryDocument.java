@@ -32,9 +32,6 @@ import org.threeten.bp.LocalDate;
  * FamilySalaryDocument
  */
 
-
-
-
 public class FamilySalaryDocument {
   @SerializedName("percentageInNovember")
   private Double percentageInNovember = null;

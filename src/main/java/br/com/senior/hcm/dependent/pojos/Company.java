@@ -28,9 +28,6 @@ import java.io.IOException;
  * Company
  */
 
-
-
-
 public class Company {
   @SerializedName("code")
   private Integer code = null;
