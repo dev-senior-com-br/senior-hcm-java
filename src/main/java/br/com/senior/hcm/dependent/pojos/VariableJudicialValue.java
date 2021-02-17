@@ -29,9 +29,6 @@ import java.io.IOException;
  * VariableJudicialValue
  */
 
-
-
-
 public class VariableJudicialValue {
   @SerializedName("minimumValue")
   private Double minimumValue = null;

@@ -33,9 +33,6 @@ import org.threeten.bp.LocalDate;
  * FixedJudicialValue
  */
 
-
-
-
 public class FixedJudicialValue {
   @SerializedName("financialIndex")
   private FinancialIndex financialIndex = null;

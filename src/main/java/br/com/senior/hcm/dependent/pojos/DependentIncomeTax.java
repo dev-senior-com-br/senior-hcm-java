@@ -30,9 +30,6 @@ import org.threeten.bp.LocalDate;
  * DependentIncomeTax
  */
 
-
-
-
 public class DependentIncomeTax {
   @SerializedName("beginCompetence")
   private LocalDate beginCompetence = null;
@@ -94,7 +91,7 @@ public class DependentIncomeTax {
    * Idade limite imposto de renda
    * @return ageLimitIncomeTax
   **/
-  @ApiModelProperty(required = true, value = "Idade limite imposto de renda")
+  @ApiModelProperty(value = "Idade limite imposto de renda")
   public Integer getAgeLimitIncomeTax() {
     return ageLimitIncomeTax;
   }
