@@ -30,9 +30,6 @@ import org.threeten.bp.LocalDate;
  * FamilySalary
  */
 
-
-
-
 public class FamilySalary {
   @SerializedName("id")
   private String id = null;

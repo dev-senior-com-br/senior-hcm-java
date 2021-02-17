@@ -30,9 +30,6 @@ import org.threeten.bp.LocalDate;
  * Tutelage
  */
 
-
-
-
 public class Tutelage {
   @SerializedName("endDate")
   private LocalDate endDate = null;

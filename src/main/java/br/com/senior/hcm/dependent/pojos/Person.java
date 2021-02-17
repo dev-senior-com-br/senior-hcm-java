@@ -28,9 +28,6 @@ import java.io.IOException;
  * Person
  */
 
-
-
-
 public class Person {
   @SerializedName("firstname")
   private String firstname = null;

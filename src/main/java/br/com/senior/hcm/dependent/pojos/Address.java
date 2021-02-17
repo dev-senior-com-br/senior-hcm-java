@@ -31,9 +31,6 @@ import java.io.IOException;
  * Address
  */
 
-
-
-
 public class Address {
   @SerializedName("neighborhoodId")
   private Neighborhood neighborhoodId = null;
