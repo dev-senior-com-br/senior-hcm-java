@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.23.0] - 2021-02-18
+
 ### Changed
-- Atualização dos POJOs das entidades do `hcm/dependent`
+
+-   Atualização dos POJOs das entidades do `hcm/dependent`
 
 ## [0.22.0] - 2020-10-22
 
@@ -20,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Atualização dos POJOs das entidades do `hcm/recruitment`
+-   Atualização dos POJOs das entidades do `hcm/recruitment`
 
 ## [0.20.0] - 2020-08-26
 
@@ -38,7 +41,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-[Unreleased]: https://github.com/dev-senior-com-br/senior-hcm-java/compare/v0.22.0...HEAD
+[Unreleased]: https://github.com/dev-senior-com-br/senior-hcm-java/compare/0.23.0...HEAD
+
+[0.23.0]: https://github.com/dev-senior-com-br/senior-hcm-java/compare/0.22.0...0.23.0
 
 [0.22.0]: https://github.com/dev-senior-com-br/senior-hcm-java/compare/v0.21.0...0.22.0
 
