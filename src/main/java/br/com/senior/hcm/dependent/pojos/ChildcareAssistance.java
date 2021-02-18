@@ -29,9 +29,6 @@ import java.io.IOException;
  * ChildcareAssistance
  */
 
-
-
-
 public class ChildcareAssistance {
   @SerializedName("months")
   private Integer months = null;

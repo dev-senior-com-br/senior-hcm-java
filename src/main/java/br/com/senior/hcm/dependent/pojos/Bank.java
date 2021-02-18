@@ -28,9 +28,6 @@ import java.io.IOException;
  * Bank
  */
 
-
-
-
 public class Bank {
   @SerializedName("code")
   private Integer code = null;

@@ -30,9 +30,6 @@ import org.threeten.bp.LocalDate;
  * Othercompany
  */
 
-
-
-
 public class Othercompany {
   @SerializedName("subscriptionNumber")
   private Integer subscriptionNumber = null;

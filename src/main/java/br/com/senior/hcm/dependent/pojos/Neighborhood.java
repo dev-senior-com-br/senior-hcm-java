@@ -29,9 +29,6 @@ import java.io.IOException;
  * Neighborhood
  */
 
-
-
-
 public class Neighborhood {
   @SerializedName("code")
   private Integer code = null;

@@ -37,9 +37,6 @@ import org.threeten.bp.LocalDate;
  * Dependent
  */
 
-
-
-
 public class Dependent {
   @SerializedName("iseligibletoalimony")
   private Boolean iseligibletoalimony = null;

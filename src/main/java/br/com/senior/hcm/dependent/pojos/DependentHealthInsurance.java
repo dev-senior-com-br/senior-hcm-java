@@ -30,9 +30,6 @@ import org.threeten.bp.LocalDate;
  * DependentHealthInsurance
  */
 
-
-
-
 public class DependentHealthInsurance {
   @SerializedName("endDate")
   private LocalDate endDate = null;

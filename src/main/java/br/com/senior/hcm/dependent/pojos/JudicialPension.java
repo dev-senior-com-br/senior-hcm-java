@@ -40,9 +40,6 @@ import org.threeten.bp.LocalDate;
  * JudicialPension
  */
 
-
-
-
 public class JudicialPension {
   @SerializedName("bankAccount")
   private BankAccount bankAccount = null;
