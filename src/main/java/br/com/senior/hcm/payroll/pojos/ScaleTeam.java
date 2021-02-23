@@ -28,9 +28,6 @@ import java.io.IOException;
  * ScaleTeam
  */
 
-
-
-
 public class ScaleTeam {
   @SerializedName("code")
   private Integer code = null;

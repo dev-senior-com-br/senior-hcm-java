@@ -29,9 +29,6 @@ import java.io.IOException;
  * State
  */
 
-
-
-
 public class State {
   @SerializedName("name")
   private String name = null;

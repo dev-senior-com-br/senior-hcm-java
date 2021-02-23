@@ -30,9 +30,6 @@ import java.io.IOException;
  * OtherContract
  */
 
-
-
-
 public class OtherContract {
   @SerializedName("otherEmployee")
   private Employee otherEmployee = null;

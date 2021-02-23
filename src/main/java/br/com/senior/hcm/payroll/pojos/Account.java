@@ -31,9 +31,6 @@ import java.io.IOException;
  * Account
  */
 
-
-
-
 public class Account {
   @SerializedName("bankAccount")
   private String bankAccount = null;

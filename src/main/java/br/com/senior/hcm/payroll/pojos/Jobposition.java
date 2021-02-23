@@ -29,9 +29,6 @@ import org.threeten.bp.LocalDate;
  * Jobposition
  */
 
-
-
-
 public class Jobposition {
   @SerializedName("cbo")
   private String cbo = null;

@@ -38,9 +38,6 @@ import org.threeten.bp.LocalDate;
  * Document
  */
 
-
-
-
 public class Document {
   @SerializedName("issuerState")
   private State issuerState = null;

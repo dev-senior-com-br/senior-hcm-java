@@ -29,9 +29,6 @@ import java.io.IOException;
  * Nationality
  */
 
-
-
-
 public class Nationality {
   @SerializedName("code")
   private Integer code = null;

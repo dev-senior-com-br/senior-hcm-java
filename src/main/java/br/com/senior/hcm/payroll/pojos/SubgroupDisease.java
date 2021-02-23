@@ -28,9 +28,6 @@ import java.io.IOException;
  * SubgroupDisease
  */
 
-
-
-
 public class SubgroupDisease {
   @SerializedName("code")
   private String code = null;

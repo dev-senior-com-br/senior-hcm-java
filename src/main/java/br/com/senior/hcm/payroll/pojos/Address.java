@@ -33,9 +33,6 @@ import org.threeten.bp.LocalDate;
  * Address
  */
 
-
-
-
 public class Address {
   @SerializedName("neighborhoodId")
   private Neighborhood neighborhoodId = null;

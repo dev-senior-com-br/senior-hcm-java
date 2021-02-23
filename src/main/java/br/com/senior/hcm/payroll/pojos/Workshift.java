@@ -31,9 +31,6 @@ import java.io.IOException;
  * Workshift
  */
 
-
-
-
 public class Workshift {
   @SerializedName("dsrminutes")
   private Double dsrminutes = null;

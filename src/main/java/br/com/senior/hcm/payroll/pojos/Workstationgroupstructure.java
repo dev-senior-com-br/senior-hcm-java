@@ -28,9 +28,6 @@ import java.io.IOException;
  * Workstationgroupstructure
  */
 
-
-
-
 public class Workstationgroupstructure {
   @SerializedName("code")
   private Integer code = null;

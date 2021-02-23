@@ -30,9 +30,6 @@ import java.io.IOException;
  * Professionalcouncil
  */
 
-
-
-
 public class Professionalcouncil {
   @SerializedName("code")
   private Integer code = null;

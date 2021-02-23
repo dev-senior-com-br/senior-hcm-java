@@ -29,9 +29,6 @@ import java.io.IOException;
  * Email
  */
 
-
-
-
 public class Email {
   @SerializedName("person")
   private String person = null;

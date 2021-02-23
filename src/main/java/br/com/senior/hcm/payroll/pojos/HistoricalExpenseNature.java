@@ -32,9 +32,6 @@ import org.threeten.bp.LocalDate;
  * HistoricalExpenseNature
  */
 
-
-
-
 public class HistoricalExpenseNature {
   @SerializedName("originExpenseNature")
   private OriginExpenseNatureType originExpenseNature = null;

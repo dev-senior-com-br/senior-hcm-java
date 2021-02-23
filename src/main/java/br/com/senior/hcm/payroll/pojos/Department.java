@@ -30,9 +30,6 @@ import org.threeten.bp.LocalDate;
  * Department
  */
 
-
-
-
 public class Department {
   @SerializedName("nightTimeHoliday")
   private String nightTimeHoliday = null;

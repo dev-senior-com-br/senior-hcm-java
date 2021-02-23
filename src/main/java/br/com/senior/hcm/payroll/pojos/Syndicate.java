@@ -29,9 +29,6 @@ import java.io.IOException;
  * Syndicate
  */
 
-
-
-
 public class Syndicate {
   @SerializedName("code")
   private Integer code = null;

@@ -44,9 +44,6 @@ import org.threeten.bp.LocalDate;
  * Workstationgroup
  */
 
-
-
-
 public class Workstationgroup {
   @SerializedName("employmentRelationship")
   private EmploymentRelationship employmentRelationship = null;

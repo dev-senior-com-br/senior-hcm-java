@@ -32,9 +32,6 @@ import java.io.IOException;
  * Timetrackingsituation
  */
 
-
-
-
 public class Timetrackingsituation {
   @SerializedName("isforabsent")
   private Boolean isforabsent = null;

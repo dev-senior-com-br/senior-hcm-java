@@ -29,9 +29,6 @@ import java.io.IOException;
  * IntervalGroup
  */
 
-
-
-
 public class IntervalGroup {
   @SerializedName("code")
   private Integer code = null;

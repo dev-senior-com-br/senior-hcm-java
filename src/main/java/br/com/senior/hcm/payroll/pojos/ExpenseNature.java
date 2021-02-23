@@ -28,9 +28,6 @@ import java.io.IOException;
  * ExpenseNature
  */
 
-
-
-
 public class ExpenseNature {
   @SerializedName("code")
   private Integer code = null;

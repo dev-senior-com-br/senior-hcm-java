@@ -30,9 +30,6 @@ import org.threeten.bp.LocalDate;
  * WorkshiftGroup
  */
 
-
-
-
 public class WorkshiftGroup {
   @SerializedName("code")
   private Integer code = null;

@@ -30,9 +30,6 @@ import java.io.IOException;
  * Actingtype
  */
 
-
-
-
 public class Actingtype {
   @SerializedName("code")
   private Integer code = null;

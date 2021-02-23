@@ -30,9 +30,6 @@ import org.threeten.bp.LocalDate;
  * Wagescalerevision
  */
 
-
-
-
 public class Wagescalerevision {
   @SerializedName("enddate")
   private LocalDate enddate = null;

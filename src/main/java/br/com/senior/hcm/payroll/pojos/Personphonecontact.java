@@ -29,9 +29,6 @@ import java.io.IOException;
  * Personphonecontact
  */
 
-
-
-
 public class Personphonecontact {
   @SerializedName("person")
   private String person = null;

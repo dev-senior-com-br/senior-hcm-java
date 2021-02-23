@@ -29,9 +29,6 @@ import java.io.IOException;
  * PaymentRelationship
  */
 
-
-
-
 public class PaymentRelationship {
   @SerializedName("employmentRelationship")
   private EmploymentRelationship employmentRelationship = null;

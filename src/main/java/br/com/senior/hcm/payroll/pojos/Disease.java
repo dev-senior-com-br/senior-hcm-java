@@ -28,9 +28,6 @@ import java.io.IOException;
  * Disease
  */
 
-
-
-
 public class Disease {
   @SerializedName("code")
   private String code = null;
