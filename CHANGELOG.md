@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.24.0] - 2021-02-23
+
 ## [0.23.0] - 2021-02-18
 
 ### Changed
@@ -41,7 +43,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-[Unreleased]: https://github.com/dev-senior-com-br/senior-hcm-java/compare/0.23.0...HEAD
+[Unreleased]: https://github.com/dev-senior-com-br/senior-hcm-java/compare/0.24.0...HEAD
+
+[0.24.0]: https://github.com/dev-senior-com-br/senior-hcm-java/compare/0.23.0...0.24.0
 
 [0.23.0]: https://github.com/dev-senior-com-br/senior-hcm-java/compare/0.22.0...0.23.0
 
