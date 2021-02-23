@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.24.0] - 2021-02-23
 
+### Changed
+
+-   Atualização dos POJOs das entidades do `hcm/payroll`
+
 ## [0.23.0] - 2021-02-18
 
 ### Changed
