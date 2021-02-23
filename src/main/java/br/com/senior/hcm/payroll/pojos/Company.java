@@ -35,9 +35,6 @@ import org.threeten.bp.LocalDate;
  * Company
  */
 
-
-
-
 public class Company {
   @SerializedName("code")
   private Integer code = null;

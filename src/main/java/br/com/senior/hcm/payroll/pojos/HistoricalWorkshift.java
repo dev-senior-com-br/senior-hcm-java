@@ -35,9 +35,6 @@ import org.threeten.bp.LocalDate;
  * HistoricalWorkshift
  */
 
-
-
-
 public class HistoricalWorkshift {
   @SerializedName("intervalGroupId")
   private IntervalGroup intervalGroupId = null;

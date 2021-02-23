@@ -28,9 +28,6 @@ import java.io.IOException;
  * Apportionment
  */
 
-
-
-
 public class Apportionment {
   @SerializedName("code")
   private Integer code = null;

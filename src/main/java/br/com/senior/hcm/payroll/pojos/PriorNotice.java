@@ -37,9 +37,6 @@ import org.threeten.bp.LocalDate;
  * PriorNotice
  */
 
-
-
-
 public class PriorNotice {
   @SerializedName("daysAdditionInCount")
   private DaysAdditionInCountType daysAdditionInCount = null;

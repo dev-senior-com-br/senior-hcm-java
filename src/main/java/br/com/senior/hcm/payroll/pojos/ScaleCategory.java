@@ -28,9 +28,6 @@ import java.io.IOException;
  * ScaleCategory
  */
 
-
-
-
 public class ScaleCategory {
   @SerializedName("code")
   private Integer code = null;

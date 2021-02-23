@@ -29,9 +29,6 @@ import java.io.IOException;
  * Movimentationreason
  */
 
-
-
-
 public class Movimentationreason {
   @SerializedName("code")
   private Integer code = null;

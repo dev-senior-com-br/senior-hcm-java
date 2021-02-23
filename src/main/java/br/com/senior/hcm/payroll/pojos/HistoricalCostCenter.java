@@ -32,9 +32,6 @@ import org.threeten.bp.LocalDate;
  * HistoricalCostCenter
  */
 
-
-
-
 public class HistoricalCostCenter {
   @SerializedName("lotWorkstation")
   private String lotWorkstation = null;

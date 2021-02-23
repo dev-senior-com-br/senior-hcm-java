@@ -31,9 +31,6 @@ import org.threeten.bp.LocalDate;
  * HistoricalEmploymentRelationship
  */
 
-
-
-
 public class HistoricalEmploymentRelationship {
   @SerializedName("employmentRelationship")
   private EmploymentRelationship employmentRelationship = null;

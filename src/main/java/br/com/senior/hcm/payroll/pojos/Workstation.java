@@ -31,9 +31,6 @@ import java.io.IOException;
  * Workstation
  */
 
-
-
-
 public class Workstation {
   @SerializedName("company")
   private Company company = null;

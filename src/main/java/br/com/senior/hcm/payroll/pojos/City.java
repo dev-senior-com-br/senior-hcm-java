@@ -29,9 +29,6 @@ import java.io.IOException;
  * City
  */
 
-
-
-
 public class City {
   @SerializedName("stateId")
   private State stateId = null;

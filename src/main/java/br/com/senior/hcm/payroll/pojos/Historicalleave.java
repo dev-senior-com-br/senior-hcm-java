@@ -42,9 +42,6 @@ import org.threeten.bp.OffsetDateTime;
  * Historicalleave
  */
 
-
-
-
 public class Historicalleave {
   @SerializedName("attachments")
   private List<Attachment> attachments = null;
@@ -90,6 +87,9 @@ public class Historicalleave {
 
   @SerializedName("initialSituation")
   private Timetrackingsituation initialSituation = null;
+
+  @SerializedName("professionalCouncilState")
+  private String professionalCouncilState = null;
 
   @SerializedName("attendantState")
   private State attendantState = null;
@@ -411,6 +411,24 @@ public class Historicalleave {
     this.initialSituation = initialSituation;
   }
 
+  public Historicalleave professionalCouncilState(String professionalCouncilState) {
+    this.professionalCouncilState = professionalCouncilState;
+    return this;
+  }
+
+   /**
+   * UF do Conselho Profissional
+   * @return professionalCouncilState
+  **/
+  @ApiModelProperty(value = "UF do Conselho Profissional")
+  public String getProfessionalCouncilState() {
+    return professionalCouncilState;
+  }
+
+  public void setProfessionalCouncilState(String professionalCouncilState) {
+    this.professionalCouncilState = professionalCouncilState;
+  }
+
   public Historicalleave attendantState(State attendantState) {
     this.attendantState = attendantState;
     return this;
@@ -688,6 +706,7 @@ public class Historicalleave {
         Objects.equals(this.workAccidentType, historicalleave.workAccidentType) &&
         Objects.equals(this.subgroupDisease, historicalleave.subgroupDisease) &&
         Objects.equals(this.initialSituation, historicalleave.initialSituation) &&
+        Objects.equals(this.professionalCouncilState, historicalleave.professionalCouncilState) &&
         Objects.equals(this.attendantState, historicalleave.attendantState) &&
         Objects.equals(this.disease, historicalleave.disease) &&
         Objects.equals(this.nexusHazard, historicalleave.nexusHazard) &&
@@ -706,7 +725,7 @@ public class Historicalleave {
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachments, classOrganType, endDate, timetrackingsituation, employee, startdate, pregnancyConfirmation, estimatedenddate, attendant, medicalDecisionDate, returnExamination, id, workAccidentType, subgroupDisease, initialSituation, attendantState, disease, nexusHazard, recordCouncil, observation, externalId, isIntegration, attendantName, birthDate, justifiedDays, enddate, nexusStartDate, startDate, movimentationRaisType);
+    return Objects.hash(attachments, classOrganType, endDate, timetrackingsituation, employee, startdate, pregnancyConfirmation, estimatedenddate, attendant, medicalDecisionDate, returnExamination, id, workAccidentType, subgroupDisease, initialSituation, professionalCouncilState, attendantState, disease, nexusHazard, recordCouncil, observation, externalId, isIntegration, attendantName, birthDate, justifiedDays, enddate, nexusStartDate, startDate, movimentationRaisType);
   }
 
 
@@ -730,6 +749,7 @@ public class Historicalleave {
     sb.append("    workAccidentType: ").append(toIndentedString(workAccidentType)).append("\n");
     sb.append("    subgroupDisease: ").append(toIndentedString(subgroupDisease)).append("\n");
     sb.append("    initialSituation: ").append(toIndentedString(initialSituation)).append("\n");
+    sb.append("    professionalCouncilState: ").append(toIndentedString(professionalCouncilState)).append("\n");
     sb.append("    attendantState: ").append(toIndentedString(attendantState)).append("\n");
     sb.append("    disease: ").append(toIndentedString(disease)).append("\n");
     sb.append("    nexusHazard: ").append(toIndentedString(nexusHazard)).append("\n");

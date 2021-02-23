@@ -30,9 +30,6 @@ import java.io.IOException;
  * Wagelevel
  */
 
-
-
-
 public class Wagelevel {
   @SerializedName("initialsalaryCrypto")
   private String initialsalaryCrypto = null;

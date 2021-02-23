@@ -30,9 +30,6 @@ import java.io.IOException;
  * EmploymentRelationship
  */
 
-
-
-
 public class EmploymentRelationship {
   @SerializedName("code")
   private Integer code = null;

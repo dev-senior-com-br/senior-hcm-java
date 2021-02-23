@@ -37,9 +37,6 @@ import org.threeten.bp.LocalDate;
  * Employee
  */
 
-
-
-
 public class Employee {
   @SerializedName("employeetype")
   private EmployeeType employeetype = null;

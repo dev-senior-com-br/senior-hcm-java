@@ -31,9 +31,6 @@ import org.threeten.bp.LocalDate;
  * HistoricalEsocialCategory
  */
 
-
-
-
 public class HistoricalEsocialCategory {
   @SerializedName("dateWhen")
   private LocalDate dateWhen = null;

@@ -28,9 +28,6 @@ import java.io.IOException;
  * Currency
  */
 
-
-
-
 public class Currency {
   @SerializedName("symbol")
   private String symbol = null;

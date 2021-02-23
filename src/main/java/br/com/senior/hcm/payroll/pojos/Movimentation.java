@@ -42,9 +42,6 @@ import org.threeten.bp.OffsetDateTime;
  * Movimentation
  */
 
-
-
-
 public class Movimentation {
   @SerializedName("newemploymentrelationship")
   private RaisType newemploymentrelationship = null;

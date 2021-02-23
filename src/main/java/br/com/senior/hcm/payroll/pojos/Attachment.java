@@ -30,9 +30,6 @@ import org.threeten.bp.LocalDate;
  * Attachment
  */
 
-
-
-
 public class Attachment {
   @SerializedName("sourceId")
   private String sourceId = null;

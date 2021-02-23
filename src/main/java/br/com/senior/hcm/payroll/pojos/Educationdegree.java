@@ -29,9 +29,6 @@ import java.io.IOException;
  * Educationdegree
  */
 
-
-
-
 public class Educationdegree {
   @SerializedName("code")
   private Integer code = null;

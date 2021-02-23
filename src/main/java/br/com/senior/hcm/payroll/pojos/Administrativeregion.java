@@ -29,9 +29,6 @@ import java.io.IOException;
  * Administrativeregion
  */
 
-
-
-
 public class Administrativeregion {
   @SerializedName("code")
   private Integer code = null;

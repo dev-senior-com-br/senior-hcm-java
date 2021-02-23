@@ -29,9 +29,6 @@ import java.io.IOException;
  * Wagescale
  */
 
-
-
-
 public class Wagescale {
   @SerializedName("name")
   private String name = null;

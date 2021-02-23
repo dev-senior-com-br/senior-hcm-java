@@ -29,9 +29,6 @@ import java.io.IOException;
  * Wageclass
  */
 
-
-
-
 public class Wageclass {
   @SerializedName("sequence")
   private Integer sequence = null;

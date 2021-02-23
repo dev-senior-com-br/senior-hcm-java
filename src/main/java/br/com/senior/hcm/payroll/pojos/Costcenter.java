@@ -31,9 +31,6 @@ import org.threeten.bp.LocalDate;
  * Costcenter
  */
 
-
-
-
 public class Costcenter {
   @SerializedName("descriptionCode")
   private String descriptionCode = null;

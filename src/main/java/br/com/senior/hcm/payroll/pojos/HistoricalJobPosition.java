@@ -32,9 +32,6 @@ import org.threeten.bp.LocalDate;
  * HistoricalJobPosition
  */
 
-
-
-
 public class HistoricalJobPosition {
   @SerializedName("lotWorkstation")
   private String lotWorkstation = null;

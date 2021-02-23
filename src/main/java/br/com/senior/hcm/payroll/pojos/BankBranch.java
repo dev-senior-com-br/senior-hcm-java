@@ -28,9 +28,6 @@ import java.io.IOException;
  * BankBranch
  */
 
-
-
-
 public class BankBranch {
   @SerializedName("bank")
   private String bank = null;

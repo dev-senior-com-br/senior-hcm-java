@@ -32,9 +32,6 @@ import java.io.IOException;
  * Attendant
  */
 
-
-
-
 public class Attendant {
   @SerializedName("situationCouncil")
   private String situationCouncil = null;

@@ -28,9 +28,6 @@ import java.io.IOException;
  * Religion
  */
 
-
-
-
 public class Religion {
   @SerializedName("code")
   private Integer code = null;

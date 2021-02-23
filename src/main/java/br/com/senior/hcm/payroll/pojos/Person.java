@@ -36,9 +36,6 @@ import org.threeten.bp.LocalDate;
  * Person
  */
 
-
-
-
 public class Person {
   @SerializedName("birthday")
   private LocalDate birthday = null;
